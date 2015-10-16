@@ -1,0 +1,103 @@
+<% content_for('signup_form') do %>
+    <p class="login-box-msg">Register a new membership</p>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+
+        <div class="row">
+          <div class = 'col-sm-6' id="_first_name">
+            <div class='form-group has-feedback'>
+              <label for=''>First Name</label>
+              <%= f.text_field :first_name, class: 'form-control',  placeholder: 'First Name', 'data-error':'Enter your first name.', required: true%>
+              <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+              <span class="help-block with-errors">Hey look, this one has feedback icons!</span>
+            </div>
+          </div>
+          <div class="col-sm-6" id="_last_name">
+            <div class='form-group has-feedback'>
+              <label for=''>Last Name</label>
+              <%= f.text_field :last_name, class: 'form-control' , size: '3x6', 'data-error':'Last name is required.', required: true %>
+              <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class = 'col-sm-6' id="_username">
+            <div class='form-group has-feedback'>
+              <label for=''>Username</label>
+              <%= f.text_field :username, class: 'form-control' , pattern: '^[a-z]\w+$', 'data-minlength': '6', 'data-error':'username is required.',required: true %>
+              <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+              <span class="help-block with-errors">Minimum of 6 characters</span>
+            </div>
+          </div>
+          <div class="col-sm-6" id="_email">
+            <div class='form-group has-feedback'>
+              <label for=''>Email</label>
+              <%= f.email_field :email, class: 'form-control', pattern: '^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$', 'data-error':'Please enter valid email address', required: true %>
+              <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class = 'col-sm-6' id="_password">
+            <div class='form-group has-feedback'>
+              <label for=''>Password</label>
+              <%= f.password_field :password, class: 'form-control' , 'data-minlength': '8', placeholder: 'Password', size: '3x6', 'data-error':'password is required.',required: true %>
+              <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+              <span class="help-block with-errors">Minimum of 8 characters</span>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class='form-group has-feedback'>
+              <label for=''>Confirm Password</label>
+              <%= f.password_field :password, id:'passwordConfirm', class: 'form-control' , 'data-minlength': '8', placeholder: 'Confirm password', size: '3x6', 'data-match':'#user_password', 'data-match-error':'password do not match', required: true %>
+              <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+              <span class="help-block with-errors">Minimum of 8 characters</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class='form-group has-feedback'>
+              <label for=''>Department</label>
+              <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+              <%= f.text_field :department, class: 'form-control'%>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class='form-group has-feedback'>
+              <label for=''></label>
+              <br/>
+              <label>
+                <%= f.check_box :admin, class: 'minimal'%>
+              </label>
+              <span><strong>&nbsp;&nbsp;Make user admin?</strong></span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-8">
+            <div class="checkbox icheck">
+              <label>
+                <input type="checkbox"> I agree to the <a href="#">terms</a>
+              </label>
+            </div>
+          </div>
+          <!-- /.col -->
+          <div class="col-xs-4">
+            <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
+          </div>
+          <!-- /.col -->
+        </div>
+    <% end %>
+<% end %>
+
+<div class="register-box">
+  <div class="register-logo">
+    <a href="/"><b>Authorize</b>IT</a>
+  </div>
+  <div class="register-box-body">
+    <%= yield 'signup_form' %>
+  </div>
+<div>

@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
 
+path 'components' do
+   gem 'persistence'
+   gem 'authorization'
+   gem 'authentication'
+   gem 'web_style'
+ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
@@ -24,17 +30,6 @@ gem 'puma'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
-=begin
-path 'components' do
-  gem 'persistence'
-  gem 'frontend'
-  gem 'api'
-  gem 'integration'
-  gem 'authentication'
-  gem 'authorization'
-  gem 'web_style'
-end
-=end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
@@ -42,7 +37,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :development do
   # Quiet Assets turns off the Rails asset pipeline log. This means that it suppresses messages in your development log
   gem 'quiet_assets'
-
+  gem 'less-rails'
+  gem 'sass-rails'
   # Use Capistrano for deployment
   gem 'capistrano-rails'
 end

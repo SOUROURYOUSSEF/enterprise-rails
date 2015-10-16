@@ -123,6 +123,38 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="authorization (v0.0.1, /Users/prakashteli/workspaces/enterprise-rails/components/authorization) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/components/authorization/app" />
+          <root url="file://$MODULE_DIR$/components/authorization/bin" />
+          <root url="file://$MODULE_DIR$/components/authorization/lib" />
+          <root url="file://$MODULE_DIR$/components/authorization/config" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/components/authorization/app" />
+          <root url="file://$MODULE_DIR$/components/authorization/bin" />
+          <root url="file://$MODULE_DIR$/components/authorization/lib" />
+          <root url="file://$MODULE_DIR$/components/authorization/config" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="persistence (v0.0.1, /Users/prakashteli/workspaces/enterprise-rails/components/persistence) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/components/persistence/app" />
+          <root url="file://$MODULE_DIR$/components/persistence/bin" />
+          <root url="file://$MODULE_DIR$/components/persistence/lib" />
+          <root url="file://$MODULE_DIR$/components/persistence/config" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/components/persistence/app" />
+          <root url="file://$MODULE_DIR$/components/persistence/bin" />
+          <root url="file://$MODULE_DIR$/components/persistence/lib" />
+          <root url="file://$MODULE_DIR$/components/persistence/config" />
+        </SOURCES>
+      </library>
+    </orderEntry>
     <orderEntry type="library" scope="PROVIDED" name="actionmailer (v4.2.4, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionpack (v4.2.4, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionview (v4.2.4, RVM: ruby-2.2.1) [gem]" level="application" />
