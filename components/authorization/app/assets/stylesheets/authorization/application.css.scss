@@ -1,0 +1,36 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_self
+ * load index.css from vendor/assets/stylesheets folder
+ *= require web_style/index.css
+ * require_tree .
+ */
+
+.main-header a {
+  float: left;
+  padding: 15px;
+}
+
+.navbar-custom-menu > .navbar-nav > li > .dropdown-menu {
+  border: 1px solid #3c8dbc;
+  top: 50px;
+}
+.navbar-nav > .notifications-menu > .dropdown-menu > li .menu > li > a {
+  width: 100%;
+}
+.navbar-nav > .messages-menu > .dropdown-menu > li .menu > li > a {
+  width: 100%;
+}
+.navbar-nav > .tasks-menu > .dropdown-menu > li .menu > li > a {
+  width: 100%;
+}

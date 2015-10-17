@@ -22,7 +22,8 @@ Gem::Specification.new do |s|
   # versions of gems, bundler will complain.
 
   s.add_dependency 'rails', '~> 4.2.4'
-
+  s.add_dependency 'devise', '3.4.1'
+  s.add_dependency 'persistence'
   s.add_development_dependency 'rspec-rails', '3.2.1'
   s.add_development_dependency 'shoulda-matchers', '2.8.0'
 end
