@@ -36,6 +36,19 @@ Rails.application.configure do
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
 
+  # Set to :debug to see everything in the log.
+  config.log_level = :debug
+
+  # Use default logging formatter so that PID and timestamp are not suppressed.
+  config.log_formatter = ::Logger::Formatter.new
+
+  # Set the logging destination(s)
+  config.log_to = %w[stdout debug error audit]
+
+  # Show the logging configuration on STDOUT
+  config.show_log_configuration = true
+
+
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end

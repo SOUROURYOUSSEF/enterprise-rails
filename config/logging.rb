@@ -43,7 +43,7 @@ Logging::Rails.configure do |config|
   Logging.appenders.rolling_file( 'debug',
     #:filename => config.paths['log'].first,
     :name => 'debug_appender',
-    :filename => 'log/chorus.log',
+    :filename => 'log/application.log',
     :keep => 7,
     :age => 'daily',
     :truncate => false,
@@ -54,7 +54,7 @@ Logging::Rails.configure do |config|
 
   Logging.appenders.rolling_file( 'audit',
                                   :name => 'audit_appender',
-                                  :filename => 'log/chorus_audit.log',
+                                  :filename => 'log/application_audit.log',
                                   :keep => 7,
                                   :age => 'daily',
                                   :truncate => false,

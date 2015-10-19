@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
+  # Order of engines mount is important if each engine has its own database migration.
+  # You need to sequence is such that database migrations ans sychnronized correctly
   mount Persistence::Engine, at: '/'
-  mount Authorization::Engine, at: '/admin'
   mount Authentication::Engine, at: '/'
+  mount Authorization::Engine, at: '/'
   mount WebStyle::Engine, at: '/'
 
   # The priority is based upon order of creation: first created -> highest priority.
