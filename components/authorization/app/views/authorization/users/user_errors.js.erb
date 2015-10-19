@@ -1,0 +1,6 @@
+$('#form_error_messages').html('<%= escape_javascript(render 'authorize_it/shared/form_errors', :messages => @user.errors.full_messages) %>');
+<% @user.errors.messages.each do |k,v|  %>
+$('#_<%= k.to_s %>').find('.has-success').removeClass('has-sucess').addClass('has-error');
+$('#_<%= k.to_s %>').find('.glyphicon-ok').removeClass('glyphicon-ok').addClass('glyphicon-remove');
+<% end %>
+

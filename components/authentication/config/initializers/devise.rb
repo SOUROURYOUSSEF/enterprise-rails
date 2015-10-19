@@ -254,8 +254,9 @@ Devise.setup do |config|
   #     mount MyEngine, at: '/my_engine'
   #
   # The router that invoked `devise_for`, in the example above, would be:
-  config.router_name = :basic_authentication
-  config.parent_controller = 'BasicAuthentication::ApplicationController'
+  config.router_name = :authentication
+  config.parent_controller = 'Authentication::ApplicationController'
+  #config.parent_view = 'Authentication::Devise
   config.authentication_keys = [:username]
   config.case_insensitive_keys = [:username]
   config.strip_whitespace_keys = [:username]

@@ -1,6 +1,5 @@
 Authorization::Engine.routes.draw do
 
-  namespace :authorize_it do
     resources :operations do
       get 'delete', on: :member
     end
@@ -22,8 +21,7 @@ Authorization::Engine.routes.draw do
     resources :users do
       get 'delete', on: :member
     end
-  end
 
-  root 'authorize_it/users#index'
+  root 'users#index'
 
 end

@@ -2,6 +2,16 @@ class BaseSchema < ActiveRecord::Migration
 
   def change
 
+
+    create_table 'activities', :force => true do |t|
+      t.integer 'entity_id'
+      t.string  'entity_type'
+      t.integer 'event_id'
+    end
+
+    add_index 'activities', ['entity_id', 'entity_type'], :name => 'index_activities_on_entity_id_and_entity_type'
+    add_index 'activities', ['event_id'], :name => 'index_activities_on_event_id'
+
     create_table :users, :force => true do |t|
       t.string :first_name, null: false
       t.string :last_name, null: false
@@ -24,15 +34,6 @@ class BaseSchema < ActiveRecord::Migration
     add_index(:users, :email, unique: true)
     add_index(:users, :username, unique: true)
     add_index(:users, [:first_name, :last_name], unique: true)
-
-    create_table 'activities', :force => true do |t|
-      t.integer 'entity_id'
-      t.string  'entity_type'
-      t.integer 'event_id'
-    end
-
-    add_index 'activities', ['entity_id', 'entity_type'], :name => 'index_activities_on_entity_id_and_entity_type'
-    add_index 'activities', ['event_id'], :name => 'index_activities_on_event_id'
 
     create_table 'associated_datasets', :force => true do |t|
       t.integer  'dataset_id'
@@ -511,34 +512,6 @@ class BaseSchema < ActiveRecord::Migration
       t.datetime 'created_at',            :null => false
       t.datetime 'updated_at',            :null => false
     end
-
-    create_table 'users', :force => true do |t|
-      t.string   'username',               :limit => 256
-      t.string   'password_digest',        :limit => 256
-      t.datetime 'created_at',                                               :null => false
-      t.datetime 'updated_at',                                               :null => false
-      t.string   'first_name',             :limit => 256
-      t.string   'last_name',              :limit => 256
-      t.string   'email',                  :limit => 256
-      t.string   'title',                  :limit => 256
-      t.string   'dept',                   :limit => 256
-      t.text     'notes'
-      t.boolean  'admin',                                 :default => false
-      t.datetime 'deleted_at'
-      t.string   'image_file_name',        :limit => 256
-      t.string   'image_content_type',     :limit => 256
-      t.integer  'image_file_size'
-      t.datetime 'image_updated_at'
-      t.string   'password_salt',                         :default => '',    :null => false
-      t.string   'legacy_id'
-      t.string   'legacy_password_digest'
-      t.boolean  'subscribed_to_emails',                  :default => true
-      t.boolean  'developer',                             :default => false, :null => false
-      t.string   'auth_method'
-      t.string   'ldap_group_id'
-    end
-
-    add_index 'users', ['deleted_at', 'id'], :name => 'index_users_on_deleted_at_and_id'
 
     create_table 'workfile_drafts', :force => true do |t|
       t.integer  'workfile_id',  :null => false
