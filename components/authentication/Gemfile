@@ -11,7 +11,7 @@ gemspec
 # your gem to rubygems.org.
 
 path '../' do
-  gem 'persistence', '0.0.1'
+  gem 'persistence'
 end
 
 #gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

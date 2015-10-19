@@ -3,8 +3,8 @@ PATH
   specs:
     authorization (0.0.1)
       devise (= 3.4.1)
-      persistence (= 0.0.1)
       rails (~> 4.2.4)
+      responders (= 2.1.0)
 
 PATH
   remote: ../
@@ -77,6 +77,9 @@ GEM
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
+    jbuilder (2.3.2)
+      activesupport (>= 3.0.0, < 5)
+      multi_json (~> 1.2)
     jquery-rails (4.0.5)
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
@@ -88,6 +91,7 @@ GEM
       mime-types (>= 1.16, < 3)
     mime-types (2.6.2)
     minitest (5.8.1)
+    multi_json (1.11.2)
     nokogiri (1.6.6.2-java)
     orm_adapter (0.5.0)
     rack (1.6.4)
@@ -165,11 +169,12 @@ DEPENDENCIES
   database_cleaner (= 1.3.0)
   factory_girl_rails (= 4.4.1)
   faker (= 1.4.3)
-  persistence (= 0.0.1)!
+  jbuilder
+  persistence!
   rspec-rails (= 3.2.1)
   shoulda-callback-matchers (= 1.1.3)
   shoulda-matchers (= 2.8.0)
-  web_style (= 0.0.1)!
+  web_style!
 
 BUNDLED WITH
    1.10.6

@@ -1,5 +1,5 @@
 class Authorization::UsersController < Authorization::ApplicationController
-  respond_to :html, :js, :json
+  # respond_to :html, :js, :json
 
   def index
     # handling Ajax data table filtering, search and sort.
@@ -10,13 +10,19 @@ class Authorization::UsersController < Authorization::ApplicationController
     @order = params[:order] == nil ? 0 : params[:order]['0'][:column]
     @order_column = params[:columns] == nil ? 'created_at' :params[:columns][@order][:data]
     @total = User.count
+    puts "total = #{@total}"
     if @search == nil || @search == ''
       @users = User.limit(@limit).offset(@offset).order("#{@order_column} ASC")
       @filteredCount = User.count
     else
       @users = User.where('first_name like :kw or last_name like :kw', :kw=>"%#{@search}%").limit(@limit).offset(@offset).order("#{@order_column} ASC")
       @filteredCount = @users.count
-      respond_with()
+    end
+
+    respond_to do |format|
+      format.html {render 'index'}
+      format.js { render 'index'}
+      format.json { render 'index' }
     end
   end
 

@@ -13,6 +13,9 @@ gem 'rails', '4.2.4'
 gem 'turbolinks'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'jbuilder'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
@@ -59,6 +62,8 @@ group :development do
   # Quiet Assets turns off the Rails asset pipeline log. This means that it suppresses messages in your development log
   # bundle exec rake doc:rails generates the API under doc/api.
 #  gem 'quiet_assets'
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'pry-rails'
   gem 'sdoc', '~> 0.4.0'
   gem 'annotate'
   gem 'less-rails'

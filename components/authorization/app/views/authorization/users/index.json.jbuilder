@@ -10,6 +10,6 @@ json.data do
     json.email      user.email
     json.department user.department
     # need to append .html to force rendering of HTML partials
-    json.actions    render partial: 'authorize_it/users/actions.html',  :locals => { :user => user }
+    json.actions    render partial: 'authorization/users/actions.html'.html_safe,  :locals => { :user => user }
   end
 end
