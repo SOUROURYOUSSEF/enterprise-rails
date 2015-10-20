@@ -5,6 +5,7 @@ path 'components' do
    gem 'authentication'
    gem 'authorization'
    gem 'web_style'
+   gem 'sample_data'
  end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -14,6 +15,10 @@ gem 'turbolinks'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+# Note: Even though the main application is not using Jbuilder, it needs to be declared here so that
+# rails middleware gets initialized in correct sequence. You will still need to add add_dependency clause
+# to engine's gemspec file.
+
 gem 'jbuilder'
 
 # Use Uglifier as compressor for JavaScript assets
@@ -40,6 +45,7 @@ platform :ruby do
     # web-console gem depends on bindng_of_caller gem that does not support JRuby
     # Please see http://stackoverflow.com/questions/33210259/bundle-install-error-with-jruby
     gem 'web-console', '~> 2.0'
+    gem 'byebug'
   end
 
 end
@@ -61,7 +67,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :development do
   # Quiet Assets turns off the Rails asset pipeline log. This means that it suppresses messages in your development log
   # bundle exec rake doc:rails generates the API under doc/api.
-#  gem 'quiet_assets'
+  gem 'quiet_assets'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'pry-rails'
   gem 'sdoc', '~> 0.4.0'
@@ -75,8 +81,6 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
-
 
 # group :test, :development do
 #  gem 'rspec-rails'

@@ -1,5 +1,5 @@
 class Authorization::UsersController < Authorization::ApplicationController
-  # respond_to :html, :js, :json
+  respond_to :html, :js, :json
 
   def index
     # handling Ajax data table filtering, search and sort.
@@ -19,11 +19,8 @@ class Authorization::UsersController < Authorization::ApplicationController
       @filteredCount = @users.count
     end
 
-    respond_to do |format|
-      format.html {render 'index'}
-      format.js { render 'index'}
-      format.json { render 'index' }
-    end
+    respond_with()
+
   end
 
 

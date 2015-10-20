@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-# Declare your gem's dependencies in authorization.gemspec.
+# Declare your gem's dependencies in sample_data.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and
 # development dependencies will be added by default to the :development group.
 gemspec
@@ -12,9 +12,6 @@ gemspec
 
 path '../' do
   gem 'persistence'
-  gem 'web_style'
 end
 
-# gem 'jbuilder'
-
-#gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'rails', '~> 4.2.4'
 
   s.add_development_dependency 'rspec-rails', '3.2.1'
+  s.add_development_dependency 'factory_girl', '4.4.0'
   s.add_development_dependency 'factory_girl_rails', '4.4.1'
   s.add_development_dependency 'faker', '1.4.3'
   # https://github.com/thoughtbot/shoulda-matchers
