@@ -1,4 +1,7 @@
 # desc "Explaining what the task does"
-# task :authorization do
-#   # Task goes here
-# end
+namespace :authorization do
+  task :seed do
+    require "#{Persistence::Engine.root}/spec/dummy/config/environment"
+    Authorization::Engine.load_seed
+  end
+end

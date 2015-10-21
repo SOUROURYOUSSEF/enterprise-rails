@@ -1,4 +1,5 @@
 class Authorization::UsersController < Authorization::ApplicationController
+
   respond_to :html, :js, :json
 
   def index
@@ -27,6 +28,7 @@ class Authorization::UsersController < Authorization::ApplicationController
   def create
     #user_params = params[:user]
     #@user = User.create(:first_name => user_params['first_name'], :last_name => user_params['last_name'], :username => user_params['username'], :email => user_params['email'], :admin => user_params['admin'])
+
     @user.create(user_params)
     #byebug
     if @user.errors.any?

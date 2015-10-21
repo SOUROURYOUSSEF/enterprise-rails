@@ -18,13 +18,13 @@
     </div>
     <div class='form-group has-feedback'>
       <label for=''>Username</label>
-      <%= f.text_field :username, class: 'form-control',  placeholder: 'username', 'data-error':'Invalid user name.', required: true, autofocus: true %>
+      <%= f.text_field :username, class: 'form-control',  placeholder: 'username', required: true, autofocus: true %>
       <span class="glyphicon glyphicon-user form-control-feedback"></span>
       <span class="help-block with-errors"></span>
     </div>
     <div class='form-group has-feedback'>
       <label for=''>Password</label>
-      <%= f.password_field :password, class: 'form-control' , 'data-minlength': '8', placeholder: 'Password', 'data-error':'password is required.',required: true, autocomplete: "off" %>
+      <%= f.password_field :password, class: 'form-control' , 'data-minlength' => '8', placeholder: 'Password', 'data-error' => 'password is required.',required: true, autocomplete: "off" %>
       <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       <span class="help-block with-errors"></span>
     </div>

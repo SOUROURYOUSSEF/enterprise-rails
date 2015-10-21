@@ -2,7 +2,7 @@ toastr.success('User data is updated successfully');
 $('#editUser').modal('hide');
 $('#table_content').html('<%= escape_javascript(render 'table', :users => @users) %>');
 $('#users_table').DataTable({
-    "ajax": "/authorize_it/users.json",
+    "ajax": "users.json",
     "columns": [
         { "data": "first_name" },
         { "data": "last_name" },
