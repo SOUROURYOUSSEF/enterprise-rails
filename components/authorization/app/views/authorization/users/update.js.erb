@@ -1,24 +1,3 @@
 toastr.success('User data is updated successfully');
 $('#editUser').modal('hide');
-$('#table_content').html('<%= escape_javascript(render 'table', :users => @users) %>');
-$('#users_table').DataTable({
-    "ajax": "users.json",
-    "columns": [
-        { "data": "first_name" },
-        { "data": "last_name" },
-        { "data": "username" },
-        { "data": "email" },
-        { "data": "department" },
-        { "data": "actions" }
-    ],
-    "paging": true,
-    "bServerSide": true,
-    "sServerMethod": "GET",
-    "lengthChange": false,
-    "searching": true,
-    "ordering": true,
-    "info": true,
-    "autoWidth": false,
-    "iDisplayLength": 10
-});
-
+<%= render 'refresh_table', users: @users %>

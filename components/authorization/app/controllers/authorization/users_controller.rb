@@ -13,10 +13,10 @@ class Authorization::UsersController < Authorization::ApplicationController
     @total = User.count
     puts "total = #{@total}"
     if @search == nil || @search == ''
-      @users = User.limit(@limit).offset(@offset).order("#{@order_column} ASC")
+      @users = User.limit(@limit).offset(@offset).order("#{@order_column} ASC").includes(:groups)
       @filteredCount = User.count
     else
-      @users = User.where('first_name like :kw or last_name like :kw', :kw=>"%#{@search}%").limit(@limit).offset(@offset).order("#{@order_column} ASC")
+      @users = User.where('first_name like :kw or last_name like :kw', :kw=>"%#{@search}%").limit(@limit).offset(@offset).order("#{@order_column} ASC").includes(:groups)
       @filteredCount = @users.count
     end
 
@@ -53,7 +53,7 @@ class Authorization::UsersController < Authorization::ApplicationController
   end
 
   def edit
-    @user = User.find(params[:id])
+    @user = User.where(:id => params[:id]).includes(:groups).first
     @groups = Group.all
     respond_with()
   end

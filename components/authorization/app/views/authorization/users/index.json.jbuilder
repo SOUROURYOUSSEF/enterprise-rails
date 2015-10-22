@@ -8,7 +8,8 @@ json.data do
     json.last_name  user.last_name
     json.username   user.username
     json.email      user.email
-    json.department user.department
+    json.groups     user.groups[0].name
+    json.scope      user.groups[0].application_scope.name
     # need to append .html to force rendering of HTML partials
     json.actions    render partial: 'authorization/users/actions.html'.html_safe,  :locals => { :user => user }
   end

@@ -6,7 +6,8 @@
                 { "data": "last_name" },
                 { "data": "username" },
                 { "data": "email" },
-                { "data": "department" },
+                { "data": "groups" },
+                { "data": "scope" },
                 { "data": "actions" }
             ],
             "paging": true,

@@ -19,7 +19,7 @@
       </div>
       <div class="modal-footer">
         <button type='button' class='btn btn-info pull-left' data-dismiss='modal'>Cancel</button>
-        <%= link_to authorize_it_user_path(@user), :method => :delete, :title => 'Delete User', :remote => true do %>
+        <%= link_to user_path(@user), :method => :delete, :title => 'Delete User', :remote => true do %>
             <button type="" class="btn btn-primary">Submit</button>
         <% end %>
       </div>

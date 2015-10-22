@@ -26,6 +26,39 @@
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu">
       <li class="header">MAIN NAVIGATION</li>
+      <% APP_CONFIG['sidebar_menu'].each do |k,v| %>
+          <% if v['sub_menu'] == nil %>
+              <li>
+                <%= link_to v['url'], :remote => true do %>
+                    <i class="<%= v['icon'] %>"></i> <span><%= k %></span>
+                    <% if v['label'] != nil %>
+                        <small class="label pull-right <%= v['label_bg'] %>"><%= v['label'] %></small>
+                    <% end %>
+                <% end %>
+              </li>
+          <% else %>
+              <li class="treeview">
+                <a href="#">
+                  <i class="<%= v['icon'] %>"></i> <span><%= k %></span>
+                  <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <% v['sub_menu'].each do |sub_k, sub_v| %>
+                      <li>
+                          <%= link_to sub_v['url'], :remote => true do %>
+                              <i class="<%= sub_v['icon'] %>"></i> <span><%= sub_k %></span>
+                            <% if sub_v['label'] != nil %>
+                                <small class="label pull-right <%= sub_v['label_bg'] %>"><%= sub_v['label'] %></small>
+                            <% end %>
+                          <% end %>
+                      </li>
+                    <% end %>
+                </ul>
+              </li>
+          <% end %>
+      <% end %>
+
+      <!--
       <li class="active treeview">
         <a href="#">
           <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
@@ -155,6 +188,7 @@
           <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
         </ul>
       </li>
+      -->
       <li><a href="documentation/index.html"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
       <li class="header">LABELS</li>
       <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>

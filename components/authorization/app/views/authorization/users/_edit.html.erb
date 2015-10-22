@@ -92,7 +92,7 @@
                 <div class="col-sm-6">
                   <div class='form-group has-feedback'>
                     <label for=''>Assign group</label>
-                       <%= select_tag "group_id", options_from_collection_for_select(@groups, "id", "name"), class:'form-control select2', include_blank: true, style:'width:100%;', required: true %>
+                       <%= select_tag "group_id", options_from_collection_for_select(@groups, "id", "name", @user.groups[0].id), class:'form-control select2', include_blank: true, style:'width:100%;', required: true %>
                       <span class="help-block with-errors">Select a group from the list</span>
                   </div>
                 </div>
