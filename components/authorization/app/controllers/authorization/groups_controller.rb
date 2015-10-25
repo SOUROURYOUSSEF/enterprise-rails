@@ -37,16 +37,17 @@ class Authorization::GroupsController < Authorization::ApplicationController
 
   def update
     @group = Group.where(:id => params[:id]).includes(:users, :application_scope).first
-    @users = @group.users
-    @scope = @group.application_scope
+    @scope = ApplicationScope.where(:id => params[:scope_id]).first
+    @groups = Group.all.includes(:application_scope)
     @group.update!(group_params)
+    @group.application_scope = @scope
+    @group.save!
     respond_with()
   end
 
   def edit
     @group = Group.where(:id => params[:id]).includes(:users, :application_scope).first
-    @users = @group.users
-    @scope = @group.application_scope
+    @scopes = ApplicationScope.all
     respond_with()
   end
 

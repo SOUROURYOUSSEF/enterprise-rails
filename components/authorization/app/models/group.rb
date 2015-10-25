@@ -17,7 +17,7 @@ class Group < ActiveRecord::Base
   validates_uniqueness_of :name
 
   has_and_belongs_to_many :users, -> { uniq }
-  has_one :application_scope
+  belongs_to :application_scope
 
   # Delete HABTM association objects
   before_destroy {users.clear}

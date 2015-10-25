@@ -7,7 +7,7 @@ class CreateApplicationScopes < ActiveRecord::Migration
       t.text   :description
       t.timestamps null: false
     end
-    add_reference :application_scopes, :group, index: true
-    add_foreign_key :application_scopes, :groups
+    # add_reference :application_scopes, :group, index: true
+    # add_foreign_key :application_scopes, :groups
   end
 end

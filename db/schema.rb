@@ -59,10 +59,7 @@ ActiveRecord::Schema.define(version: 20151016203137) do
     t.text     "description"
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
-    t.integer  "group_id"
   end
-
-  add_index "application_scopes", ["group_id"], name: "index_application_scopes_on_group_id", using: :btree
 
   create_table "associated_datasets", force: :cascade do |t|
     t.integer  "dataset_id"
@@ -262,11 +259,15 @@ ActiveRecord::Schema.define(version: 20151016203137) do
   add_index "gnip_data_sources", ["deleted_at", "id"], name: "index_gnip_data_sources_on_deleted_at_and_id", using: :btree
 
   create_table "groups", force: :cascade do |t|
-    t.string   "name",        limit: 255, null: false
-    t.string   "description", limit: 255
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.string   "name",                  limit: 255, null: false
+    t.string   "description",           limit: 255
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.integer  "application_scope_id"
+    t.integer  "application_scopes_id"
   end
+
+  add_index "groups", ["application_scopes_id"], name: "index_groups_on_application_scopes_id", using: :btree
 
   create_table "groups_roles", id: false, force: :cascade do |t|
     t.integer "group_id", null: false
@@ -749,7 +750,6 @@ ActiveRecord::Schema.define(version: 20151016203137) do
   add_foreign_key "application_objects", "application_classes"
   add_foreign_key "application_objects", "application_scopes"
   add_foreign_key "application_objects", "users"
-  add_foreign_key "application_scopes", "groups"
   add_foreign_key "operations", "application_classes"
   add_foreign_key "permissions", "application_classes"
   add_foreign_key "permissions", "roles"
