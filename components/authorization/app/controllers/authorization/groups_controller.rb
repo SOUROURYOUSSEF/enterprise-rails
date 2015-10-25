@@ -2,19 +2,36 @@ class Authorization::GroupsController < Authorization::ApplicationController
   respond_to :html, :js, :json
 
   def index
-    @group = Group.all
+    # handling Ajax data table filtering, search and sort.
+    @limit = params[:length] == nil ? 10 : params[:length]
+    @offset = params[:start] == nil ? 0 : params[:start]
+    @draw = params[:draw] == nil ? 1 : params[:draw]
+    @search = params[:search] == nil ? nil : params[:search][:value]
+    @order = params[:order] == nil ? 0 : params[:order]['0'][:column]
+    @order_column = params[:columns] == nil ? 'created_at' :params[:columns][@order][:data]
+    @total = Group.count
+    puts "total = #{@total}"
+    if @search == nil || @search == ''
+      @groups = Group.limit(@limit).offset(@offset).order("#{@order_column} ASC").includes(:application_scope)
+      @filteredCount = Group.count
+    else
+      @groups = Group.where('first_name like :kw or last_name like :kw', :kw=>"%#{@search}%").limit(@limit).offset(@offset).order("#{@order_column} ASC").includes(:application_scope)
+      @filteredCount = @groups.count
+    end
+
     respond_with()
   end
 
   def create
-    @group = Group.create!(:name => params['group']['name'], :description => params['group']['description'])
-    #@group.scope = params['group']['scope']
-    #users = params['group']['users']
-    #users.each do |user|
-      # find/create and assing users to this group
-    #end
 
-    respond_with()
+    @group = Group.create(:name => params['group']['name'], :description => params['group']['description'])
+    if @group.errors.any?
+      render 'user_errors'
+    else
+      @scope = ApplicationScope.find(params[:scope_id])
+      @group.application_scope = @scope
+      render 'create'
+    end
 
   end
 
@@ -35,6 +52,7 @@ class Authorization::GroupsController < Authorization::ApplicationController
 
   def new
     @group = Group.new()
+    @scopes = ApplicationScope.all
     respond_with()
   end
 

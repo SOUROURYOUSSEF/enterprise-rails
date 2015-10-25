@@ -1,0 +1,10 @@
+<tr>
+  <td><%= group.name %></td>
+  <td><%= user.description %></td>
+  <td><%= user.username %></td>
+  <td><%= user.email %></td>
+  <td><%= user.department %></td>
+  <td>
+    <%= render :partial => 'actions', :locals => {:user => user} %>
+  </td>
+</tr>

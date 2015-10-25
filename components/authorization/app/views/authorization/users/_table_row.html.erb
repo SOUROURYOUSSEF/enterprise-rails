@@ -3,7 +3,8 @@
   <td><%= user.last_name %></td>
   <td><%= user.username %></td>
   <td><%= user.email %></td>
-  <td><%= user.department %></td>
+  <td><%= user.groups[0].name %></td>
+  <td><%= user.groups[0].application_scope %></td>
   <td>
     <%= render :partial => 'actions', :locals => {:user => user} %>
   </td>

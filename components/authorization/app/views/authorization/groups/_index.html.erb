@@ -5,8 +5,8 @@
       <h3 class="pull-left">Users</h3>
     </div>
     <div class="col-xs-6">
-      <%= link_to :new_user, :title => 'New User', :remote => true do %>
-          <button type="" class="btn bg-navy margin-top pull-right">+Add User</button>
+      <%= link_to :new_group, :title => 'New Group', :remote => true do %>
+          <button type="" class="btn bg-navy margin-top pull-right">+Add Group</button>
       <% end %>
     </div>
   </div>
@@ -14,7 +14,7 @@
     <div class="col-xs-12">
       <div class="box">
         <div class="box-body" id="table_content">
-            <%= render :partial => 'table', :locals => {users: @users} %>
+            <%= render :partial => 'table', :locals => {groups: @groups} %>
         </div>
       </div>
     </div>

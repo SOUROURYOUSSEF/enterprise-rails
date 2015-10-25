@@ -1,0 +1,69 @@
+<div class='modal fade' id='newGroup' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>
+    <div class='modal-dialog'>
+      <div class='modal-content'>
+        <div class='modal-header'>
+          <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+            <span class='fa fa-times close_image'></span>
+          </button>
+          <h2 class='modal-title'>Create New Group</h2>
+          <div class="row">
+            <div class="col-sm-12">
+              <div id="form_error_messages"></div>
+            </div>
+          </div>
+        </div>
+        <%= form_for @group, url: groups_path, id: 'new_group_form', method: :post, 'data-toggle' => 'validator', role: 'form', remote: true do |f| %>
+        <div class='modal-body'>
+          <div class='box-body'>
+            <div class="row">
+              <div class = 'col-sm-6' id="_first_name">
+                <div class='form-group has-feedback'>
+                  <label for=''>Name</label>
+                  <%= f.text_field :name, class: 'form-control',  placeholder: 'Name', 'data-error' => 'Enter group name.', required: true -%>
+                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                  <span class="help-block with-errors"></span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class='form-group has-feedback'>
+                  <label for=''>Description</label>
+                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                  <%= f.text_area :description, class: 'form-control'%>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class='form-group has-feedback'>
+                  <label for=''>Assign Scope</label>
+                  <%= select_tag "scope_id", options_from_collection_for_select(@scopes, "id", "name"),  class:'form-control select2', include_blank: true, style:'width:100%;', required: true %>
+                  <span class="help-block with-errors">Select scope from the list</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='modal-footer'>
+           <button type='button' class='btn btn-info pull-left' data-dismiss='modal'>Cancel</button>
+           <%= f.submit 'Submit' , class: 'btn btn-primary' %>
+        </div>
+        <% end %>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+<script type="text/javascript">
+    $('#new_group').validator();
+    $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+        checkboxClass: 'icheckbox_flat-green',
+        radioClass: 'iradio_flat-green'
+    });
+    $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+        checkboxClass: 'icheckbox_minimal-blue',
+        radioClass: 'iradio_minimal-blue'
+    });
+    $(".select2").select2({
+        placeholder: "Select a scope",
+        allowClear: true
+    });
+</script>

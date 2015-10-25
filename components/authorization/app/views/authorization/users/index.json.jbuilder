@@ -9,7 +9,7 @@ json.data do
     json.username   user.username
     json.email      user.email
     json.groups     user.groups[0].name
-    json.scope      user.groups[0].application_scope.name
+    json.scope       user.group[0].application_scope.nil? ? "" : user.group[0].application_scope.name
     # need to append .html to force rendering of HTML partials
     json.actions    render partial: 'authorization/users/actions.html'.html_safe,  :locals => { :user => user }
   end
