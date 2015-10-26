@@ -3,20 +3,21 @@ class Authorization::UsersController < Authorization::ApplicationController
   respond_to :html, :js, :json
 
   def index
-    # handling Ajax data table filtering, search and sort.
+    # handling Ajax data table filtering, search and sort for JQuery dataTables
     @limit = params[:length] == nil ? 10 : params[:length]
     @offset = params[:start] == nil ? 0 : params[:start]
     @draw = params[:draw] == nil ? 1 : params[:draw]
     @search = params[:search] == nil ? nil : params[:search][:value]
     @order = params[:order] == nil ? 0 : params[:order]['0'][:column]
+    @direction = params[:order] == nil ? 0 : params[:order]['0'][:dir]
     @order_column = params[:columns] == nil ? 'created_at' :params[:columns][@order][:data]
     @total = User.count
     puts "total = #{@total}"
     if @search == nil || @search == ''
-      @users = User.limit(@limit).offset(@offset).order("#{@order_column} ASC").includes(:groups)
+      @users = User.limit(@limit).offset(@offset).order("#{@order_column} #{@direction}").includes(:groups)
       @filteredCount = User.count
     else
-      @users = User.where('first_name like :kw or last_name like :kw', :kw=>"%#{@search}%").limit(@limit).offset(@offset).order("#{@order_column} ASC").includes(:groups)
+      @users = User.where('first_name like :kw or last_name like :kw', :kw=>"%#{@search}%").limit(@limit).offset(@offset).order("#{@order_column} #{@direction}").includes(:groups)
       @filteredCount = @users.count
     end
 

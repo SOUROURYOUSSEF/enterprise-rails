@@ -1,1 +1,4 @@
 $('#main_content').html('<%= escape_javascript(render 'index') %>');
+$('#breadcrumb').html('<%= escape_javascript(render "authorization/shared/single_breadcrumb", breadcrumb_key: :users, object: @users ) %>');
+$('#breadcrumb').html('<%= escape_javascript(render "authorization/shared/breadcrumb" ) %>');
+<%= render 'refresh_table', users: @users %>

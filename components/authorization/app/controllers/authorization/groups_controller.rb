@@ -8,14 +8,15 @@ class Authorization::GroupsController < Authorization::ApplicationController
     @draw = params[:draw] == nil ? 1 : params[:draw]
     @search = params[:search] == nil ? nil : params[:search][:value]
     @order = params[:order] == nil ? 0 : params[:order]['0'][:column]
+    @direction = params[:order] == nil ? 0 : params[:order]['0'][:dir]
     @order_column = params[:columns] == nil ? 'created_at' :params[:columns][@order][:data]
     @total = Group.count
     puts "total = #{@total}"
     if @search == nil || @search == ''
-      @groups = Group.limit(@limit).offset(@offset).order("#{@order_column} ASC").includes(:application_scope)
+      @groups = Group.limit(@limit).offset(@offset).order("#{@order_column} #{@direction}").includes(:application_scope)
       @filteredCount = Group.count
     else
-      @groups = Group.where('first_name like :kw or last_name like :kw', :kw=>"%#{@search}%").limit(@limit).offset(@offset).order("#{@order_column} ASC").includes(:application_scope)
+      @groups = Group.where('first_name like :kw or last_name like :kw', :kw=>"%#{@search}%").limit(@limit).offset(@offset).order("#{@order_column} #{@direction}").includes(:application_scope)
       @filteredCount = @groups.count
     end
 
@@ -68,6 +69,14 @@ class Authorization::GroupsController < Authorization::ApplicationController
   def destroy
     @group = Group.find(params[:id])
     @group.destroy unless @group.nil?
+    respond_with()
+  end
+
+  def manage_membership
+    @group = Group.where(:id => params[:id]).includes(:users).first
+    @members = @group.users
+    @all_members = User.all
+    @non_members = User.all - @members
     respond_with()
   end
 

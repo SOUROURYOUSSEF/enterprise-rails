@@ -17,6 +17,7 @@ Authorization::Engine.routes.draw do
     end
     resources :groups do
       get 'delete', on: :member
+      get 'manage_membership', on: :member
     end
     resources :users do
       get 'delete', on: :member

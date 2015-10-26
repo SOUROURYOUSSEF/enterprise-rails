@@ -1,0 +1,7 @@
+$('#main_content').html('<%= escape_javascript(render 'manage_membership') %>');
+$('.dual_select').DualListBox({
+            json: false,
+            title: 'Members'
+            /* See https://github.com/Geodan/DualListBox for all available options */
+        });
+

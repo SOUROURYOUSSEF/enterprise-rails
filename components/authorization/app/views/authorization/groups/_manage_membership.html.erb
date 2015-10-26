@@ -1,0 +1,15 @@
+
+<div class="row">
+  <div class="col-xs-6">
+    <h4 class="pull-left">Manage Membership</h4>
+  </div>
+  <div class="col-xs-6">
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-2"></div>
+  <div class="col-xs-8">
+    <%= select_tag 'members[]', options_for_select(@all_members.map {|s| [s.full_name, s.id]}, @members.map {|j| j.id}), :multiple => true, :class => 'dual_select', :size => 10 %>
+  </div>
+  <div class="col-xs-2"></div>
+</div>

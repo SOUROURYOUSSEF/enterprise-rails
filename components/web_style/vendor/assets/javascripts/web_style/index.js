@@ -9,4 +9,10 @@
 //= require web_style/admin_lte/toastr/toastr.min
 //= require web_style/admin_lte/icheck/icheck.min
 //= require web_style/admin_lte/select2/select2.full.min
+//= require web_style/admin_lte/dual-list-box/dual-list-box
+
+
+
+
+
 
