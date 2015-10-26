@@ -1,21 +1,5 @@
 $('#main_content').html('<%= escape_javascript(render 'index') %>');
-
-$('#groups_table').DataTable({
-    "ajax": "groups.json",
-    "columns": [
-        { "data": "name" },
-        { "data": "description" },
-        { "data": "scope" },
-        { "data": "actions" }
-    ],
-    "paging": true,
-    "bServerSide": true,
-    "sServerMethod": "GET",
-    "lengthChange": false,
-    "searching": true,
-    "ordering": true,
-    "info": true,
-    "autoWidth": false,
-    "iDisplayLength": 10
-});
+$('#breadcrumb').html('<%= escape_javascript(render "authorization/shared/single_breadcrumb", breadcrumb_key: :groups, object: @groups ) %>');
+$('#breadcrumb').html('<%= escape_javascript(render "authorization/shared/breadcrumb" ) %>');
+<%= render 'refresh_table', groups: @groups %>
 

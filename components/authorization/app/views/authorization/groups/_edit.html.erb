@@ -39,7 +39,7 @@
                   <% if @group.application_scope.nil? %>
                     <%= select_tag "scope_id", options_from_collection_for_select(@scopes, "id", "name"),  class:'form-control select2', include_blank: true, style:'width:100%;', required: true %>
                   <% else %>
-                      <%= select_tag "scope_id", options_from_collection_for_select(@scopes, "id", "name", @group.application_scope.name),  class:'form-control select2', include_blank: true, style:'width:100%;', required: true %>
+                      <%= select_tag "scope_id", options_from_collection_for_select(@scopes, "id", "name", @group.application_scope.id),  class:'form-control select2', include_blank: true, style:'width:100%;', required: true %>
                   <% end %>
                       <span class="help-block with-errors">Select scope from the list</span>
                 </div>

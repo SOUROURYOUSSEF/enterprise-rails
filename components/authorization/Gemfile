@@ -15,6 +15,9 @@ path '../' do
   gem 'web_style'
 end
 
+# NOTE: Needed to make a minor change to gretel to work with Rails 4.2. see https://github.com/prakash-alpine/gretel
+gem 'gretel', :github => 'prakash-alpine/gretel.git'
+
 # gem 'jbuilder'
 
 #gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

@@ -238,6 +238,7 @@
     <orderEntry type="library" scope="PROVIDED" name="faker (v1.4.3, RVM: jruby-1.7.22) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.9.10, RVM: jruby-1.7.22) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v0.3.6, RVM: jruby-1.7.22) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="gretel (v3.0.8, RVM: jruby-1.7.22) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.7.0, RVM: jruby-1.7.22) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jbuilder (v2.3.2, RVM: jruby-1.7.22) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jdbc-postgres (v9.4.1200, RVM: jruby-1.7.22) [gem]" level="application" />

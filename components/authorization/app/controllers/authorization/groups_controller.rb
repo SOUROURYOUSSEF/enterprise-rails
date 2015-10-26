@@ -30,6 +30,7 @@ class Authorization::GroupsController < Authorization::ApplicationController
     else
       @scope = ApplicationScope.find(params[:scope_id])
       @group.application_scope = @scope
+      @group.save!
       render 'create'
     end
 
