@@ -1,6 +1,6 @@
 $('#table_content').html('<%= escape_javascript(render 'table', :users => users) %>');
 $('#users_table').DataTable({
-    "ajax": "users.json",
+    "ajax": "/users.json",
     "columns": [
         { "data": "first_name" },
         { "data": "last_name" },

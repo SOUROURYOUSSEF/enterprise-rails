@@ -1,6 +1,6 @@
 $('#table_content').html('<%= escape_javascript(render 'table', :groups => groups) %>');
 $('#groups_table').DataTable({
-    "ajax": "groups.json",
+    "ajax": "/groups.json",
     "columns": [
         { "data": "name" },
         { "data": "description" },

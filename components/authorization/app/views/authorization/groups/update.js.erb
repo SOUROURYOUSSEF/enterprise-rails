@@ -1,3 +1,4 @@
 toastr.success('Group data is updated successfully');
 $('#editGroup').modal('hide');
-<%= render 'refresh_table', groups: @groups %>
+/* manually push the URL to previous state. This will go two step back in history and make an Ajax call to restore the groups index page */
+history.go(-2);

@@ -6,10 +6,22 @@
   <div class="col-xs-6">
   </div>
 </div>
+<%= form_tag update_membership_group_path(@group), :method => :put, :remote => true do %>
 <div class="row">
   <div class="col-xs-2"></div>
-  <div class="col-xs-8">
-    <%= select_tag 'members[]', options_for_select(@all_members.map {|s| [s.full_name, s.id]}, @members.map {|j| j.id}), :multiple => true, :class => 'dual_select', :size => 10 %>
+    <div class="col-xs-8">
+        <%= select_tag 'members[]', options_for_select(@all_members.map {|s| [s.full_name, s.id]}, @members.map {|j| j.id}), :multiple => true, :class => 'dual_select', :size => 10 %>
   </div>
-  <div class="col-xs-2"></div>
+  <div class="col-xs-2">
+  </div>
 </div>
+<br/>
+<div class="row">
+  <div class="col-xs-5"></div>
+  <div class="col-xs-2">
+    <button type='button' class='btn btn-info pull-left'>Cancel</button>
+    <button type='submit' class='btn btn-primary pull-right'>Submit</button>
+  </div>
+  <div class="col-xs-5"></div>
+</div>
+<% end %>

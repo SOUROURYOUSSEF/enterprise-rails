@@ -1,4 +1,6 @@
 $('#main_content').html('<%= escape_javascript(render 'manage_membership') %>');
+$('#breadcrumb').html('<%= escape_javascript(render "authorization/shared/single_breadcrumb", breadcrumb_key: :manage_membership, object: @group ) %>');
+$('#breadcrumb').html('<%= escape_javascript(render "authorization/shared/breadcrumb" ) %>');
 $('.dual_select').DualListBox({
             json: false,
             title: 'Members'

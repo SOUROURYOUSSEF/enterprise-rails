@@ -80,6 +80,16 @@ class Authorization::GroupsController < Authorization::ApplicationController
     respond_with()
   end
 
+  def update_membership
+    @group = Group.find(params[:id])
+    @group.users.delete_all
+    params[:members].each do |id|
+      @group.users << User.find(id.to_i)
+    end
+    @groups = Group.all
+    respond_with()
+  end
+
   # Using a private method to encapsulate the permissible parameters
   # is just a good pattern since you'll be able to reuse the same
   # permit list between create and update. Also, you can specialize

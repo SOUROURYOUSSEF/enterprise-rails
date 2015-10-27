@@ -8,8 +8,13 @@ crumb :users do
 end
 
 crumb :groups do
-  link 'Groups', groups_path
+  link_to 'Groups', groups_path
   parent :root
+end
+
+crumb :manage_membership do |group|
+  link 'Manage Membeship', manage_membership_group_path(group)
+  parent :groups
 end
 
 crumb :scopes do
