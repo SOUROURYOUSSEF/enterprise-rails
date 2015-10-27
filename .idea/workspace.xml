@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a9e28779-1c11-49b8-a47a-bef81c08446f" name="Default" comment="Added sample_data component">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/components/authorization/app/views/authorization/groups/create.html.erb" afterPath="" />
-    </list>
+    <list default="true" id="a9e28779-1c11-49b8-a47a-bef81c08446f" name="Default" comment="Added sample_data component" />
     <ignored path="enterprise-rails.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -29,34 +27,24 @@
     <favorites_list name="enterprise-rails" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.79928744">
+    <splitter split-orientation="vertical" split-proportion="0.60940695">
       <split-first>
         <leaf>
           <file leaf-file-name="init.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/components/authorization/app/assets/javascripts/authorization/init.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-7.142857">
-                  <caret line="73" column="54" selection-start-line="73" selection-start-column="54" selection-end-line="73" selection-end-column="54" />
+                <state vertical-scroll-proportion="-6.178571">
+                  <caret line="72" column="35" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="35" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="_refresh_table.js.erb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/groups/_refresh_table.js.erb">
+          <file leaf-file-name="_manage_membership.html.erb" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/groups/_manage_membership.html.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-1.3571428">
-                  <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="_refresh_table.js.erb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/users/_refresh_table.js.erb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-1.3571428">
-                  <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+                <state vertical-scroll-proportion="-5.428571">
+                  <caret line="8" column="92" selection-start-line="8" selection-start-column="92" selection-end-line="8" selection-end-column="92" />
                   <folding />
                 </state>
               </provider>
@@ -65,35 +53,45 @@
           <file leaf-file-name="update_membership.js.erb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/groups/update_membership.js.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-0.6896552">
-                  <caret line="1" column="139" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="139" />
+                <state vertical-scroll-proportion="-4.827586">
+                  <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="update.js.erb" pinned="false" current-in-tab="false">
+          <file leaf-file-name="update.js.erb" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/groups/update.js.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-1.3571428">
-                  <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="15" />
+                <state vertical-scroll-proportion="0.07129456">
+                  <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="destroy.js.erb" pinned="false" current-in-tab="true">
+          <file leaf-file-name="destroy.js.erb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/users/destroy.js.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <state vertical-scroll-proportion="-1.2857143">
+                  <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="manage_membership.js.erb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/groups/manage_membership.js.erb">
+          <file leaf-file-name="create.js.erb" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/groups/create.js.erb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-2.0357144">
+                  <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="delete.js.erb" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/groups/delete.js.erb">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="-0.0">
                   <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -102,11 +100,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.json.jbuilder" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/users/index.json.jbuilder">
+          <file leaf-file-name="_actions.html.erb" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/groups/_actions.html.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="12" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+                <state vertical-scroll-proportion="-8.142858">
+                  <caret line="12" column="84" selection-start-line="12" selection-start-column="84" selection-end-line="12" selection-end-column="107" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_main_sidebar.html.erb" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/components/authorization/app/views/layouts/authorization/_main_sidebar.html.erb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-5.678571">
+                  <caret line="47" column="76" selection-start-line="47" selection-start-column="76" selection-end-line="47" selection-end-column="76" />
                   <folding />
                 </state>
               </provider>
@@ -122,16 +130,6 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="_table.html.erb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/users/_table.html.erb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-5.428571">
-                  <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
         </leaf>
       </split-first>
       <split-second>
@@ -139,7 +137,7 @@
           <file leaf-file-name="users_controller.rb" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/components/authorization/app/controllers/authorization/users_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.37951806">
+                <state vertical-scroll-proportion="0.17948718">
                   <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
                   <folding />
                 </state>
@@ -156,7 +154,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/components/authorization/app/views/authorization/groups/new.js.erb" />
         <option value="$PROJECT_DIR$/components/authorization/app/views/authorization/groups/user_errors.js.erb" />
         <option value="$PROJECT_DIR$/components/authorization/app/views/authorization/users/user_errors.js.erb" />
         <option value="$PROJECT_DIR$/components/authorization/app/views/authorization/groups/destroy.js.erb" />
@@ -187,13 +184,11 @@
         <option value="$PROJECT_DIR$/components/authorization/app/views/authorization/groups/manage_membeship.js.erb" />
         <option value="$PROJECT_DIR$/components/authorization/app/views/authorization/groups/_index.html.erb" />
         <option value="$PROJECT_DIR$/components/authorization/app/views/authorization/groups/_table_row.html.erb" />
-        <option value="$PROJECT_DIR$/components/authorization/app/views/authorization/groups/_actions.html.erb" />
         <option value="$PROJECT_DIR$/components/authorization/app/views/authorization/groups/_non_members.html.erb" />
         <option value="$PROJECT_DIR$/components/authorization/app/views/authorization/groups/_members.html.erb" />
         <option value="$PROJECT_DIR$/components/web_style/vendor/assets/javascripts/web_style/index.js" />
         <option value="$PROJECT_DIR$/components/authorization/app/assets/stylesheets/authorization/application.css.scss" />
         <option value="$PROJECT_DIR$/components/authorization/config/routes.rb" />
-        <option value="$PROJECT_DIR$/components/authorization/app/views/authorization/groups/_manage_membership.html.erb" />
         <option value="$PROJECT_DIR$/components/authorization/app/views/authorization/groups/index.js.erb" />
         <option value="$PROJECT_DIR$/components/authorization/app/views/authorization/groups/manage_membership.js.erb" />
         <option value="$PROJECT_DIR$/components/authorization/config/breadcrumbs.rb" />
@@ -202,11 +197,14 @@
         <option value="$PROJECT_DIR$/components/authorization/app/views/authorization/users/_refresh_table.js.erb" />
         <option value="$PROJECT_DIR$/components/authorization/app/views/authorization/users/index.json.jbuilder" />
         <option value="$PROJECT_DIR$/components/authorization/app/views/authorization/users/_table.html.erb" />
-        <option value="$PROJECT_DIR$/components/authorization/app/assets/javascripts/authorization/init.js" />
-        <option value="$PROJECT_DIR$/components/authorization/app/views/authorization/groups/update_membership.js.erb" />
-        <option value="$PROJECT_DIR$/components/authorization/app/views/authorization/groups/update.js.erb" />
         <option value="$PROJECT_DIR$/components/authorization/app/views/authorization/users/update.js.erb" />
+        <option value="$PROJECT_DIR$/components/authorization/app/views/authorization/groups/_actions.html.erb" />
+        <option value="$PROJECT_DIR$/components/authorization/app/views/layouts/authorization/_main_sidebar.html.erb" />
+        <option value="$PROJECT_DIR$/components/authorization/app/assets/javascripts/authorization/init.js" />
+        <option value="$PROJECT_DIR$/components/authorization/app/views/authorization/groups/_manage_membership.html.erb" />
+        <option value="$PROJECT_DIR$/components/authorization/app/views/authorization/groups/update_membership.js.erb" />
         <option value="$PROJECT_DIR$/components/authorization/app/views/authorization/users/destroy.js.erb" />
+        <option value="$PROJECT_DIR$/components/authorization/app/views/authorization/groups/update.js.erb" />
       </list>
     </option>
   </component>
@@ -619,10 +617,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="enterprise-rails" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1143,14 +1137,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="475" y="51" width="1986" height="1385" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2991761" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2991761" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28809705" sideWeight="0.50205976" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32786885" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32752085" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329927" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1194,38 +1188,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/components/authorization/app/models/role.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/persistence/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/authorization/lib/authorization/engine.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/jruby-1.7.22/gems/actionview-4.2.4/lib/action_view/helpers/rendering_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/persistence/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32258064">
@@ -1282,14 +1244,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/groups/destroy.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.392857">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/authorization/app/models/group.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1326,22 +1280,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/groups/_index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.3392857">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="20" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/users/_index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.7142856">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -1431,28 +1369,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/groups/_manage_membership.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.25">
-          <caret line="8" column="68" selection-start-line="8" selection-start-column="68" selection-end-line="8" selection-end-column="68" />
-          <folding>
-            <marker date="1445949433000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/groups/new.js.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/groups/create.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0357144">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1473,14 +1393,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/groups/_actions.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.071428">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/authorization/app/views/layouts/authorization/layout.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-19.714285">
@@ -1493,14 +1405,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/groups/index.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0357144">
-          <caret line="3" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1529,17 +1433,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/groups/manage_membership.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/authorization/app/controllers/authorization/users_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37951806">
+        <state vertical-scroll-proportion="0.17948718">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
@@ -1561,34 +1457,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/authorization/app/assets/javascripts/authorization/init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.142857">
-          <caret line="73" column="54" selection-start-line="73" selection-start-column="54" selection-end-line="73" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/groups/update_membership.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6896552">
-          <caret line="1" column="139" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="139" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/groups/edit.js.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.6785714">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/groups/update.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3571428">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="15" />
           <folding />
         </state>
       </provider>
@@ -1601,10 +1473,130 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/users/destroy.js.erb">
+    <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/groups/_actions.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.142858">
+          <caret line="12" column="84" selection-start-line="12" selection-start-column="84" selection-end-line="12" selection-end-column="107" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/groups/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/groups/_index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.75">
+          <caret line="7" column="53" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/users/_index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.75">
+          <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/authorization/app/views/layouts/authorization/_main_sidebar.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.678571">
+          <caret line="47" column="76" selection-start-line="47" selection-start-column="76" selection-end-line="47" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/authorization/app/assets/javascripts/authorization/init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.178571">
+          <caret line="72" column="35" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/groups/_manage_membership.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.428571">
+          <caret line="8" column="92" selection-start-line="8" selection-start-column="92" selection-end-line="8" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/groups/manage_membership.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/groups/update_membership.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.827586">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/users/destroy.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.2857143">
+          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/groups/destroy.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/groups/destroy.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.392857">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/groups/index.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0357144">
+          <caret line="3" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/groups/create.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0357144">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/groups/delete.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/authorization/app/views/authorization/groups/update.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.07129456">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -29,7 +29,7 @@
       <% APP_CONFIG['sidebar_menu'].each do |k,v| %>
           <% if v['sub_menu'] == nil %>
               <li>
-                <%= link_to v['url'], :remote => true do %>
+                <%= link_to v['url'], :class => 'push_state', :remote => true do %>
                     <i class="<%= v['icon'] %>"></i> <span><%= k %></span>
                     <% if v['label'] != nil %>
                         <small class="label pull-right <%= v['label_bg'] %>"><%= v['label'] %></small>
@@ -45,7 +45,7 @@
                 <ul class="treeview-menu">
                     <% v['sub_menu'].each do |sub_k, sub_v| %>
                       <li>
-                          <%= link_to sub_v['url'], :remote => true do %>
+                          <%= link_to sub_v['url'], :class => 'push_state', :remote => true do %>
                               <i class="<%= sub_v['icon'] %>"></i> <span><%= sub_k %></span>
                             <% if sub_v['label'] != nil %>
                                 <small class="label pull-right <%= sub_v['label_bg'] %>"><%= sub_v['label'] %></small>

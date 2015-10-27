@@ -70,8 +70,8 @@ $(function() {
     /*var getA = 'a[data-remote][data-method!="put"][data-method!="post"][data-method!="delete"]'
         , getForm = 'form[data-remote][method="get"]'; */
 
-    var getA = 'body a[data-remote]';
-    var getForm = 'body form[data-remote][method="post"]';
+    var getA = 'body a.push_state';
+    /* var getForm = 'body form[data-remote][method="post"]'; */
 
     function getState(el) {
         // insert your own code here to extract a relevant state object from an <a> or <form> tag
@@ -86,11 +86,12 @@ $(function() {
         pushPageState(getState(this), "Loading...", this.href);
         window.title = "Loading...";
     });
-
+    /*
     $(document).on('ajax:beforeSend', getForm, function(xhr) {
         pushPageState(getState(this), "Loading...", this.action);
         window.title = "Loading...";
     });
+    */
 
     /*
     $(getA).on('ajax:beforeSend', function(xhr) {
@@ -111,10 +112,12 @@ $(function() {
         replacePageState(getState(this), window.title, location.href);
     });
 
+    /*
     $(document).on('ajax:success', getForm, function(xhr) {
         $('body').attr('data-state-href', location.href);
         replacePageState(getState(this), window.title, location.href);
     });
+    */
 
 
     /*

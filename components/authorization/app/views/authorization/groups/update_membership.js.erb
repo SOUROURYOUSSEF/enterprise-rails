@@ -1,12 +1,9 @@
 toastr.success('Group membership is updated successfully');
 /* manually push the URL to previous state. This will go one step back in history and make an Ajax call to restore the groups index page */
-history.go(-2);
-
-/*
-$('#main_content').html('<#= escape_javascript(render 'index') %>');
-$('#breadcrumb').html('<#= escape_javascript(render "authorization/shared/single_breadcrumb", breadcrumb_key: :groups, object: @groups ) %>');
-$('#breadcrumb').html('<#= escape_javascript(render "authorization/shared/breadcrumb" ) %>');
-<#= render 'refresh_table', groups: @groups %>
-*/
+$('#main_content').html('<%= escape_javascript(render 'index') %>');
+$('#breadcrumb').html('<%= escape_javascript(render "authorization/shared/single_breadcrumb", breadcrumb_key: :groups, object: @groups ) %>');
+$('#breadcrumb').html('<%= escape_javascript(render "authorization/shared/breadcrumb" ) %>');
+<%= render 'refresh_table', groups: @groups %>
+history.go(-1);
 
 
