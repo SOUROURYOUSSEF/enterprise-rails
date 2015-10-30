@@ -110,6 +110,7 @@ Rails.application.routes.draw do
   mount Persistence::Engine, at: '/'
   mount Authentication::Engine, at: '/'
   mount Authorization::Engine, at: '/'
+  mount Api::Engine, at: '/api'
   mount WebStyle::Engine, at: '/'
   mount SampleData::Engine, at: '/'
   # The priority is based upon order of creation: first created -> highest priority.

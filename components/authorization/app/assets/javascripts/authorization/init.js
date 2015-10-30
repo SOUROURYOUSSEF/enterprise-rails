@@ -71,6 +71,7 @@ $(function() {
         , getForm = 'form[data-remote][method="get"]'; */
 
     var getA = 'body a.push_state';
+    var getP = 'body li.paginate_button a';
     /* var getForm = 'body form[data-remote][method="post"]'; */
 
     function getState(el) {
@@ -83,6 +84,10 @@ $(function() {
 
     /* use .on to bind event to all current and future remote links */
     $(document).on('ajax:beforeSend', getA, function(xhr) {
+        pushPageState(getState(this), "Loading...", this.href);
+        window.title = "Loading...";
+    });
+    $(document).on('ajax:beforeSend', getP, function(xhr) {
         pushPageState(getState(this), "Loading...", this.href);
         window.title = "Loading...";
     });
@@ -111,7 +116,10 @@ $(function() {
         $('body').attr('data-state-href', location.href);
         replacePageState(getState(this), window.title, location.href);
     });
-
+    $(document).on('ajax:complete', getP, function(xhr) {
+        $('body').attr('data-state-href', location.href);
+        replacePageState(getState(this), window.title, location.href);
+    });
     /*
     $(document).on('ajax:success', getForm, function(xhr) {
         $('body').attr('data-state-href', location.href);

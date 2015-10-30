@@ -123,6 +123,22 @@
     <orderEntry type="jdk" jdkName="RVM: jruby-1.7.22" jdkType="JRUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
+      <library name="api (v0.0.1, /Users/prakashteli/workspaces/enterprise-rails/components/api) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/components/api/app" />
+          <root url="file://$MODULE_DIR$/components/api/bin" />
+          <root url="file://$MODULE_DIR$/components/api/lib" />
+          <root url="file://$MODULE_DIR$/components/api/config" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/components/api/app" />
+          <root url="file://$MODULE_DIR$/components/api/bin" />
+          <root url="file://$MODULE_DIR$/components/api/lib" />
+          <root url="file://$MODULE_DIR$/components/api/config" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="authentication (v0.0.1, /Users/prakashteli/workspaces/enterprise-rails/components/authentication) [path][gem]">
         <CLASSES>
           <root url="file://$MODULE_DIR$/components/authentication/db" />
@@ -297,6 +313,7 @@
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v1.2.2, RVM: jruby-1.7.22) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo-data (v1.2015.7, RVM: jruby-1.7.22) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="uglifier (v2.7.2, RVM: jruby-1.7.22) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="wannabe_bool (v0.1.1, RVM: jruby-1.7.22) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="warden (v1.2.3, RVM: jruby-1.7.22) [gem]" level="application" />
   </component>
   <component name="RModuleSettingsStorage">

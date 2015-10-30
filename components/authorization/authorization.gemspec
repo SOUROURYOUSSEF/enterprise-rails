@@ -26,6 +26,9 @@ Gem::Specification.new do |s|
   s.add_dependency 'jbuilder', '2.3.2'
   s.add_dependency 'responders', '2.1.0'
   s.add_dependency 'gretel', '3.0.8'
+  s.add_dependency 'active_model_serializers'
+
+
 
   s.add_development_dependency 'rspec-rails', '3.2.1'
   s.add_development_dependency 'factory_girl_rails', '4.4.1'

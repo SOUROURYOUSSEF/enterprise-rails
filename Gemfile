@@ -4,6 +4,7 @@ path 'components' do
    gem 'persistence'
    gem 'authentication'
    gem 'authorization'
+   gem 'api'
    gem 'web_style'
    gem 'sample_data'
  end
