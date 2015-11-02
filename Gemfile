@@ -61,8 +61,8 @@ platform :ruby do
 
 end
 
-gem 'sunspot_rails'
-gem 'sunspot_solr', :group => :development
+# gem 'sunspot_rails'
+# gem 'sunspot_solr', :group => :development
 
 # Use logging gem as a replacement of rails default logger
 # See https://github.com/mcmire/logging-rails

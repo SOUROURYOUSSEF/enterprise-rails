@@ -1,739 +1,385 @@
-Nov 01, 2015 9:44:06 AM org.apache.solr.servlet.SolrDispatchFilter init
+Nov 02, 2015 4:36:10 PM org.apache.solr.servlet.SolrDispatchFilter init
 INFO: SolrDispatchFilter.init()
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.SolrResourceLoader locateSolrHome
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
 INFO: JNDI not configured for solr (NoInitialContextEx)
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.SolrResourceLoader locateSolrHome
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
 INFO: using system property solr.solr.home: /Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.CoreContainer$Initializer initialize
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.CoreContainer$Initializer initialize
 INFO: looking for solr.xml: /Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/solr.xml
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.CoreContainer <init>
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.CoreContainer <init>
 INFO: New CoreContainer 306123060
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.CoreContainer load
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.CoreContainer load
 INFO: Loading CoreContainer using Solr Home: '/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/'
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.SolrResourceLoader <init>
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.SolrResourceLoader <init>
 INFO: new SolrResourceLoader for directory: '/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/'
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+Nov 02, 2015 4:36:10 PM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
 INFO: Setting socketTimeout to: 0
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+Nov 02, 2015 4:36:10 PM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
 INFO: Setting urlScheme to: http://
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+Nov 02, 2015 4:36:10 PM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
 INFO: Setting connTimeout to: 0
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+Nov 02, 2015 4:36:10 PM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
 INFO: Setting maxConnectionsPerHost to: 20
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+Nov 02, 2015 4:36:10 PM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
 INFO: Setting corePoolSize to: 0
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+Nov 02, 2015 4:36:10 PM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
 INFO: Setting maximumPoolSize to: 2147483647
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+Nov 02, 2015 4:36:10 PM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
 INFO: Setting maxThreadIdleTime to: 5
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+Nov 02, 2015 4:36:10 PM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
 INFO: Setting sizeOfQueue to: -1
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+Nov 02, 2015 4:36:10 PM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
 INFO: Setting fairnessPolicy to: false
-Nov 01, 2015 9:44:06 AM org.apache.solr.client.solrj.impl.HttpClientUtil createClient
+Nov 02, 2015 4:36:10 PM org.apache.solr.client.solrj.impl.HttpClientUtil createClient
 INFO: Creating new http client, config:maxConnectionsPerHost=20&maxConnections=10000&socketTimeout=0&connTimeout=0&retry=false
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.CoreContainer load
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.CoreContainer load
 INFO: Registering Log Listener
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.CoreContainer create
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.CoreContainer create
 INFO: Creating SolrCore 'default' using instanceDir: /Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/.
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.CoreContainer create
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.CoreContainer create
 INFO: Creating SolrCore 'development' using instanceDir: /Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/.
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.SolrResourceLoader <init>
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.SolrResourceLoader <init>
 INFO: new SolrResourceLoader for directory: '/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/./'
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.SolrResourceLoader <init>
-INFO: new SolrResourceLoader for directory: '/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/./'
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.CoreContainer create
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.CoreContainer create
 INFO: Creating SolrCore 'test' using instanceDir: /Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/.
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.SolrResourceLoader <init>
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.SolrResourceLoader <init>
 INFO: new SolrResourceLoader for directory: '/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/./'
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.SolrConfig <init>
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.SolrResourceLoader <init>
+INFO: new SolrResourceLoader for directory: '/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/./'
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.SolrConfig <init>
 INFO: Using Lucene MatchVersion: LUCENE_41
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.SolrConfig <init>
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.SolrConfig <init>
 INFO: Using Lucene MatchVersion: LUCENE_41
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.SolrConfig <init>
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.SolrConfig <init>
 INFO: Using Lucene MatchVersion: LUCENE_41
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.SolrConfig <init>
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.SolrConfig <init>
 INFO: Loaded SolrConfig: solrconfig.xml
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.SolrConfig <init>
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.SolrConfig <init>
 INFO: Loaded SolrConfig: solrconfig.xml
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.SolrConfig <init>
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.SolrConfig <init>
 INFO: Loaded SolrConfig: solrconfig.xml
-Nov 01, 2015 9:44:06 AM org.apache.solr.schema.IndexSchema readSchema
+Nov 02, 2015 4:36:10 PM org.apache.solr.schema.IndexSchema readSchema
 INFO: Reading Solr Schema
-Nov 01, 2015 9:44:06 AM org.apache.solr.schema.IndexSchema readSchema
+Nov 02, 2015 4:36:10 PM org.apache.solr.schema.IndexSchema readSchema
 INFO: Reading Solr Schema
-Nov 01, 2015 9:44:06 AM org.apache.solr.schema.IndexSchema readSchema
+Nov 02, 2015 4:36:10 PM org.apache.solr.schema.IndexSchema readSchema
 INFO: Reading Solr Schema
-Nov 01, 2015 9:44:06 AM org.apache.solr.schema.IndexSchema readSchema
+Nov 02, 2015 4:36:10 PM org.apache.solr.schema.IndexSchema readSchema
 INFO: Schema name=sunspot
-Nov 01, 2015 9:44:06 AM org.apache.solr.schema.IndexSchema readSchema
+Nov 02, 2015 4:36:10 PM org.apache.solr.schema.IndexSchema readSchema
 INFO: Schema name=sunspot
-Nov 01, 2015 9:44:06 AM org.apache.solr.schema.IndexSchema readSchema
+Nov 02, 2015 4:36:10 PM org.apache.solr.schema.IndexSchema readSchema
 INFO: Schema name=sunspot
-Nov 01, 2015 9:44:06 AM org.apache.solr.schema.IndexSchema readSchema
+Nov 02, 2015 4:36:10 PM org.apache.solr.schema.IndexSchema readSchema
 INFO: default search field in schema is text
-Nov 01, 2015 9:44:06 AM org.apache.solr.schema.IndexSchema readSchema
+Nov 02, 2015 4:36:10 PM org.apache.solr.schema.IndexSchema readSchema
 INFO: default search field in schema is text
-Nov 01, 2015 9:44:06 AM org.apache.solr.schema.IndexSchema readSchema
-INFO: query parser default operator is AND
-Nov 01, 2015 9:44:06 AM org.apache.solr.schema.IndexSchema readSchema
-INFO: query parser default operator is AND
-Nov 01, 2015 9:44:06 AM org.apache.solr.schema.IndexSchema readSchema
+Nov 02, 2015 4:36:10 PM org.apache.solr.schema.IndexSchema readSchema
 INFO: default search field in schema is text
-Nov 01, 2015 9:44:06 AM org.apache.solr.schema.IndexSchema readSchema
-INFO: unique key field: id
-Nov 01, 2015 9:44:06 AM org.apache.solr.schema.IndexSchema readSchema
-INFO: unique key field: id
-Nov 01, 2015 9:44:06 AM org.apache.solr.schema.IndexSchema readSchema
+Nov 02, 2015 4:36:10 PM org.apache.solr.schema.IndexSchema readSchema
 INFO: query parser default operator is AND
-Nov 01, 2015 9:44:06 AM org.apache.solr.schema.IndexSchema readSchema
+Nov 02, 2015 4:36:10 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: query parser default operator is AND
+Nov 02, 2015 4:36:10 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: query parser default operator is AND
+Nov 02, 2015 4:36:10 PM org.apache.solr.schema.IndexSchema readSchema
 INFO: unique key field: id
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.SolrCore <init>
-INFO: [development] Opening new SolrCore at /Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/./, dataDir=/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/./development/data/
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.SolrCore <init>
-INFO: [test] Opening new SolrCore at /Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/./, dataDir=/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/./test/data/
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.SolrCore <init>
+Nov 02, 2015 4:36:10 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: unique key field: id
+Nov 02, 2015 4:36:10 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: unique key field: id
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.SolrCore <init>
 INFO: [default] Opening new SolrCore at /Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/./, dataDir=/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/./default/data/
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.SolrCore <init>
-INFO: JMX monitoring not detected for core: test
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.SolrCore <init>
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.SolrCore <init>
+INFO: [development] Opening new SolrCore at /Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/./, dataDir=/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/./development/data/
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.SolrCore <init>
+INFO: [test] Opening new SolrCore at /Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/./, dataDir=/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/./test/data/
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.SolrCore <init>
 INFO: JMX monitoring not detected for core: development
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.SolrCore <init>
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.SolrCore <init>
 INFO: JMX monitoring not detected for core: default
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.SolrCore initDirectoryFactory
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.SolrCore <init>
+INFO: JMX monitoring not detected for core: test
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.SolrCore initDirectoryFactory
 INFO: solr.NRTCachingDirectoryFactory
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.SolrCore initDirectoryFactory
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.SolrCore initDirectoryFactory
 INFO: solr.NRTCachingDirectoryFactory
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.SolrCore initDirectoryFactory
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.SolrCore initDirectoryFactory
 INFO: solr.NRTCachingDirectoryFactory
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.CachingDirectoryFactory get
-INFO: return new directory for /Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/./development/data forceNew: false
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.CachingDirectoryFactory get
-INFO: return new directory for /Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/./default/data forceNew: false
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.CachingDirectoryFactory get
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.CachingDirectoryFactory get
 INFO: return new directory for /Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/./test/data forceNew: false
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.SolrCore getNewIndexDir
-INFO: New index directory detected: old=null new=/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/./default/data/index/
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.SolrCore getNewIndexDir
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.CachingDirectoryFactory get
+INFO: return new directory for /Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/./development/data forceNew: false
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.CachingDirectoryFactory get
+INFO: return new directory for /Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/./default/data forceNew: false
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.SolrCore getNewIndexDir
 INFO: New index directory detected: old=null new=/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/./development/data/index/
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.SolrCore getNewIndexDir
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.SolrCore getNewIndexDir
 INFO: New index directory detected: old=null new=/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/./test/data/index/
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.CachingDirectoryFactory get
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.SolrCore getNewIndexDir
+INFO: New index directory detected: old=null new=/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/./default/data/index/
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.CachingDirectoryFactory get
 INFO: return new directory for /Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/./development/data/index forceNew: false
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.CachingDirectoryFactory get
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.CachingDirectoryFactory get
 INFO: return new directory for /Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/./default/data/index forceNew: false
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.CachingDirectoryFactory get
+Nov 02, 2015 4:36:10 PM org.apache.solr.core.CachingDirectoryFactory get
 INFO: return new directory for /Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/./test/data/index forceNew: false
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /select: solr.SearchHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /query: solr.SearchHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
-INFO: created /get: solr.RealTimeGetHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /select: solr.SearchHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /select: solr.SearchHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /query: solr.SearchHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /query: solr.SearchHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /get: solr.RealTimeGetHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /get: solr.RealTimeGetHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /get: solr.RealTimeGetHandler
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /update: solr.UpdateRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /update: solr.UpdateRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /update: solr.UpdateRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /update/json: solr.JsonUpdateRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /update/json: solr.JsonUpdateRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /update/json: solr.JsonUpdateRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /update/csv: solr.CSVRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: adding lazy requestHandler: solr.extraction.ExtractingRequestHandler
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /update/extract: solr.extraction.ExtractingRequestHandler
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /update/csv: solr.CSVRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
-INFO: adding lazy requestHandler: solr.extraction.ExtractingRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: adding lazy requestHandler: solr.FieldAnalysisRequestHandler
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /update/csv: solr.CSVRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /analysis/field: solr.FieldAnalysisRequestHandler
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: adding lazy requestHandler: solr.extraction.ExtractingRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: adding lazy requestHandler: solr.DocumentAnalysisRequestHandler
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: adding lazy requestHandler: solr.extraction.ExtractingRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
-INFO: created /update/extract: solr.extraction.ExtractingRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
-INFO: created /update/extract: solr.extraction.ExtractingRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
-INFO: adding lazy requestHandler: solr.FieldAnalysisRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
-INFO: created /update/extract: solr.extraction.ExtractingRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
-INFO: created /analysis/field: solr.FieldAnalysisRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
-INFO: adding lazy requestHandler: solr.FieldAnalysisRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
-INFO: adding lazy requestHandler: solr.DocumentAnalysisRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
-INFO: adding lazy requestHandler: solr.FieldAnalysisRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /analysis/document: solr.DocumentAnalysisRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /update/extract: solr.extraction.ExtractingRequestHandler
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /update/extract: solr.extraction.ExtractingRequestHandler
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: adding lazy requestHandler: solr.FieldAnalysisRequestHandler
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: adding lazy requestHandler: solr.FieldAnalysisRequestHandler
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /analysis/field: solr.FieldAnalysisRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /analysis/field: solr.FieldAnalysisRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: adding lazy requestHandler: solr.DocumentAnalysisRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: adding lazy requestHandler: solr.DocumentAnalysisRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /analysis/document: solr.DocumentAnalysisRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /analysis/document: solr.DocumentAnalysisRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /admin/ping: solr.PingRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /admin/ping: solr.PingRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
-INFO: created /debug/dump: solr.DumpRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
-INFO: created /debug/dump: solr.DumpRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /admin/ping: solr.PingRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /debug/dump: solr.DumpRequestHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /debug/dump: solr.DumpRequestHandler
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /debug/dump: solr.DumpRequestHandler
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /replication: solr.ReplicationHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /replication: solr.ReplicationHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /replication: solr.ReplicationHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /mlt: solr.MoreLikeThisHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /mlt: solr.MoreLikeThisHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /mlt: solr.MoreLikeThisHandler
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /admin/: solr.admin.AdminHandlers
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /admin/: solr.admin.AdminHandlers
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /admin/: solr.admin.AdminHandlers
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.loader.XMLLoader init
+Nov 02, 2015 4:36:11 PM org.apache.solr.handler.loader.XMLLoader init
 INFO: xsltCacheLifetimeSeconds=60
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.loader.XMLLoader init
+Nov 02, 2015 4:36:11 PM org.apache.solr.handler.loader.XMLLoader init
 INFO: xsltCacheLifetimeSeconds=60
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.loader.XMLLoader init
+Nov 02, 2015 4:36:11 PM org.apache.solr.handler.loader.XMLLoader init
 INFO: xsltCacheLifetimeSeconds=60
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.loader.XMLLoader init
+Nov 02, 2015 4:36:11 PM org.apache.solr.handler.loader.XMLLoader init
 INFO: xsltCacheLifetimeSeconds=60
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.loader.XMLLoader init
+Nov 02, 2015 4:36:11 PM org.apache.solr.handler.loader.XMLLoader init
 INFO: xsltCacheLifetimeSeconds=60
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.loader.XMLLoader init
+Nov 02, 2015 4:36:11 PM org.apache.solr.handler.loader.XMLLoader init
 INFO: xsltCacheLifetimeSeconds=60
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.loader.XMLLoader init
+Nov 02, 2015 4:36:11 PM org.apache.solr.handler.loader.XMLLoader init
 INFO: xsltCacheLifetimeSeconds=60
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.loader.XMLLoader init
+Nov 02, 2015 4:36:11 PM org.apache.solr.handler.loader.XMLLoader init
 INFO: xsltCacheLifetimeSeconds=60
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.loader.XMLLoader init
+Nov 02, 2015 4:36:11 PM org.apache.solr.handler.loader.XMLLoader init
 INFO: xsltCacheLifetimeSeconds=60
-Nov 01, 2015 9:44:06 AM org.apache.solr.search.SolrIndexSearcher <init>
-INFO: Opening Searcher@5e704b2 main
-Nov 01, 2015 9:44:06 AM org.apache.solr.search.SolrIndexSearcher <init>
-INFO: Opening Searcher@7fefe6e2 main
-Nov 01, 2015 9:44:06 AM org.apache.solr.search.SolrIndexSearcher <init>
-INFO: Opening Searcher@499f8871 main
-Nov 01, 2015 9:44:06 AM org.apache.solr.update.CommitTracker <init>
+Nov 02, 2015 4:36:11 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@2ca84d7 main
+Nov 02, 2015 4:36:11 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@460314f9 main
+Nov 02, 2015 4:36:11 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@f0e065a main
+Nov 02, 2015 4:36:11 PM org.apache.solr.update.CommitTracker <init>
 INFO: Hard AutoCommit: if uncommited for 15000ms; 
-Nov 01, 2015 9:44:06 AM org.apache.solr.update.CommitTracker <init>
+Nov 02, 2015 4:36:11 PM org.apache.solr.update.CommitTracker <init>
 INFO: Hard AutoCommit: if uncommited for 15000ms; 
-Nov 01, 2015 9:44:06 AM org.apache.solr.update.CommitTracker <init>
+Nov 02, 2015 4:36:11 PM org.apache.solr.update.CommitTracker <init>
 INFO: Hard AutoCommit: if uncommited for 15000ms; 
-Nov 01, 2015 9:44:06 AM org.apache.solr.update.CommitTracker <init>
+Nov 02, 2015 4:36:11 PM org.apache.solr.update.CommitTracker <init>
 INFO: Soft AutoCommit: if uncommited for 5000ms; 
-Nov 01, 2015 9:44:06 AM org.apache.solr.update.CommitTracker <init>
+Nov 02, 2015 4:36:11 PM org.apache.solr.update.CommitTracker <init>
 INFO: Soft AutoCommit: if uncommited for 5000ms; 
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.component.SpellCheckComponent inform
+Nov 02, 2015 4:36:11 PM org.apache.solr.handler.component.SpellCheckComponent inform
 INFO: Initializing spell checkers
-Nov 01, 2015 9:44:06 AM org.apache.solr.update.CommitTracker <init>
+Nov 02, 2015 4:36:11 PM org.apache.solr.update.CommitTracker <init>
 INFO: Soft AutoCommit: if uncommited for 5000ms; 
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.component.SpellCheckComponent inform
+Nov 02, 2015 4:36:11 PM org.apache.solr.handler.component.SpellCheckComponent inform
 INFO: Initializing spell checkers
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.component.SpellCheckComponent inform
+Nov 02, 2015 4:36:11 PM org.apache.solr.handler.component.SpellCheckComponent inform
 INFO: Initializing spell checkers
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.component.SpellCheckComponent inform
+Nov 02, 2015 4:36:11 PM org.apache.solr.handler.component.SpellCheckComponent inform
 INFO: Registering newSearcher listener for spellchecker: default
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.component.SpellCheckComponent inform
+Nov 02, 2015 4:36:11 PM org.apache.solr.handler.component.SpellCheckComponent inform
 INFO: Registering newSearcher listener for spellchecker: default
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.component.SpellCheckComponent inform
+Nov 02, 2015 4:36:11 PM org.apache.solr.handler.component.SpellCheckComponent inform
 INFO: Registering newSearcher listener for spellchecker: default
-Nov 01, 2015 9:44:06 AM org.apache.solr.spelling.DirectSolrSpellChecker init
+Nov 02, 2015 4:36:11 PM org.apache.solr.spelling.DirectSolrSpellChecker init
 INFO: init: {name=example,field=title_text,buildOnCommit=true,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
-Nov 01, 2015 9:44:06 AM org.apache.solr.spelling.DirectSolrSpellChecker init
+Nov 02, 2015 4:36:11 PM org.apache.solr.spelling.DirectSolrSpellChecker init
 INFO: init: {name=example,field=title_text,buildOnCommit=true,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.component.SpellCheckComponent inform
-INFO: Registering newSearcher listener for spellchecker: example
-Nov 01, 2015 9:44:06 AM org.apache.solr.spelling.DirectSolrSpellChecker init
+Nov 02, 2015 4:36:11 PM org.apache.solr.spelling.DirectSolrSpellChecker init
 INFO: init: {name=example,field=title_text,buildOnCommit=true,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.component.SpellCheckComponent inform
+Nov 02, 2015 4:36:11 PM org.apache.solr.handler.component.SpellCheckComponent inform
 INFO: Registering newSearcher listener for spellchecker: example
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.component.SpellCheckComponent inform
+Nov 02, 2015 4:36:11 PM org.apache.solr.handler.component.SpellCheckComponent inform
 INFO: Registering newSearcher listener for spellchecker: example
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.component.SpellCheckComponent inform
+Nov 02, 2015 4:36:11 PM org.apache.solr.handler.component.SpellCheckComponent inform
+INFO: Registering newSearcher listener for spellchecker: example
+Nov 02, 2015 4:36:11 PM org.apache.solr.handler.component.SpellCheckComponent inform
 INFO: No queryConverter defined, using default converter
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.component.SpellCheckComponent inform
+Nov 02, 2015 4:36:11 PM org.apache.solr.handler.component.SpellCheckComponent inform
 INFO: No queryConverter defined, using default converter
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.component.SpellCheckComponent inform
+Nov 02, 2015 4:36:11 PM org.apache.solr.handler.component.SpellCheckComponent inform
 INFO: No queryConverter defined, using default converter
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.ReplicationHandler inform
+Nov 02, 2015 4:36:11 PM org.apache.solr.handler.ReplicationHandler inform
 INFO: Commits will be reserved for  10000
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.ReplicationHandler inform
+Nov 02, 2015 4:36:11 PM org.apache.solr.handler.ReplicationHandler inform
 INFO: Commits will be reserved for  10000
-Nov 01, 2015 9:44:06 AM org.apache.solr.handler.ReplicationHandler inform
+Nov 02, 2015 4:36:11 PM org.apache.solr.handler.ReplicationHandler inform
 INFO: Commits will be reserved for  10000
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.SolrCore registerSearcher
-INFO: [development] Registered new searcher Searcher@7fefe6e2 main{StandardDirectoryReader(segments_1:1)}
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.CoreContainer registerCore
-INFO: registering core: default
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.CoreContainer registerCore
-INFO: registering core: development
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.CoreContainer registerCore
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.CoreContainer registerCore
 INFO: registering core: test
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.SolrCore registerSearcher
-INFO: [test] Registered new searcher Searcher@499f8871 main{StandardDirectoryReader(segments_1:1)}
-Nov 01, 2015 9:44:06 AM org.apache.solr.core.SolrCore registerSearcher
-INFO: [default] Registered new searcher Searcher@5e704b2 main{StandardDirectoryReader(segments_1:1)}
-Nov 01, 2015 9:44:06 AM org.apache.solr.servlet.SolrDispatchFilter init
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [development] Registered new searcher Searcher@460314f9 main{StandardDirectoryReader(segments_1:1)}
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [test] Registered new searcher Searcher@f0e065a main{StandardDirectoryReader(segments_1:1)}
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [default] Registered new searcher Searcher@2ca84d7 main{StandardDirectoryReader(segments_1:1)}
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.CoreContainer registerCore
+INFO: registering core: default
+Nov 02, 2015 4:36:11 PM org.apache.solr.core.CoreContainer registerCore
+INFO: registering core: development
+Nov 02, 2015 4:36:11 PM org.apache.solr.servlet.SolrDispatchFilter init
 INFO: user.dir=/Users/prakashteli/.rvm/gems/ruby-2.2.1/gems/sunspot_solr-2.2.0/solr
-Nov 01, 2015 9:44:06 AM org.apache.solr.servlet.SolrDispatchFilter init
+Nov 02, 2015 4:36:11 PM org.apache.solr.servlet.SolrDispatchFilter init
 INFO: SolrDispatchFilter.init() done
-Nov 01, 2015 9:44:22 AM org.apache.solr.servlet.SolrDispatchFilter handleAdminRequest
-INFO: [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json} status=0 QTime=3 
-Nov 01, 2015 9:44:22 AM org.apache.solr.core.SolrCore execute
-INFO: [default] webapp=/solr path=/admin/system params={wt=json} status=0 QTime=22 
-Nov 01, 2015 9:45:04 AM org.apache.solr.core.SolrDeletionPolicy onInit
+Nov 02, 2015 4:36:51 PM org.apache.solr.servlet.SolrDispatchFilter handleAdminRequest
+INFO: [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json} status=0 QTime=4 
+Nov 02, 2015 4:36:51 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/admin/system params={wt=json} status=0 QTime=20 
+Nov 02, 2015 4:36:59 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/admin/file/ params={file=admin-extra.menu-bottom.html} status=404 QTime=2 
+Nov 02, 2015 4:36:59 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/admin/file/ params={file=admin-extra.menu-top.html} status=404 QTime=2 
+Nov 02, 2015 4:36:59 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/admin/luke params={show=index&numTerms=0&wt=json} status=0 QTime=1 
+Nov 02, 2015 4:36:59 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/replication params={wt=json&command=details} status=0 QTime=2 
+Nov 02, 2015 4:36:59 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/admin/file/ params={file=admin-extra.html} status=0 QTime=1 
+Nov 02, 2015 4:36:59 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/admin/ping params={action=status&wt=json} status=503 QTime=1 
+Nov 02, 2015 4:37:22 PM org.apache.solr.core.SolrDeletionPolicy onInit
 INFO: SolrDeletionPolicy.onInit: commits:num=1
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_1,generation=1,filenames=[segments_1]
-Nov 01, 2015 9:45:04 AM org.apache.solr.core.SolrDeletionPolicy updateCommits
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/development/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@750cc46f; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_1,generation=1,filenames=[segments_1]
+Nov 02, 2015 4:37:22 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
 INFO: newest commit = 1[segments_1]
-Nov 01, 2015 9:45:04 AM org.apache.solr.search.SolrIndexSearcher <init>
-INFO: Opening Searcher@5c52dd11 realtime
-Nov 01, 2015 9:45:04 AM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {deleteByQuery=type:User (-1516648901330862080)} 0 59
-Nov 01, 2015 9:45:09 AM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=true,prepareCommit=false}
-Nov 01, 2015 9:45:09 AM org.apache.solr.search.SolrIndexSearcher <init>
-INFO: Opening Searcher@74492cd9 main
-Nov 01, 2015 9:45:09 AM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: end_commit_flush
-Nov 01, 2015 9:45:09 AM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
-INFO: Building spell index for spell checker: default
-Nov 01, 2015 9:45:09 AM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
-INFO: Building spell index for spell checker: example
-Nov 01, 2015 9:45:09 AM org.apache.solr.core.SolrCore registerSearcher
-INFO: [default] Registered new searcher Searcher@74492cd9 main{StandardDirectoryReader(segments_1:1:nrt)}
-Nov 01, 2015 9:45:19 AM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: start commit{,optimize=false,openSearcher=false,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
-Nov 01, 2015 9:45:19 AM org.apache.solr.core.SolrDeletionPolicy onCommit
-INFO: SolrDeletionPolicy.onCommit: commits:num=2
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_1,generation=1,filenames=[segments_1]
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_2,generation=2,filenames=[segments_2]
-Nov 01, 2015 9:45:19 AM org.apache.solr.core.SolrDeletionPolicy updateCommits
-INFO: newest commit = 2[segments_2]
-Nov 01, 2015 9:45:19 AM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: end_commit_flush
-Nov 01, 2015 10:57:17 AM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {deleteByQuery=type:User (-1516653445420941312)} 0 1
-Nov 01, 2015 10:57:17 AM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {add=[User 1 (1516653445582422016), User 2 (1516653445602344960), User 3 (1516653445603393536), User 4 (1516653445604442112), User 5 (1516653445605490688), User 6 (1516653445606539264), User 7 (1516653445607587840), User 8 (1516653445608636416), User 9 (1516653445609684992), User 10 (1516653445610733568), ... (50 adds)]} 0 57
-Nov 01, 2015 10:57:18 AM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {add=[User 54 (1516653445718736896), User 55 (1516653445719785472), User 56 (1516653445720834048), User 57 (1516653445721882624), User 58 (1516653445721882625), User 59 (1516653445722931200), User 60 (1516653445723979776), User 61 (1516653445723979777), User 62 (1516653445725028352), User 63 (1516653445726076928), ... (45 adds)]} 0 21
-Nov 01, 2015 10:57:18 AM org.apache.solr.update.DirectUpdateHandler2 commit
+Nov 02, 2015 4:37:22 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@6da7f664 realtime
+Nov 02, 2015 4:37:22 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [development] webapp=/solr path=/update params={wt=ruby} {deleteByQuery=type:User (-1516765437825646592)} 0 57
+Nov 02, 2015 4:37:22 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [development] webapp=/solr path=/update params={wt=ruby} {add=[User 1 (1516765437948329984), User 2 (1516765437967204352), User 3 (1516765437968252928), User 4 (1516765437970350080), User 5 (1516765437971398656), User 6 (1516765437972447232), User 7 (1516765437973495808), User 8 (1516765437974544384), User 9 (1516765437975592960), User 10 (1516765437976641536), ... (50 adds)]} 0 57
+Nov 02, 2015 4:37:22 PM org.apache.solr.update.DirectUpdateHandler2 commit
 INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
-Nov 01, 2015 10:57:18 AM org.apache.solr.core.SolrDeletionPolicy onCommit
+Nov 02, 2015 4:37:22 PM org.apache.solr.core.SolrDeletionPolicy onCommit
 INFO: SolrDeletionPolicy.onCommit: commits:num=2
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_2,generation=2,filenames=[segments_2]
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_3,generation=3,filenames=[_0_Lucene41_0.tip, _0_Lucene41_0.doc, _0.si, _0_Lucene41_0.tim, _0.nvd, _0.fdx, _0.fdt, _0_Lucene41_0.pos, segments_3, _0.nvm, _0.fnm]
-Nov 01, 2015 10:57:18 AM org.apache.solr.core.SolrDeletionPolicy updateCommits
-INFO: newest commit = 3[_0_Lucene41_0.tip, _0_Lucene41_0.doc, _0.si, _0_Lucene41_0.tim, _0.nvd, _0.fdx, _0.fdt, _0_Lucene41_0.pos, segments_3, _0.nvm, _0.fnm]
-Nov 01, 2015 10:57:18 AM org.apache.solr.search.SolrIndexSearcher <init>
-INFO: Opening Searcher@5a68c859 main
-Nov 01, 2015 10:57:18 AM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
-INFO: Building spell index for spell checker: default
-Nov 01, 2015 10:57:18 AM org.apache.solr.update.DirectUpdateHandler2 commit
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/development/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@750cc46f; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_1,generation=1,filenames=[segments_1]
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/development/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@750cc46f; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_2,generation=2,filenames=[_0_Lucene41_0.tip, _0_Lucene41_0.doc, _0.si, _0_Lucene41_0.tim, segments_2, _0.nvd, _0.fdx, _0.fdt, _0_Lucene41_0.pos, _0.nvm, _0.fnm]
+Nov 02, 2015 4:37:22 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 2[_0_Lucene41_0.tip, _0_Lucene41_0.doc, _0.si, _0_Lucene41_0.tim, segments_2, _0.nvd, _0.fdx, _0.fdt, _0_Lucene41_0.pos, _0.nvm, _0.fnm]
+Nov 02, 2015 4:37:22 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@49a0641c main
+Nov 02, 2015 4:37:22 PM org.apache.solr.update.DirectUpdateHandler2 commit
 INFO: end_commit_flush
-Nov 01, 2015 10:57:18 AM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
+Nov 02, 2015 4:37:22 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
+INFO: Building spell index for spell checker: default
+Nov 02, 2015 4:37:22 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
 INFO: Building spell index for spell checker: example
-Nov 01, 2015 10:57:18 AM org.apache.solr.core.SolrCore registerSearcher
-INFO: [default] Registered new searcher Searcher@5a68c859 main{StandardDirectoryReader(segments_3:3:nrt _0(4.2):C95)}
-Nov 01, 2015 10:57:18 AM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {commit=} 0 116
-Nov 01, 2015 11:42:58 AM org.apache.solr.search.SolrIndexSearcher <init>
-INFO: Opening Searcher@d05136 realtime
-Nov 01, 2015 11:42:58 AM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {deleteByQuery=type:User (-1516656318944903168)} 0 15
-Nov 01, 2015 11:42:58 AM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {add=[User 1 (1516656319077023744), User 2 (1516656319078072320), User 3 (1516656319079120896), User 4 (1516656319079120897), User 5 (1516656319079120898), User 6 (1516656319080169472), User 7 (1516656319080169473), User 8 (1516656319080169474), User 9 (1516656319080169475), User 10 (1516656319081218048), ... (50 adds)]} 0 16
-Nov 01, 2015 11:42:58 AM org.apache.solr.update.DirectUpdateHandler2 commit
+Nov 02, 2015 4:37:22 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [development] Registered new searcher Searcher@49a0641c main{StandardDirectoryReader(segments_2:3:nrt _0(4.2):C50)}
+Nov 02, 2015 4:37:22 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [development] webapp=/solr path=/update params={wt=ruby} {commit=} 0 102
+Nov 02, 2015 4:37:22 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [development] webapp=/solr path=/update params={wt=ruby} {add=[User 54 (1516765438207328256), User 55 (1516765438209425408), User 56 (1516765438209425409), User 57 (1516765438209425410), User 58 (1516765438210473984), User 59 (1516765438210473985), User 60 (1516765438210473986), User 61 (1516765438211522560), User 62 (1516765438211522561), User 63 (1516765438211522562), ... (45 adds)]} 0 17
+Nov 02, 2015 4:37:22 PM org.apache.solr.update.DirectUpdateHandler2 commit
 INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
-Nov 01, 2015 11:42:58 AM org.apache.solr.core.SolrDeletionPolicy onCommit
+Nov 02, 2015 4:37:22 PM org.apache.solr.core.SolrDeletionPolicy onCommit
 INFO: SolrDeletionPolicy.onCommit: commits:num=2
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_3,generation=3,filenames=[_0_Lucene41_0.tip, _0_Lucene41_0.doc, _0.si, _0_Lucene41_0.tim, _0.nvd, _0.fdx, _0.fdt, _0_Lucene41_0.pos, segments_3, _0.nvm, _0.fnm]
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_4,generation=4,filenames=[_1.si, _1.nvd, _1_Lucene41_0.tip, _1.fdx, _1_Lucene41_0.doc, _1_Lucene41_0.tim, _1.nvm, _1.fnm, segments_4, _1.fdt, _1_Lucene41_0.pos]
-Nov 01, 2015 11:42:58 AM org.apache.solr.core.SolrDeletionPolicy updateCommits
-INFO: newest commit = 4[_1.si, _1.nvd, _1_Lucene41_0.tip, _1.fdx, _1_Lucene41_0.doc, _1_Lucene41_0.tim, _1.nvm, _1.fnm, segments_4, _1.fdt, _1_Lucene41_0.pos]
-Nov 01, 2015 11:42:58 AM org.apache.solr.search.SolrIndexSearcher <init>
-INFO: Opening Searcher@78cdd25c main
-Nov 01, 2015 11:42:58 AM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/development/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@750cc46f; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_2,generation=2,filenames=[_0_Lucene41_0.tip, _0_Lucene41_0.doc, _0.si, _0_Lucene41_0.tim, segments_2, _0.nvd, _0.fdx, _0.fdt, _0_Lucene41_0.pos, _0.nvm, _0.fnm]
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/development/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@750cc46f; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_3,generation=3,filenames=[_0_Lucene41_0.tip, _0_Lucene41_0.doc, _0.si, _0_Lucene41_0.tim, _1.si, _1.nvd, _0.nvd, _0.fdx, _1.nvm, _1.fnm, _0.fdt, _0_Lucene41_0.pos, segments_3, _1_Lucene41_0.tip, _1.fdx, _1_Lucene41_0.doc, _1_Lucene41_0.tim, _0.nvm, _0.fnm, _1.fdt, _1_Lucene41_0.pos]
+Nov 02, 2015 4:37:22 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 3[_0_Lucene41_0.tip, _0_Lucene41_0.doc, _0.si, _0_Lucene41_0.tim, _1.si, _1.nvd, _0.nvd, _0.fdx, _1.nvm, _1.fnm, _0.fdt, _0_Lucene41_0.pos, segments_3, _1_Lucene41_0.tip, _1.fdx, _1_Lucene41_0.doc, _1_Lucene41_0.tim, _0.nvm, _0.fnm, _1.fdt, _1_Lucene41_0.pos]
+Nov 02, 2015 4:37:22 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@f880542 main
+Nov 02, 2015 4:37:22 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
 INFO: Building spell index for spell checker: default
-Nov 01, 2015 11:42:58 AM org.apache.solr.update.DirectUpdateHandler2 commit
+Nov 02, 2015 4:37:22 PM org.apache.solr.update.DirectUpdateHandler2 commit
 INFO: end_commit_flush
-Nov 01, 2015 11:42:58 AM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
+Nov 02, 2015 4:37:22 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
 INFO: Building spell index for spell checker: example
-Nov 01, 2015 11:42:58 AM org.apache.solr.core.SolrCore registerSearcher
-INFO: [default] Registered new searcher Searcher@78cdd25c main{StandardDirectoryReader(segments_4:7:nrt _1(4.2):C50)}
-Nov 01, 2015 11:42:58 AM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {commit=} 0 40
-Nov 01, 2015 11:42:58 AM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {add=[User 54 (1516656319233261568), User 55 (1516656319235358720), User 56 (1516656319236407296), User 57 (1516656319236407297), User 58 (1516656319237455872), User 59 (1516656319237455873), User 60 (1516656319237455874), User 61 (1516656319237455875), User 62 (1516656319237455876), User 63 (1516656319238504448), ... (45 adds)]} 0 14
-Nov 01, 2015 11:42:58 AM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
-Nov 01, 2015 11:42:58 AM org.apache.solr.core.SolrDeletionPolicy onCommit
-INFO: SolrDeletionPolicy.onCommit: commits:num=2
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_4,generation=4,filenames=[_1.si, _1.nvd, _1_Lucene41_0.tip, _1.fdx, _1_Lucene41_0.doc, _1_Lucene41_0.tim, _1.nvm, _1.fnm, segments_4, _1.fdt, _1_Lucene41_0.pos]
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_5,generation=5,filenames=[_1.si, _2.si, _1.nvd, _2_Lucene41_0.tip, _2.fdt, _2_Lucene41_0.doc, _2_Lucene41_0.tim, _1.nvm, _1.fnm, _2.fdx, _2_Lucene41_0.pos, segments_5, _2.nvd, _1_Lucene41_0.tip, _2.nvm, _2.fnm, _1.fdx, _1_Lucene41_0.doc, _1_Lucene41_0.tim, _1.fdt, _1_Lucene41_0.pos]
-Nov 01, 2015 11:42:58 AM org.apache.solr.core.SolrDeletionPolicy updateCommits
-INFO: newest commit = 5[_1.si, _2.si, _1.nvd, _2_Lucene41_0.tip, _2.fdt, _2_Lucene41_0.doc, _2_Lucene41_0.tim, _1.nvm, _1.fnm, _2.fdx, _2_Lucene41_0.pos, segments_5, _2.nvd, _1_Lucene41_0.tip, _2.nvm, _2.fnm, _1.fdx, _1_Lucene41_0.doc, _1_Lucene41_0.tim, _1.fdt, _1_Lucene41_0.pos]
-Nov 01, 2015 11:42:58 AM org.apache.solr.search.SolrIndexSearcher <init>
-INFO: Opening Searcher@7b0a3d44 main
-Nov 01, 2015 11:42:58 AM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
-INFO: Building spell index for spell checker: default
-Nov 01, 2015 11:42:58 AM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: end_commit_flush
-Nov 01, 2015 11:42:58 AM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
-INFO: Building spell index for spell checker: example
-Nov 01, 2015 11:42:58 AM org.apache.solr.core.SolrCore registerSearcher
-INFO: [default] Registered new searcher Searcher@7b0a3d44 main{StandardDirectoryReader(segments_5:9:nrt _1(4.2):C50 _2(4.2):C45)}
-Nov 01, 2015 11:42:58 AM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {commit=} 0 53
-Nov 01, 2015 11:43:42 AM org.apache.solr.search.SolrIndexSearcher <init>
-INFO: Opening Searcher@73ff2ea1 realtime
-Nov 01, 2015 11:43:42 AM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {deleteByQuery=type:User (-1516656365056032768)} 0 4
-Nov 01, 2015 11:43:42 AM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {add=[User 1 (1516656365176619008), User 2 (1516656365177667584), User 3 (1516656365177667585), User 4 (1516656365177667586), User 5 (1516656365177667587), User 6 (1516656365177667588), User 7 (1516656365178716160), User 8 (1516656365178716161), User 9 (1516656365178716162), User 10 (1516656365178716163), ... (50 adds)]} 0 10
-Nov 01, 2015 11:43:42 AM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
-Nov 01, 2015 11:43:42 AM org.apache.solr.core.SolrDeletionPolicy onCommit
-INFO: SolrDeletionPolicy.onCommit: commits:num=2
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_5,generation=5,filenames=[_1.si, _2.si, _1.nvd, _2_Lucene41_0.tip, _2.fdt, _2_Lucene41_0.doc, _2_Lucene41_0.tim, _1.nvm, _1.fnm, _2.fdx, _2_Lucene41_0.pos, segments_5, _2.nvd, _1_Lucene41_0.tip, _2.nvm, _2.fnm, _1.fdx, _1_Lucene41_0.doc, _1_Lucene41_0.tim, _1.fdt, _1_Lucene41_0.pos]
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_6,generation=6,filenames=[_3.fdx, _3_Lucene41_0.pos, _3.si, _3.nvd, _3_Lucene41_0.doc, _3_Lucene41_0.tim, _3_Lucene41_0.tip, _3.nvm, _3.fnm, segments_6, _3.fdt]
-Nov 01, 2015 11:43:42 AM org.apache.solr.core.SolrDeletionPolicy updateCommits
-INFO: newest commit = 6[_3.fdx, _3_Lucene41_0.pos, _3.si, _3.nvd, _3_Lucene41_0.doc, _3_Lucene41_0.tim, _3_Lucene41_0.tip, _3.nvm, _3.fnm, segments_6, _3.fdt]
-Nov 01, 2015 11:43:42 AM org.apache.solr.search.SolrIndexSearcher <init>
-INFO: Opening Searcher@636d1176 main
-Nov 01, 2015 11:43:42 AM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
-INFO: Building spell index for spell checker: default
-Nov 01, 2015 11:43:42 AM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: end_commit_flush
-Nov 01, 2015 11:43:42 AM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
-INFO: Building spell index for spell checker: example
-Nov 01, 2015 11:43:42 AM org.apache.solr.core.SolrCore registerSearcher
-INFO: [default] Registered new searcher Searcher@636d1176 main{StandardDirectoryReader(segments_6:13:nrt _3(4.2):C50)}
-Nov 01, 2015 11:43:42 AM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {commit=} 0 34
-Nov 01, 2015 11:43:42 AM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {add=[User 54 (1516656365308739584), User 55 (1516656365309788160), User 56 (1516656365309788161), User 57 (1516656365309788162), User 58 (1516656365309788163), User 59 (1516656365309788164), User 60 (1516656365310836736), User 61 (1516656365310836737), User 62 (1516656365310836738), User 63 (1516656365310836739), ... (45 adds)]} 0 7
-Nov 01, 2015 11:43:42 AM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
-Nov 01, 2015 11:43:42 AM org.apache.solr.core.SolrDeletionPolicy onCommit
-INFO: SolrDeletionPolicy.onCommit: commits:num=2
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_6,generation=6,filenames=[_3.fdx, _3_Lucene41_0.pos, _3.si, _3.nvd, _3_Lucene41_0.doc, _3_Lucene41_0.tim, _3_Lucene41_0.tip, _3.nvm, _3.fnm, segments_6, _3.fdt]
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_7,generation=7,filenames=[_3.fdx, _3_Lucene41_0.pos, _3.si, segments_7, _3.nvd, _4.nvm, _4.fnm, _3_Lucene41_0.doc, _3_Lucene41_0.tim, _3_Lucene41_0.tip, _3.nvm, _3.fnm, _4.nvd, _4.fdx, _4.fdt, _4_Lucene41_0.pos, _4_Lucene41_0.tip, _4_Lucene41_0.doc, _4_Lucene41_0.tim, _4.si, _3.fdt]
-Nov 01, 2015 11:43:42 AM org.apache.solr.core.SolrDeletionPolicy updateCommits
-INFO: newest commit = 7[_3.fdx, _3_Lucene41_0.pos, _3.si, segments_7, _3.nvd, _4.nvm, _4.fnm, _3_Lucene41_0.doc, _3_Lucene41_0.tim, _3_Lucene41_0.tip, _3.nvm, _3.fnm, _4.nvd, _4.fdx, _4.fdt, _4_Lucene41_0.pos, _4_Lucene41_0.tip, _4_Lucene41_0.doc, _4_Lucene41_0.tim, _4.si, _3.fdt]
-Nov 01, 2015 11:43:42 AM org.apache.solr.search.SolrIndexSearcher <init>
-INFO: Opening Searcher@6483153f main
-Nov 01, 2015 11:43:42 AM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
-INFO: Building spell index for spell checker: default
-Nov 01, 2015 11:43:42 AM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: end_commit_flush
-Nov 01, 2015 11:43:42 AM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
-INFO: Building spell index for spell checker: example
-Nov 01, 2015 11:43:42 AM org.apache.solr.core.SolrCore registerSearcher
-INFO: [default] Registered new searcher Searcher@6483153f main{StandardDirectoryReader(segments_7:15:nrt _3(4.2):C50 _4(4.2):C45)}
-Nov 01, 2015 11:43:42 AM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {commit=} 0 41
-Nov 01, 2015 6:35:09 PM org.apache.solr.search.SolrIndexSearcher <init>
-INFO: Opening Searcher@7e979d00 realtime
-Nov 01, 2015 6:35:09 PM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {deleteByQuery=type:User (-1516682251708923904)} 0 3
-Nov 01, 2015 6:35:14 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=true,prepareCommit=false}
-Nov 01, 2015 6:35:14 PM org.apache.solr.search.SolrIndexSearcher <init>
-INFO: Opening Searcher@3b610eb6 main
-Nov 01, 2015 6:35:14 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: end_commit_flush
-Nov 01, 2015 6:35:14 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
-INFO: Building spell index for spell checker: default
-Nov 01, 2015 6:35:14 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
-INFO: Building spell index for spell checker: example
-Nov 01, 2015 6:35:14 PM org.apache.solr.core.SolrCore registerSearcher
-INFO: [default] Registered new searcher Searcher@3b610eb6 main{StandardDirectoryReader(segments_7:17:nrt)}
-Nov 01, 2015 6:35:24 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: start commit{,optimize=false,openSearcher=false,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
-Nov 01, 2015 6:35:24 PM org.apache.solr.core.SolrDeletionPolicy onCommit
-INFO: SolrDeletionPolicy.onCommit: commits:num=2
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_7,generation=7,filenames=[_3.fdx, _3_Lucene41_0.pos, _3.si, segments_7, _3.nvd, _4.nvm, _4.fnm, _3_Lucene41_0.doc, _3_Lucene41_0.tim, _3_Lucene41_0.tip, _3.nvm, _3.fnm, _4.nvd, _4.fdx, _4.fdt, _4_Lucene41_0.pos, _4_Lucene41_0.tip, _4_Lucene41_0.doc, _4_Lucene41_0.tim, _4.si, _3.fdt]
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_8,generation=8,filenames=[segments_8]
-Nov 01, 2015 6:35:24 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
-INFO: newest commit = 8[segments_8]
-Nov 01, 2015 6:35:24 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: end_commit_flush
-Nov 01, 2015 6:38:48 PM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {deleteByQuery=type:User (-1516682481646960640)} 0 1
-Nov 01, 2015 6:38:53 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=true,prepareCommit=false}
-Nov 01, 2015 6:38:53 PM org.apache.solr.search.SolrIndexSearcher <init>
-INFO: Opening Searcher@1028ab41 main
-Nov 01, 2015 6:38:53 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: end_commit_flush
-Nov 01, 2015 6:38:53 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
-INFO: Building spell index for spell checker: default
-Nov 01, 2015 6:38:53 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
-INFO: Building spell index for spell checker: example
-Nov 01, 2015 6:38:53 PM org.apache.solr.core.SolrCore registerSearcher
-INFO: [default] Registered new searcher Searcher@1028ab41 main{StandardDirectoryReader(segments_7:17:nrt)}
-Nov 01, 2015 6:39:03 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: start commit{,optimize=false,openSearcher=false,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
-Nov 01, 2015 6:39:03 PM org.apache.solr.core.SolrDeletionPolicy onCommit
-INFO: SolrDeletionPolicy.onCommit: commits:num=2
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_8,generation=8,filenames=[segments_8]
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_9,generation=9,filenames=[segments_9]
-Nov 01, 2015 6:39:03 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
-INFO: newest commit = 9[segments_9]
-Nov 01, 2015 6:39:03 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: end_commit_flush
-Nov 01, 2015 6:40:44 PM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {deleteByQuery=type:User (-1516682603154898944)} 0 1
-Nov 01, 2015 6:40:49 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=true,prepareCommit=false}
-Nov 01, 2015 6:40:49 PM org.apache.solr.search.SolrIndexSearcher <init>
-INFO: Opening Searcher@2f8e7fa3 main
-Nov 01, 2015 6:40:49 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: end_commit_flush
-Nov 01, 2015 6:40:49 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
-INFO: Building spell index for spell checker: default
-Nov 01, 2015 6:40:49 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
-INFO: Building spell index for spell checker: example
-Nov 01, 2015 6:40:49 PM org.apache.solr.core.SolrCore registerSearcher
-INFO: [default] Registered new searcher Searcher@2f8e7fa3 main{StandardDirectoryReader(segments_7:17:nrt)}
-Nov 01, 2015 6:40:59 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: start commit{,optimize=false,openSearcher=false,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
-Nov 01, 2015 6:40:59 PM org.apache.solr.core.SolrDeletionPolicy onCommit
-INFO: SolrDeletionPolicy.onCommit: commits:num=2
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_9,generation=9,filenames=[segments_9]
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_a,generation=10,filenames=[segments_a]
-Nov 01, 2015 6:40:59 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
-INFO: newest commit = 10[segments_a]
-Nov 01, 2015 6:40:59 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: end_commit_flush
-Nov 01, 2015 6:42:27 PM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {deleteByQuery=type:User (-1516682710633938944)} 0 1
-Nov 01, 2015 6:42:32 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=true,prepareCommit=false}
-Nov 01, 2015 6:42:32 PM org.apache.solr.search.SolrIndexSearcher <init>
-INFO: Opening Searcher@49cd0ba3 main
-Nov 01, 2015 6:42:32 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: end_commit_flush
-Nov 01, 2015 6:42:32 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
-INFO: Building spell index for spell checker: default
-Nov 01, 2015 6:42:32 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
-INFO: Building spell index for spell checker: example
-Nov 01, 2015 6:42:32 PM org.apache.solr.core.SolrCore registerSearcher
-INFO: [default] Registered new searcher Searcher@49cd0ba3 main{StandardDirectoryReader(segments_7:17:nrt)}
-Nov 01, 2015 6:42:42 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: start commit{,optimize=false,openSearcher=false,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
-Nov 01, 2015 6:42:42 PM org.apache.solr.core.SolrDeletionPolicy onCommit
-INFO: SolrDeletionPolicy.onCommit: commits:num=2
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_a,generation=10,filenames=[segments_a]
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_b,generation=11,filenames=[segments_b]
-Nov 01, 2015 6:42:42 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
-INFO: newest commit = 11[segments_b]
-Nov 01, 2015 6:42:42 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: end_commit_flush
-Nov 01, 2015 6:43:31 PM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {deleteByQuery=type:User (-1516682777852903424)} 0 1
-Nov 01, 2015 6:43:31 PM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {add=[User 1 (1516682777886457856), User 2 (1516682777887506432), User 3 (1516682777887506433), User 4 (1516682777887506434), User 5 (1516682777887506435), User 6 (1516682777887506436), User 7 (1516682777887506437), User 8 (1516682777887506438), User 9 (1516682777887506439), User 10 (1516682777888555008), ... (50 adds)]} 0 6
-Nov 01, 2015 6:43:31 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
-Nov 01, 2015 6:43:31 PM org.apache.solr.core.SolrDeletionPolicy onCommit
-INFO: SolrDeletionPolicy.onCommit: commits:num=2
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_b,generation=11,filenames=[segments_b]
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_c,generation=12,filenames=[_5.nvm, _5.fnm, _5_Lucene41_0.tip, _5.fdt, _5_Lucene41_0.doc, _5_Lucene41_0.tim, _5.nvd, _5_Lucene41_0.pos, _5.si, segments_c, _5.fdx]
-Nov 01, 2015 6:43:31 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
-INFO: newest commit = 12[_5.nvm, _5.fnm, _5_Lucene41_0.tip, _5.fdt, _5_Lucene41_0.doc, _5_Lucene41_0.tim, _5.nvd, _5_Lucene41_0.pos, _5.si, segments_c, _5.fdx]
-Nov 01, 2015 6:43:31 PM org.apache.solr.search.SolrIndexSearcher <init>
-INFO: Opening Searcher@744da5ef main
-Nov 01, 2015 6:43:31 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
-INFO: Building spell index for spell checker: default
-Nov 01, 2015 6:43:31 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: end_commit_flush
-Nov 01, 2015 6:43:31 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
-INFO: Building spell index for spell checker: example
-Nov 01, 2015 6:43:31 PM org.apache.solr.core.SolrCore registerSearcher
-INFO: [default] Registered new searcher Searcher@744da5ef main{StandardDirectoryReader(segments_c:19:nrt _5(4.2):C50)}
-Nov 01, 2015 6:43:31 PM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {commit=} 0 25
-Nov 01, 2015 6:43:31 PM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {add=[User 54 (1516682777936789504), User 55 (1516682777937838080), User 56 (1516682777937838081), User 57 (1516682777937838082), User 58 (1516682777937838083), User 59 (1516682777937838084), User 60 (1516682777937838085), User 61 (1516682777938886656), User 62 (1516682777938886657), User 63 (1516682777938886658), ... (45 adds)]} 0 5
-Nov 01, 2015 6:43:31 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
-Nov 01, 2015 6:43:31 PM org.apache.solr.core.SolrDeletionPolicy onCommit
-INFO: SolrDeletionPolicy.onCommit: commits:num=2
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_c,generation=12,filenames=[_5.nvm, _5.fnm, _5_Lucene41_0.tip, _5.fdt, _5_Lucene41_0.doc, _5_Lucene41_0.tim, _5.nvd, _5_Lucene41_0.pos, _5.si, segments_c, _5.fdx]
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_d,generation=13,filenames=[_5_Lucene41_0.tip, _5.fdt, _6.nvm, _6.fnm, _5_Lucene41_0.doc, _5_Lucene41_0.tim, _6.fdx, _6_Lucene41_0.pos, _6.nvd, _5.nvm, _5.fnm, _6_Lucene41_0.tip, _6.fdt, _6_Lucene41_0.doc, _6_Lucene41_0.tim, _5.nvd, _5_Lucene41_0.pos, _5.si, segments_d, _6.si, _5.fdx]
-Nov 01, 2015 6:43:31 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
-INFO: newest commit = 13[_5_Lucene41_0.tip, _5.fdt, _6.nvm, _6.fnm, _5_Lucene41_0.doc, _5_Lucene41_0.tim, _6.fdx, _6_Lucene41_0.pos, _6.nvd, _5.nvm, _5.fnm, _6_Lucene41_0.tip, _6.fdt, _6_Lucene41_0.doc, _6_Lucene41_0.tim, _5.nvd, _5_Lucene41_0.pos, _5.si, segments_d, _6.si, _5.fdx]
-Nov 01, 2015 6:43:31 PM org.apache.solr.search.SolrIndexSearcher <init>
-INFO: Opening Searcher@4d2ee993 main
-Nov 01, 2015 6:43:31 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
-INFO: Building spell index for spell checker: default
-Nov 01, 2015 6:43:31 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: end_commit_flush
-Nov 01, 2015 6:43:31 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
-INFO: Building spell index for spell checker: example
-Nov 01, 2015 6:43:31 PM org.apache.solr.core.SolrCore registerSearcher
-INFO: [default] Registered new searcher Searcher@4d2ee993 main{StandardDirectoryReader(segments_d:21:nrt _5(4.2):C50 _6(4.2):C45)}
-Nov 01, 2015 6:43:31 PM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {commit=} 0 24
-Nov 01, 2015 6:44:58 PM org.apache.solr.search.SolrIndexSearcher <init>
-INFO: Opening Searcher@187eb630 realtime
-Nov 01, 2015 6:44:58 PM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {deleteByQuery=type:User (-1516682868834697216)} 0 2
-Nov 01, 2015 6:44:58 PM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {add=[User 1 (1516682868850425856), User 2 (1516682868850425857), User 3 (1516682868851474432), User 4 (1516682868851474433), User 5 (1516682868851474434), User 6 (1516682868851474435), User 7 (1516682868851474436), User 8 (1516682868851474437), User 9 (1516682868851474438), User 10 (1516682868851474439), ... (50 adds)]} 0 4
-Nov 01, 2015 6:44:58 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
-Nov 01, 2015 6:44:58 PM org.apache.solr.core.SolrDeletionPolicy onCommit
-INFO: SolrDeletionPolicy.onCommit: commits:num=2
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_d,generation=13,filenames=[_5_Lucene41_0.tip, _5.fdt, _6.nvm, _6.fnm, _5_Lucene41_0.doc, _5_Lucene41_0.tim, _6.fdx, _6_Lucene41_0.pos, _6.nvd, _5.nvm, _5.fnm, _6_Lucene41_0.tip, _6.fdt, _6_Lucene41_0.doc, _6_Lucene41_0.tim, _5.nvd, _5_Lucene41_0.pos, _5.si, segments_d, _6.si, _5.fdx]
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_e,generation=14,filenames=[_7_Lucene41_0.pos, _7.nvm, _7_Lucene41_0.doc, _7.fnm, _7.si, _7.fdt, _7_Lucene41_0.tim, _7_Lucene41_0.tip, _7.nvd, segments_e, _7.fdx]
-Nov 01, 2015 6:44:58 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
-INFO: newest commit = 14[_7_Lucene41_0.pos, _7.nvm, _7_Lucene41_0.doc, _7.fnm, _7.si, _7.fdt, _7_Lucene41_0.tim, _7_Lucene41_0.tip, _7.nvd, segments_e, _7.fdx]
-Nov 01, 2015 6:44:58 PM org.apache.solr.search.SolrIndexSearcher <init>
-INFO: Opening Searcher@2dfe0873 main
-Nov 01, 2015 6:44:58 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
-INFO: Building spell index for spell checker: default
-Nov 01, 2015 6:44:58 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: end_commit_flush
-Nov 01, 2015 6:44:58 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
-INFO: Building spell index for spell checker: example
-Nov 01, 2015 6:44:58 PM org.apache.solr.core.SolrCore registerSearcher
-INFO: [default] Registered new searcher Searcher@2dfe0873 main{StandardDirectoryReader(segments_e:25:nrt _7(4.2):C50)}
-Nov 01, 2015 6:44:58 PM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {commit=} 0 21
-Nov 01, 2015 6:44:58 PM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {add=[User 54 (1516682868892368896), User 55 (1516682868893417472), User 56 (1516682868893417473), User 57 (1516682868893417474), User 58 (1516682868893417475), User 59 (1516682868893417476), User 60 (1516682868893417477), User 61 (1516682868893417478), User 62 (1516682868893417479), User 63 (1516682868893417480), ... (45 adds)]} 0 6
-Nov 01, 2015 6:44:58 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
-Nov 01, 2015 6:44:58 PM org.apache.solr.core.SolrDeletionPolicy onCommit
-INFO: SolrDeletionPolicy.onCommit: commits:num=2
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_e,generation=14,filenames=[_7_Lucene41_0.pos, _7.nvm, _7_Lucene41_0.doc, _7.fnm, _7.si, _7.fdt, _7_Lucene41_0.tim, _7_Lucene41_0.tip, _7.nvd, segments_e, _7.fdx]
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_f,generation=15,filenames=[_8.fdx, _8_Lucene41_0.pos, _7_Lucene41_0.doc, _8.fdt, _7_Lucene41_0.tim, _7_Lucene41_0.tip, _8.nvd, _7_Lucene41_0.pos, _7.nvm, _7.fnm, _8.fnm, _7.si, _8.nvm, _7.fdt, _8_Lucene41_0.doc, _8_Lucene41_0.tim, _8_Lucene41_0.tip, segments_f, _7.nvd, _7.fdx, _8.si]
-Nov 01, 2015 6:44:58 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
-INFO: newest commit = 15[_8.fdx, _8_Lucene41_0.pos, _7_Lucene41_0.doc, _8.fdt, _7_Lucene41_0.tim, _7_Lucene41_0.tip, _8.nvd, _7_Lucene41_0.pos, _7.nvm, _7.fnm, _8.fnm, _7.si, _8.nvm, _7.fdt, _8_Lucene41_0.doc, _8_Lucene41_0.tim, _8_Lucene41_0.tip, segments_f, _7.nvd, _7.fdx, _8.si]
-Nov 01, 2015 6:44:58 PM org.apache.solr.search.SolrIndexSearcher <init>
-INFO: Opening Searcher@450789c2 main
-Nov 01, 2015 6:44:58 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
-INFO: Building spell index for spell checker: default
-Nov 01, 2015 6:44:58 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: end_commit_flush
-Nov 01, 2015 6:44:58 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
-INFO: Building spell index for spell checker: example
-Nov 01, 2015 6:44:58 PM org.apache.solr.core.SolrCore registerSearcher
-INFO: [default] Registered new searcher Searcher@450789c2 main{StandardDirectoryReader(segments_f:27:nrt _7(4.2):C50 _8(4.2):C45)}
-Nov 01, 2015 6:44:58 PM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {commit=} 0 23
-Nov 01, 2015 6:45:09 PM org.apache.solr.search.SolrIndexSearcher <init>
-INFO: Opening Searcher@75892fa7 realtime
-Nov 01, 2015 6:45:09 PM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {deleteByQuery=type:User (-1516682881125056512)} 0 3
-Nov 01, 2015 6:45:14 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=true,prepareCommit=false}
-Nov 01, 2015 6:45:14 PM org.apache.solr.search.SolrIndexSearcher <init>
-INFO: Opening Searcher@47a82bb6 main
-Nov 01, 2015 6:45:14 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: end_commit_flush
-Nov 01, 2015 6:45:14 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
-INFO: Building spell index for spell checker: default
-Nov 01, 2015 6:45:14 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
-INFO: Building spell index for spell checker: example
-Nov 01, 2015 6:45:14 PM org.apache.solr.core.SolrCore registerSearcher
-INFO: [default] Registered new searcher Searcher@47a82bb6 main{StandardDirectoryReader(segments_f:29:nrt)}
-Nov 01, 2015 6:45:24 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: start commit{,optimize=false,openSearcher=false,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
-Nov 01, 2015 6:45:24 PM org.apache.solr.core.SolrDeletionPolicy onCommit
-INFO: SolrDeletionPolicy.onCommit: commits:num=2
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_f,generation=15,filenames=[_8.fdx, _8_Lucene41_0.pos, _7_Lucene41_0.doc, _8.fdt, _7_Lucene41_0.tim, _7_Lucene41_0.tip, _8.nvd, _7_Lucene41_0.pos, _7.nvm, _7.fnm, _8.fnm, _7.si, _8.nvm, _7.fdt, _8_Lucene41_0.doc, _8_Lucene41_0.tim, _8_Lucene41_0.tip, segments_f, _7.nvd, _7.fdx, _8.si]
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_g,generation=16,filenames=[segments_g]
-Nov 01, 2015 6:45:24 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
-INFO: newest commit = 16[segments_g]
-Nov 01, 2015 6:45:24 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: end_commit_flush
-Nov 01, 2015 6:50:04 PM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {deleteByQuery=type:User (-1516683190021914624)} 0 1
-Nov 01, 2015 6:50:09 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=true,prepareCommit=false}
-Nov 01, 2015 6:50:09 PM org.apache.solr.search.SolrIndexSearcher <init>
-INFO: Opening Searcher@2cf73c3e main
-Nov 01, 2015 6:50:09 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: end_commit_flush
-Nov 01, 2015 6:50:09 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
-INFO: Building spell index for spell checker: default
-Nov 01, 2015 6:50:09 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
-INFO: Building spell index for spell checker: example
-Nov 01, 2015 6:50:09 PM org.apache.solr.core.SolrCore registerSearcher
-INFO: [default] Registered new searcher Searcher@2cf73c3e main{StandardDirectoryReader(segments_f:29:nrt)}
-Nov 01, 2015 6:50:19 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: start commit{,optimize=false,openSearcher=false,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
-Nov 01, 2015 6:50:19 PM org.apache.solr.core.SolrDeletionPolicy onCommit
-INFO: SolrDeletionPolicy.onCommit: commits:num=2
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_g,generation=16,filenames=[segments_g]
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_h,generation=17,filenames=[segments_h]
-Nov 01, 2015 6:50:19 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
-INFO: newest commit = 17[segments_h]
-Nov 01, 2015 6:50:19 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: end_commit_flush
-Nov 01, 2015 6:53:55 PM org.apache.solr.update.processor.LogUpdateProcessor finish
-INFO: [default] webapp=/solr path=/update params={wt=ruby} {deleteByQuery=type:User (-1516683432375091200)} 0 1
-Nov 01, 2015 6:54:00 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=true,prepareCommit=false}
-Nov 01, 2015 6:54:00 PM org.apache.solr.search.SolrIndexSearcher <init>
-INFO: Opening Searcher@8411df5 main
-Nov 01, 2015 6:54:00 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: end_commit_flush
-Nov 01, 2015 6:54:00 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
-INFO: Building spell index for spell checker: default
-Nov 01, 2015 6:54:00 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
-INFO: Building spell index for spell checker: example
-Nov 01, 2015 6:54:00 PM org.apache.solr.core.SolrCore registerSearcher
-INFO: [default] Registered new searcher Searcher@8411df5 main{StandardDirectoryReader(segments_f:29:nrt)}
-Nov 01, 2015 6:54:10 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: start commit{,optimize=false,openSearcher=false,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
-Nov 01, 2015 6:54:10 PM org.apache.solr.core.SolrDeletionPolicy onCommit
-INFO: SolrDeletionPolicy.onCommit: commits:num=2
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_h,generation=17,filenames=[segments_h]
-	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@758e5ff1; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_i,generation=18,filenames=[segments_i]
-Nov 01, 2015 6:54:10 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
-INFO: newest commit = 18[segments_i]
-Nov 01, 2015 6:54:10 PM org.apache.solr.update.DirectUpdateHandler2 commit
-INFO: end_commit_flush
+Nov 02, 2015 4:37:22 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [development] Registered new searcher Searcher@f880542 main{StandardDirectoryReader(segments_3:5:nrt _0(4.2):C50 _1(4.2):C45)}
+Nov 02, 2015 4:37:22 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [development] webapp=/solr path=/update params={wt=ruby} {commit=} 0 58

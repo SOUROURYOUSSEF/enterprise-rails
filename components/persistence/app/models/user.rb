@@ -42,23 +42,25 @@
   # NOTE: Following is moved to authorization/lib/authrization.rb module. This
   # keeps allows seperation of concerns across components
 
-  has_and_belongs_to_many :groups, -> { uniq }
-  has_and_belongs_to_many :roles, -> { uniq }
-  has_many :application_objects
+  # has_and_belongs_to_many :groups, -> { uniq }
+  # has_and_belongs_to_many :roles, -> { uniq }
+  # has_many :application_objects
+
+  # searchable do
+  #   text :first_name
+  #   text :last_name
+  #   text :email
+  #
+  #   # text :groups do
+  #   #  groups.map {|group| group.name}
+  #   # end
+  #
+  # end
 
   def full_name
     "#{first_name.capitalize} #{last_name.capitalize}"
   end
 
-  searchable do
-    text :first_name
-    text :last_name
-    text :email
 
-    text :groups do
-      groups.map {|group| group.name}
-    end
-
-  end
 
   end

@@ -1,3 +1,4 @@
+require 'sunspot'
 require 'sunspot/rails'
 
 module Search

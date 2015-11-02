@@ -239,7 +239,6 @@
           <root url="file://$MODULE_DIR$/components/search/bin" />
           <root url="file://$MODULE_DIR$/components/search/lib" />
           <root url="file://$MODULE_DIR$/components/search/log" />
-          <root url="file://$MODULE_DIR$/components/search/solr" />
           <root url="file://$MODULE_DIR$/components/search/config" />
         </CLASSES>
         <SOURCES>
@@ -247,7 +246,6 @@
           <root url="file://$MODULE_DIR$/components/search/bin" />
           <root url="file://$MODULE_DIR$/components/search/lib" />
           <root url="file://$MODULE_DIR$/components/search/log" />
-          <root url="file://$MODULE_DIR$/components/search/solr" />
           <root url="file://$MODULE_DIR$/components/search/config" />
         </SOURCES>
       </library>
@@ -352,7 +350,6 @@
     <orderEntry type="library" scope="PROVIDED" name="sshkit (v1.7.1, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sunspot (v2.2.0, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sunspot_rails (v2.2.0, RVM: ruby-2.2.1) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="sunspot_solr (v2.2.0, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="therubyracer (v0.12.2, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="therubyrhino (v2.0.4, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="therubyrhino_jar (v1.7.6, RVM: ruby-2.2.1) [gem]" level="application" />

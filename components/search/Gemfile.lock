@@ -12,6 +12,7 @@ PATH
     persistence (0.0.1)
       rails (~> 4.2.4)
       search (= 0.0.1)
+      sunspot_rails (= 2.2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -152,8 +153,8 @@ DEPENDENCIES
   persistence (= 0.0.1)!
   rspec-rails (~> 3.3.3)
   search!
-  sunspot_rails
-  sunspot_solr
+  sunspot_rails (= 2.2.0)
+  sunspot_solr (= 2.2.0)
 
 BUNDLED WITH
    1.10.6

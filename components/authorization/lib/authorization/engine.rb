@@ -1,6 +1,6 @@
 # NOTE: needed to add require here to avoid loading gems from Gemfile instead of .gemspec file.
 require 'rails/application'
-require 'gretel'
+# require 'gretel'
 require 'persistence'
 
 module Authorization

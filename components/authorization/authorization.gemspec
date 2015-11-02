@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'responders', '2.1.0'
   s.add_dependency 'gretel', '3.0.8'
   s.add_dependency 'active_model_serializers'
+#  s.add_dependency 'responders', '2.0'
 
 
 

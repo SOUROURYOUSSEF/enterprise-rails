@@ -11,3 +11,9 @@
 /log/*
 !/log/.keep
 /tmp
+*/solr/data
+*/solr/test
+*/solr/development
+*/solr/default/data
+*//log/*.log.lck
+*/solr/pids

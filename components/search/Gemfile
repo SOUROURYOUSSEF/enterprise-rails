@@ -7,8 +7,10 @@ gemspec
 
 gem 'rspec-rails', '~> 3.3.3'
 gem 'factory_girl_rails', '~> 4.4.1'
-gem 'sunspot_rails'
-gem 'sunspot_solr', :group => :development
+gem 'sunspot_rails', '2.2.0'
+gem 'sunspot_solr', '2.2.0', :group => :development
+
+# gem 'responders', '~> 2.0'
 
 gem 'activerecord-postgresql-adapter'
 #gem 'sqlite3'
