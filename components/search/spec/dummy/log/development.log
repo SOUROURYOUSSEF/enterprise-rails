@@ -1,0 +1,4 @@
+  [1m[32mSOLR Request (2.1ms)[0m  [ path=[1m[1mupdate[0m parameters={} ]
+  [1m[32mSOLR Request (66.1ms)[0m  [ path=[1m[1mupdate[0m parameters={} ]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 50[0m
+SQLite3::SQLException: no such table: users: SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 50

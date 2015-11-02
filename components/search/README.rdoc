@@ -1,0 +1,10 @@
+= Search
+
+NOTES:
+
+1. To run solr rake tasks from engine you need to append 'app' to the rake task like:
+
+ rake app:sunspot:solr:start instead of rake sunspot:solr:start
+ rake rake app:sunspot:solr:run instead of rake sunspot:solr:run
+
+This project rocks and uses MIT-LICENSE.
