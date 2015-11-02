@@ -11,13 +11,13 @@ class Authorization::UsersController < Authorization::ApplicationController
     @order = params[:order] == nil ? 0 : params[:order]['0'][:column]
     @direction = params[:order] == nil ? 0 : params[:order]['0'][:dir]
     @order_column = params[:columns] == nil ? 'created_at' :params[:columns][@order][:data]
-    @total = User.count
+    @total = Persistence::User.count
     puts "total = #{@total}"
     if @search == nil || @search == ''
-      @users = User.limit(@limit).offset(@offset).order("#{@order_column} #{@direction}").includes(:groups)
-      @filteredCount = User.count
+      @users = Persistence::User.limit(@limit).offset(@offset).order("#{@order_column} #{@direction}").includes(:groups)
+      @filteredCount = Persistence::User.count
     else
-      @users = User.where('first_name like :kw or last_name like :kw', :kw=>"%#{@search}%").limit(@limit).offset(@offset).order("#{@order_column} #{@direction}").includes(:groups)
+      @users = Persistence::User.where('first_name like :kw or last_name like :kw', :kw=>"%#{@search}%").limit(@limit).offset(@offset).order("#{@order_column} #{@direction}").includes(:groups)
       @filteredCount = @users.count
     end
 

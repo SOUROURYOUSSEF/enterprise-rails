@@ -7,7 +7,8 @@ require 'persistence/version'
 Gem::Specification.new do |s|
   s.name        = 'persistence'
   s.version     = Persistence::VERSION
-  s.platform    = 'java'
+  #s.platform    = 'ruby'
+  #s.platform    = 'java'
   s.authors     = ['prakash-alpine']
   s.email       = ['prakash0450@gmail.com']
   # Stupid, Stupid: Make sure to remove TODO and FIXME. It fails the bundle install command
@@ -24,6 +25,10 @@ Gem::Specification.new do |s|
   # versions of gems, bundler will complain.
 
   s.add_dependency 'rails', '~> 4.2.4'
+  s.add_dependency 'search', '0.0.1'
+  s.add_dependency 'sunspot_rails',  '2.2.0'
+  s.add_development_dependency 'sunspot_solr', '2.2.0'
+
 
   s.add_development_dependency 'rspec-rails', '3.2.1'
   s.add_development_dependency 'factory_girl', '4.4.0'

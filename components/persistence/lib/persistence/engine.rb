@@ -1,3 +1,7 @@
+require 'sunspot/rails'
+require 'authorization'
+require 'search'
+
 module Persistence
   class Engine < ::Rails::Engine
 

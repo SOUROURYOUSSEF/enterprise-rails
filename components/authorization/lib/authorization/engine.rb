@@ -1,6 +1,7 @@
 # NOTE: needed to add require here to avoid loading gems from Gemfile instead of .gemspec file.
 require 'rails/application'
 require 'gretel'
+require 'persistence'
 
 module Authorization
   class Engine < ::Rails::Engine
@@ -19,6 +20,8 @@ module Authorization
       g.test_framework :rspec
       g.fixture_replacement :factory_girl, :dir => 'spec/factories'
     end
+
+    config.autoload_paths += %W(\#{config.root}/lib)
 
   end
 end

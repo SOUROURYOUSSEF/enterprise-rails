@@ -1,12 +1,13 @@
 source 'https://rubygems.org'
 
 path 'components' do
-   gem 'persistence'
-   gem 'authentication'
-   gem 'authorization'
-   gem 'api'
-   gem 'web_style'
-   gem 'sample_data'
+   gem 'persistence', '0.0.1'
+   gem 'authentication', '0.0.1'
+   gem 'authorization', '0.0.1'
+   gem 'api', '0.0.1'
+   gem 'web_style', '0.0.1'
+   gem 'sample_data', '0.0.1'
+   gem 'search', '0.0.1'
  end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -32,14 +33,22 @@ gem 'responders', '~> 2.0'
 # Use jdbcsqlite3 as the database for Active Record
 # gem 'activerecord-jdbcsqlite3-adapter'
 
+# Devise is a flexible authentication solution for Rails based on Warden
+# https://github.com/plataformatec/devise
+gem 'devise'
+
 platform :jruby do
   # Had to lock net-ssh to 2.9.2 version. Latest version 3.1 requires Ruby 2.0
   gem 'net-ssh', '2.9.2'
   gem 'jruby-openssl', '0.9.6', :require => false
   gem 'activerecord-jdbcpostgresql-adapter', '1.3.7'
+  # Use puma as the app server. See https://github.com/puma/puma
+  gem 'puma'
 end
 
 platform :ruby do
+
+  gem 'activerecord-postgresql-adapter'
 
   group :development, :test do
     # Access an IRB console on exception pages or by using <%= console %> in views
@@ -47,20 +56,18 @@ platform :ruby do
     # Please see http://stackoverflow.com/questions/33210259/bundle-install-error-with-jruby
     gem 'web-console', '~> 2.0'
     gem 'byebug'
+    gem 'therubyracer'
   end
 
 end
+
+gem 'sunspot_rails'
+gem 'sunspot_solr', :group => :development
 
 # Use logging gem as a replacement of rails default logger
 # See https://github.com/mcmire/logging-rails
 gem 'logging-rails', :require => 'logging/rails'
 
-# Devise is a flexible authentication solution for Rails based on Warden
-# https://github.com/plataformatec/devise
-gem 'devise'
-
-# Use puma as the app server. See https://github.com/puma/puma
-gem 'puma'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
@@ -81,6 +88,7 @@ group :development do
   gem 'capistrano-rails'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  #gem 'progress_bar'
 end
 
 # group :test, :development do

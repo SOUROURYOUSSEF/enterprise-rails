@@ -22,7 +22,8 @@
 #  updated_at         :datetime         not null
 #
 
-class User < ActiveRecord::Base
+  class User < ActiveRecord::Base
+
   # See Authentcation
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -38,11 +39,26 @@ class User < ActiveRecord::Base
   validates_length_of :first_name, :last_name, :email, :title, :department, :maximum => 256
   validates_length_of :notes, :maximum => 4096
 
-  # has_and_belongs_to_many :groups, -> { uniq }
-  # has_and_belongs_to_many :roles, -> { uniq }
-  # has_many :application_objects
+  # NOTE: Following is moved to authorization/lib/authrization.rb module. This
+  # keeps allows seperation of concerns across components
+
+  has_and_belongs_to_many :groups, -> { uniq }
+  has_and_belongs_to_many :roles, -> { uniq }
+  has_many :application_objects
 
   def full_name
     "#{first_name.capitalize} #{last_name.capitalize}"
   end
-end
+
+  searchable do
+    text :first_name
+    text :last_name
+    text :email
+
+    text :groups do
+      groups.map {|group| group.name}
+    end
+
+  end
+
+  end

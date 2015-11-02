@@ -7,6 +7,12 @@ gemspec
 
 gem 'rspec-rails', '~> 3.3.3'
 gem 'factory_girl_rails', '~> 4.4.1'
+gem 'sunspot_rails',  '2.2.0'
+gem 'sunspot_solr', '2.2.0'
+
+path '../' do
+  gem 'search', '0.0.1'
+end
 
 # Declare any dependencies that are still in development here instead of in
 # your gemspec. These might include edge Rails or gems from your path or

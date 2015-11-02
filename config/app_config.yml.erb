@@ -14,7 +14,7 @@ development: &defaults
     users:
       url:          /users
       icon:         fa fa-calendar
-      label:        <%= User.count %>
+      label:        <%= Persistence::User.count %>
       label_bg:     bg-green
     roles:
       url:

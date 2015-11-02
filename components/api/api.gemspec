@@ -28,11 +28,9 @@ Gem::Specification.new do |s|
   # s.add_dependency 'rocket_pants', '1.13.1'
   # NOTE: Latest version of wannabe_bool (0.3.0) requires ruby => 2.0 (JRuby 9.0.0.0). So I am using the older version here
   # See: https://github.com/prodis/wannabe_bool
-  s.add_dependency 'wannabe_bool','0.1.1'
+  s.add_dependency 'wannabe_bool','0.0.1'
 
-
-
-
-  s.add_development_dependency 'activerecord-jdbcsqlite3-adapter'
+  s.add_dependency 'persistence', '0.0.1'
+  s.add_dependency 'authentication'
 
 end

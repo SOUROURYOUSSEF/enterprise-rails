@@ -6,6 +6,7 @@ User.class_eval do
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+  # :token_authenticatable is added to enable authetication over REST API.
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 end

@@ -113,6 +113,7 @@ Rails.application.routes.draw do
   mount Api::Engine, at: '/api'
   mount WebStyle::Engine, at: '/'
   mount SampleData::Engine, at: '/'
+  mount Search::Engine, at: '/'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
