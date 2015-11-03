@@ -12,12 +12,18 @@ to a smaller extent.
 
 ### Can Ruby/Rails be used for building large scale enterprise applications?
 
-I recently worked on a client project that involved a creating an architecture/infrastructure for developing an enterprise
+I recently worked on a client project that involved creating an architecture/infrastructure for developing an enterprise
 application on Rails framework. Refer to the WIKI page for a detailed discussion on the architecture.  Many mistakes were made and
 many lessons were learned while working on this project.
 
-This open-source project aims to extract those learnings and past expriences into creating a reusable blueprint for
+This open-source project aims to extract those learnings and past experiences into creating a reusable blueprint for
 developing enterprise applications on Rails platform.
+
+- Modular plug-in architecture
+- Clear separation of concerns
+- Use of Rails best practices and idioms
+- Fully integrated read-to-use sample application
+
 
 ### What is Enterprise Application?
 
