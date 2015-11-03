@@ -10,5 +10,14 @@ and open source frameworks such as DJango, PHPCake and Ruby-On-Rails.
 Over the past few years, Ruby-On-Rails has gain significant traction among young start-ups and traditional corporate IT departments
 to a smaller extent.
 
-## Can Ruby/Rails be used for building large scale enterprise applications?
+### Can Ruby/Rails be used for building large scale enterprise applications?
+
+I recently worked on a client project that involved a creating an architecture/infrastructure for developing an enterprise
+application on Rails framework. Refer to the WIKI page for a detailed discussion on the architecture.  Many mistakes were made and
+many lessons were learned while working on this project.
+
+This open-source project aims to extract those learnings and past expriences into creating a reusable blueprint for
+developing enterprise applications on Rails platform.
+
+
 
