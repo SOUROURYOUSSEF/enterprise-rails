@@ -1,7 +1,7 @@
 # NOTE: needed to add require here to avoid loading gems from Gemfile instead of .gemspec file.
 require 'rails/application'
-# require 'gretel'
 require 'persistence'
+require 'gretel'
 
 module Authorization
   class Engine < ::Rails::Engine

@@ -22,8 +22,7 @@
 #  updated_at         :datetime         not null
 #
 
-  class User < ActiveRecord::Base
-
+class User
   # See Authentcation
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -42,25 +41,26 @@
   # NOTE: Following is moved to authorization/lib/authrization.rb module. This
   # keeps allows seperation of concerns across components
 
-  # has_and_belongs_to_many :groups, -> { uniq }
-  # has_and_belongs_to_many :roles, -> { uniq }
-  # has_many :application_objects
-
-  # searchable do
-  #   text :first_name
-  #   text :last_name
-  #   text :email
-  #
-  #   # text :groups do
-  #   #  groups.map {|group| group.name}
-  #   # end
-  #
-  # end
+  #has_and_belongs_to_many :groups, -> { uniq }
+  #has_and_belongs_to_many :roles, -> { uniq }
+  #has_many :application_objects
 
   def full_name
     "#{first_name.capitalize} #{last_name.capitalize}"
   end
 
+  # NOTE: Following is moved to search/lib/search.rb module. This
+  # keeps allows seperation of concerns across components
 
+  # searchable do
+  #    text :first_name
+  #    text :last_name
+  #    text :email
+  #
+  #    text :groups do
+  #      groups.map {|group| group.name}
+  #    end
+  # end
 
-  end
+end
+

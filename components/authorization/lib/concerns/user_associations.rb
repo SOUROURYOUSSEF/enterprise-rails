@@ -21,14 +21,12 @@ module UserAssociations
     end
   end
 
-  def hello_again
-    puts "Hello Again"
-  end
+  # Add instance methods here.
 
 end
 
 # NOTE: Need to include superclass
-class User < ActiveRecord::Base
+class User < Persistence::User
   include UserAssociations
 end
 

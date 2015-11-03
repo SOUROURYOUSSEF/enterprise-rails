@@ -53,15 +53,15 @@ module Persistence
   # NOTE: Following is moved to search/lib/search.rb module. This
   # keeps allows seperation of concerns across components
 
-  searchable do
-     text :first_name
-     text :last_name
-     text :email
-
-     text :groups do
-       groups.map {|group| group.name}
-     end
-  end
+  # searchable do
+  #    text :first_name
+  #    text :last_name
+  #    text :email
+  #
+  #    text :groups do
+  #      groups.map {|group| group.name}
+  #    end
+  # end
 
   end
 end

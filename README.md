@@ -22,7 +22,7 @@ developing enterprise applications on Rails platform.
 - Modular plug-in architecture
 - Clear separation of concerns
 - Use of Rails best practices and idioms
-- Fully integrated read-to-use sample application
+- Fully integrated ready-to-use sample application
 
 
 ### What is Enterprise Application?

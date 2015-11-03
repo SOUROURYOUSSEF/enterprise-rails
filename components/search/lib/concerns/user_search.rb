@@ -10,13 +10,14 @@ module UserSearch
 
   included do
     searchable do
-      string :first_name
-      string :last_name
-      string :email
+      text :first_name
+      text :last_name
+      text :email
 
-      string :groups, :multiple => true do
+      text :groups do
         groups.map {|group| group.name}
       end
+
     end
   end
 
@@ -28,7 +29,7 @@ module UserSearch
 end
 
 # NOTE: Need to include superclass
-class User < ActiveRecord::Base
+class User < Persistence::User
   include Sunspot::Rails::Searchable
   include UserSearch
 end
