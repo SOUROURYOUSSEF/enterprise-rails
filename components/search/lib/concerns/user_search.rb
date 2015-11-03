@@ -10,14 +10,13 @@ module UserSearch
 
   included do
     searchable do
-      text :first_name
-      text :last_name
-      text :email
+      string :first_name
+      string :last_name
+      string :email
 
-      text :groups do
+      string :groups, :multiple => true do
         groups.map {|group| group.name}
       end
-
     end
   end
 

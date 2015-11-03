@@ -17,3 +17,17 @@
 */solr/default/data
 *//log/*.log.lck
 */solr/pids
+
+*.fdt
+
+*.tim
+
+*.pos
+
+*.0000000000000000000
+
+*.log
+
+*.log
+
+*.doc
