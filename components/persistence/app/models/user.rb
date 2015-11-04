@@ -22,7 +22,7 @@
 #  updated_at         :datetime         not null
 #
 
-class User
+class User  < ActiveRecord::Base
   # See Authentcation
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

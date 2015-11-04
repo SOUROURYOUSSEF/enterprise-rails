@@ -566,3 +566,509 @@ Nov 03, 2015 5:44:49 PM org.apache.solr.core.SolrCore execute
 INFO: [development] webapp=/solr path=/admin/luke params={show=index&numTerms=0&wt=json} status=0 QTime=0 
 Nov 03, 2015 5:46:59 PM org.apache.solr.core.SolrCore execute
 INFO: [development] webapp=/solr path=/select params={q=default_group&defType=edismax&qf=name_text+description_text&fl=*+score&start=0&fq=type:Group&rows=30&wt=ruby} hits=1 status=0 QTime=1 
+Nov 03, 2015 6:11:40 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@6a4f6942 realtime
+Nov 03, 2015 6:11:40 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [development] webapp=/solr path=/update params={wt=ruby} {deleteByQuery=type:User (-1516861967792340992)} 0 3
+Nov 03, 2015 6:11:40 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [development] webapp=/solr path=/update params={wt=ruby} {add=[User 1 (1516861967896150016), User 2 (1516861967897198592), User 3 (1516861967897198593), User 4 (1516861967897198594), User 5 (1516861967898247168), User 6 (1516861967898247169), User 7 (1516861967898247170), User 8 (1516861967898247171), User 9 (1516861967898247172), User 10 (1516861967899295744), ... (50 adds)]} 0 10
+Nov 03, 2015 6:11:40 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+Nov 03, 2015 6:11:40 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/development/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@232cc4c2; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_8,generation=8,filenames=[_6.cfe, segments_8, _5_Lucene41_0.tip, _4.nvm, _4.fnm, _5.fdt, _5_Lucene41_0.doc, _5_Lucene41_0.tim, _4.nvd, _4.fdx, _5.nvm, _5.fnm, _4.fdt, _4_Lucene41_0.pos, _6.cfs, _4_Lucene41_0.tip, _4_Lucene41_0.doc, _4_Lucene41_0.tim, _5.nvd, _5_Lucene41_0.pos, _4.si, _5.si, _6.si, _5.fdx]
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/development/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@232cc4c2; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_9,generation=9,filenames=[_6.cfe, segments_9, _7_Lucene41_0.doc, _7_Lucene41_0.tim, _7_Lucene41_0.tip, _6.cfs, _7_Lucene41_0.pos, _7.nvm, _7.fnm, _7.si, _7.fdt, _7.nvd, _7.fdx, _6.si]
+Nov 03, 2015 6:11:40 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 9[_6.cfe, segments_9, _7_Lucene41_0.doc, _7_Lucene41_0.tim, _7_Lucene41_0.tip, _6.cfs, _7_Lucene41_0.pos, _7.nvm, _7.fnm, _7.si, _7.fdt, _7.nvd, _7.fdx, _6.si]
+Nov 03, 2015 6:11:40 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@3cbab692 main
+Nov 03, 2015 6:11:40 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
+INFO: Building spell index for spell checker: default
+Nov 03, 2015 6:11:40 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+Nov 03, 2015 6:11:40 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
+INFO: Building spell index for spell checker: example
+Nov 03, 2015 6:11:40 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [development] Registered new searcher Searcher@3cbab692 main{StandardDirectoryReader(segments_9:23:nrt _6(4.2):c4 _7(4.2):C50)}
+Nov 03, 2015 6:11:40 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [development] webapp=/solr path=/update params={wt=ruby} {commit=} 0 22
+Nov 03, 2015 6:11:40 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [development] webapp=/solr path=/update params={wt=ruby} {add=[User 54 (1516861968007299072), User 55 (1516861968008347648), User 56 (1516861968008347649), User 57 (1516861968008347650), User 58 (1516861968008347651), User 59 (1516861968008347652), User 60 (1516861968008347653), User 61 (1516861968008347654), User 62 (1516861968009396224), User 63 (1516861968009396225), ... (45 adds)]} 0 6
+Nov 03, 2015 6:11:40 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+Nov 03, 2015 6:11:40 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/development/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@232cc4c2; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_9,generation=9,filenames=[_6.cfe, segments_9, _7_Lucene41_0.doc, _7_Lucene41_0.tim, _7_Lucene41_0.tip, _6.cfs, _7_Lucene41_0.pos, _7.nvm, _7.fnm, _7.si, _7.fdt, _7.nvd, _7.fdx, _6.si]
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/development/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@232cc4c2; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_a,generation=10,filenames=[_6.cfe, _8.fdx, _8_Lucene41_0.pos, _7_Lucene41_0.doc, _8.fdt, _7_Lucene41_0.tim, _7_Lucene41_0.tip, _8.nvd, _6.cfs, _7_Lucene41_0.pos, _7.nvm, _7.fnm, _8.fnm, _7.si, _8.nvm, segments_a, _7.fdt, _8_Lucene41_0.doc, _8_Lucene41_0.tim, _8_Lucene41_0.tip, _7.nvd, _7.fdx, _6.si, _8.si]
+Nov 03, 2015 6:11:40 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 10[_6.cfe, _8.fdx, _8_Lucene41_0.pos, _7_Lucene41_0.doc, _8.fdt, _7_Lucene41_0.tim, _7_Lucene41_0.tip, _8.nvd, _6.cfs, _7_Lucene41_0.pos, _7.nvm, _7.fnm, _8.fnm, _7.si, _8.nvm, segments_a, _7.fdt, _8_Lucene41_0.doc, _8_Lucene41_0.tim, _8_Lucene41_0.tip, _7.nvd, _7.fdx, _6.si, _8.si]
+Nov 03, 2015 6:11:40 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@11adb3c5 main
+Nov 03, 2015 6:11:40 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
+INFO: Building spell index for spell checker: default
+Nov 03, 2015 6:11:40 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+Nov 03, 2015 6:11:40 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
+INFO: Building spell index for spell checker: example
+Nov 03, 2015 6:11:40 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [development] Registered new searcher Searcher@11adb3c5 main{StandardDirectoryReader(segments_a:25:nrt _6(4.2):c4 _7(4.2):C50 _8(4.2):C45)}
+Nov 03, 2015 6:11:40 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [development] webapp=/solr path=/update params={wt=ruby} {commit=} 0 34
+Nov 03, 2015 6:15:40 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=default_group&defType=edismax&qf=name_text+description_text&fl=*+score&start=0&fq=type:Group&rows=30&wt=ruby} hits=1 status=0 QTime=1 
+Nov 03, 2015 6:17:08 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*group*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=45 status=0 QTime=31 
+Nov 03, 2015 6:17:45 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*group*&defType=edismax&qf=name_text+description_text&fl=*+score&start=0&fq=type:Group&rows=30&wt=ruby} hits=4 status=0 QTime=5 
+Nov 03, 2015 8:34:14 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@72a02b6 realtime
+Nov 03, 2015 8:34:14 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [development] webapp=/solr path=/update params={wt=ruby} {deleteByQuery=type:User (-1516870937414205440)} 0 2
+Nov 03, 2015 8:34:14 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [development] webapp=/solr path=/update params={wt=ruby} {add=[User 1 (1516870937514868736), User 2 (1516870937515917312), User 3 (1516870937515917313), User 4 (1516870937515917314), User 5 (1516870937515917315), User 6 (1516870937515917316), User 7 (1516870937515917317), User 8 (1516870937515917318), User 9 (1516870937515917319), User 10 (1516870937515917320), ... (50 adds)]} 0 5
+Nov 03, 2015 8:34:14 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+Nov 03, 2015 8:34:14 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/development/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@232cc4c2; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_a,generation=10,filenames=[_6.cfe, _8.fdx, _8_Lucene41_0.pos, _7_Lucene41_0.doc, _8.fdt, _7_Lucene41_0.tim, _7_Lucene41_0.tip, _8.nvd, _6.cfs, _7_Lucene41_0.pos, _7.nvm, _7.fnm, _8.fnm, _7.si, _8.nvm, segments_a, _7.fdt, _8_Lucene41_0.doc, _8_Lucene41_0.tim, _8_Lucene41_0.tip, _7.nvd, _7.fdx, _6.si, _8.si]
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/development/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@232cc4c2; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_b,generation=11,filenames=[_6.cfe, _9.nvm, _9.fnm, _9_Lucene41_0.tip, _9.fdx, _9_Lucene41_0.pos, _6.cfs, _9.fdt, _9_Lucene41_0.doc, _9_Lucene41_0.tim, segments_b, _6.si, _9.nvd, _9.si]
+Nov 03, 2015 8:34:14 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 11[_6.cfe, _9.nvm, _9.fnm, _9_Lucene41_0.tip, _9.fdx, _9_Lucene41_0.pos, _6.cfs, _9.fdt, _9_Lucene41_0.doc, _9_Lucene41_0.tim, segments_b, _6.si, _9.nvd, _9.si]
+Nov 03, 2015 8:34:14 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@42d9b132 main
+Nov 03, 2015 8:34:14 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
+INFO: Building spell index for spell checker: default
+Nov 03, 2015 8:34:14 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+Nov 03, 2015 8:34:14 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
+INFO: Building spell index for spell checker: example
+Nov 03, 2015 8:34:14 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [development] Registered new searcher Searcher@42d9b132 main{StandardDirectoryReader(segments_b:29:nrt _6(4.2):c4 _9(4.2):C50)}
+Nov 03, 2015 8:34:14 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [development] webapp=/solr path=/update params={wt=ruby} {commit=} 0 22
+Nov 03, 2015 8:34:14 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [development] webapp=/solr path=/update params={wt=ruby} {add=[User 54 (1516870937615532032), User 55 (1516870937616580608), User 56 (1516870937616580609), User 57 (1516870937616580610), User 58 (1516870937616580611), User 59 (1516870937616580612), User 60 (1516870937616580613), User 61 (1516870937616580614), User 62 (1516870937616580615), User 63 (1516870937616580616), ... (45 adds)]} 0 4
+Nov 03, 2015 8:34:14 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+Nov 03, 2015 8:34:14 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/development/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@232cc4c2; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_b,generation=11,filenames=[_6.cfe, _9.nvm, _9.fnm, _9_Lucene41_0.tip, _9.fdx, _9_Lucene41_0.pos, _6.cfs, _9.fdt, _9_Lucene41_0.doc, _9_Lucene41_0.tim, segments_b, _6.si, _9.nvd, _9.si]
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/prakashteli/workspaces/enterprise-rails/components/search/spec/dummy/solr/development/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@232cc4c2; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_c,generation=12,filenames=[_6.cfe, _a_Lucene41_0.doc, _a_Lucene41_0.tim, _a.fdt, _a_Lucene41_0.pos, _a.si, _9.nvm, _9.fnm, _a.fdx, _9_Lucene41_0.tip, _a_Lucene41_0.tip, _9.fdx, _9_Lucene41_0.pos, _a.nvm, _a.fnm, _6.cfs, _9.fdt, _9_Lucene41_0.doc, _9_Lucene41_0.tim, _a.nvd, _6.si, _9.nvd, segments_c, _9.si]
+Nov 03, 2015 8:34:14 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 12[_6.cfe, _a_Lucene41_0.doc, _a_Lucene41_0.tim, _a.fdt, _a_Lucene41_0.pos, _a.si, _9.nvm, _9.fnm, _a.fdx, _9_Lucene41_0.tip, _a_Lucene41_0.tip, _9.fdx, _9_Lucene41_0.pos, _a.nvm, _a.fnm, _6.cfs, _9.fdt, _9_Lucene41_0.doc, _9_Lucene41_0.tim, _a.nvd, _6.si, _9.nvd, segments_c, _9.si]
+Nov 03, 2015 8:34:14 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@594ddfb4 main
+Nov 03, 2015 8:34:14 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
+INFO: Building spell index for spell checker: default
+Nov 03, 2015 8:34:14 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+Nov 03, 2015 8:34:14 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
+INFO: Building spell index for spell checker: example
+Nov 03, 2015 8:34:14 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [development] Registered new searcher Searcher@594ddfb4 main{StandardDirectoryReader(segments_c:31:nrt _6(4.2):c4 _9(4.2):C50 _a(4.2):C45)}
+Nov 03, 2015 8:34:14 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [development] webapp=/solr path=/update params={wt=ruby} {commit=} 0 23
+Nov 03, 2015 8:48:23 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=2 
+Nov 03, 2015 8:49:27 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 8:50:08 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 8:50:15 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 8:50:16 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 8:50:16 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 8:50:19 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 8:50:20 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 8:51:10 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 8:51:11 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 8:51:11 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 8:51:15 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 8:51:16 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 8:51:16 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 8:51:17 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 8:51:21 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 8:51:21 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 8:51:25 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 8:51:26 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 8:51:26 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 8:51:31 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 8:51:31 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 8:51:32 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 8:51:36 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 8:51:37 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 8:51:38 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 8:51:38 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 8:51:39 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 8:57:36 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*:*&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 8:57:37 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*:*&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 8:57:40 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*:*&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 8:57:43 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*:*&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 8:57:44 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*:*&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 8:57:53 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*:*&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 8:57:53 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*:*&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 8:58:30 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=Angela&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=1 status=0 QTime=1 
+Nov 03, 2015 8:58:34 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=Angela&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=1 status=0 QTime=1 
+Nov 03, 2015 8:58:44 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=Ange&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=0 status=0 QTime=1 
+Nov 03, 2015 8:58:50 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=Ange*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=2 status=0 QTime=1 
+Nov 03, 2015 8:58:58 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=Ange*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=2 status=0 QTime=1 
+Nov 03, 2015 8:59:11 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=Russ*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=1 status=0 QTime=1 
+Nov 03, 2015 8:59:18 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=Rus*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=1 status=0 QTime=1 
+Nov 03, 2015 9:00:17 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=aylon&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=0 status=0 QTime=1 
+Nov 03, 2015 9:00:25 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=alyon&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=1 status=0 QTime=1 
+Nov 03, 2015 9:00:30 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=alyon&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=1 status=0 QTime=1 
+Nov 03, 2015 9:17:07 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=alyon&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=1 status=0 QTime=0 
+Nov 03, 2015 9:17:21 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=alyon&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=1 status=0 QTime=0 
+Nov 03, 2015 9:17:25 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=alyon&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=1 status=0 QTime=0 
+Nov 03, 2015 9:22:22 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=C&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=0 status=0 QTime=1 
+Nov 03, 2015 9:22:50 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=A&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=0 status=0 QTime=1 
+Nov 03, 2015 9:22:56 PM org.apache.solr.common.SolrException log
+SEVERE: org.apache.solr.common.SolrException: 'start' parameter cannot be negative
+	at org.apache.solr.handler.component.QueryComponent.process(QueryComponent.java:216)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:208)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:135)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:1797)
+	at org.apache.solr.servlet.SolrDispatchFilter.execute(SolrDispatchFilter.java:637)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:343)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:141)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:255)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53)
+	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:937)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:998)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:856)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240)
+	at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72)
+	at org.eclipse.jetty.server.bio.SocketConnector$ConnectorEndPoint.run(SocketConnector.java:264)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+
+Nov 03, 2015 9:22:56 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=A&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=-10&fq=type:User&rows=10&wt=ruby} status=400 QTime=1 
+Nov 03, 2015 9:23:10 PM org.apache.solr.common.SolrException log
+SEVERE: org.apache.solr.common.SolrException: 'start' parameter cannot be negative
+	at org.apache.solr.handler.component.QueryComponent.process(QueryComponent.java:216)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:208)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:135)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:1797)
+	at org.apache.solr.servlet.SolrDispatchFilter.execute(SolrDispatchFilter.java:637)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:343)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:141)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:255)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53)
+	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:937)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:998)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:856)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240)
+	at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72)
+	at org.eclipse.jetty.server.bio.SocketConnector$ConnectorEndPoint.run(SocketConnector.java:264)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+
+Nov 03, 2015 9:23:10 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=A&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=-11&fq=type:User&rows=11&wt=ruby} status=400 QTime=1 
+Nov 03, 2015 9:23:17 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=A&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=11&wt=ruby} hits=0 status=0 QTime=1 
+Nov 03, 2015 9:23:33 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=A&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=0 status=0 QTime=0 
+Nov 03, 2015 9:23:45 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=a&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=0 status=0 QTime=0 
+Nov 03, 2015 9:23:57 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=Rus&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=0 status=0 QTime=1 
+Nov 03, 2015 9:24:08 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=Rus*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=1 status=0 QTime=1 
+Nov 03, 2015 9:24:17 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=Rus*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=1 status=0 QTime=1 
+Nov 03, 2015 9:24:25 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=Rus&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=0 status=0 QTime=0 
+Nov 03, 2015 9:24:51 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*A*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=93 status=0 QTime=5 
+Nov 03, 2015 9:25:00 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*A*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=93 status=0 QTime=3 
+Nov 03, 2015 9:25:12 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=A*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=36 status=0 QTime=1 
+Nov 03, 2015 9:25:24 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=Tow*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=1 status=0 QTime=1 
+Nov 03, 2015 9:25:38 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=C*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=16 status=0 QTime=1 
+Nov 03, 2015 9:25:44 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=C*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=10&fq=type:User&rows=10&wt=ruby} hits=16 status=0 QTime=0 
+Nov 03, 2015 9:26:15 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=C*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=10&fq=type:User&rows=10&wt=ruby} hits=16 status=0 QTime=1 
+Nov 03, 2015 9:38:34 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 9:40:37 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=30&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 9:41:26 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=C*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=10&fq=type:User&rows=10&wt=ruby} hits=16 status=0 QTime=0 
+Nov 03, 2015 9:41:33 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=C*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=16 status=0 QTime=0 
+Nov 03, 2015 9:43:58 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 9:45:00 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 9:45:18 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 9:45:24 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 9:45:25 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 9:45:26 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 9:45:31 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 9:45:32 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 9:45:32 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 9:45:33 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 9:45:34 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 9:45:46 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 9:45:47 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 9:45:47 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 9:46:35 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 9:46:35 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 9:46:36 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 9:46:37 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 9:46:47 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 9:46:48 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 9:46:49 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 9:46:55 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 9:46:56 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 9:46:56 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 9:46:58 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 9:46:58 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 9:47:12 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 9:47:12 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 9:47:13 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 9:47:33 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=Asha*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=1 status=0 QTime=1 
+Nov 03, 2015 9:49:34 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 9:49:59 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=@search*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=0 status=0 QTime=1 
+Nov 03, 2015 9:50:11 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*:*&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 9:52:54 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=Asha*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=1 status=0 QTime=0 
+Nov 03, 2015 9:53:00 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=Asha*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=1 status=0 QTime=0 
+Nov 03, 2015 9:53:03 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=Asha*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=1 status=0 QTime=0 
+Nov 03, 2015 9:53:05 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=Asha*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=1 status=0 QTime=1 
+Nov 03, 2015 9:53:08 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=Asha*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=1 status=0 QTime=0 
+Nov 03, 2015 9:53:12 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=Asha*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=1 status=0 QTime=0 
+Nov 03, 2015 10:00:53 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 10:01:27 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 10:01:41 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 10:02:02 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 10:03:05 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 10:03:23 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*:*&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 10:03:49 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=Asha&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=1 status=0 QTime=1 
+Nov 03, 2015 10:04:18 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=Asha&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=1 status=0 QTime=1 
+Nov 03, 2015 10:05:06 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*:*&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 10:17:29 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=A*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=36 status=0 QTime=1 
+Nov 03, 2015 10:17:44 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=As*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=1 status=0 QTime=1 
+Nov 03, 2015 10:18:10 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=A*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=36 status=0 QTime=1 
+Nov 03, 2015 10:22:31 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*:*&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 10:22:37 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=Asha&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=1 status=0 QTime=0 
+Nov 03, 2015 10:22:44 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*:*&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 10:22:58 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*:*&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 10:23:19 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*:*&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 10:23:40 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*:*&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=0 
+Nov 03, 2015 10:23:51 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=*:*&start=0&fq=type:User&rows=10&wt=ruby} hits=95 status=0 QTime=1 
+Nov 03, 2015 10:24:06 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=Asha&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=1 status=0 QTime=0 
+Nov 03, 2015 10:24:38 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=A*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=36 status=0 QTime=1 
+Nov 03, 2015 10:26:45 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=A*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=36 status=0 QTime=0 
+Nov 03, 2015 10:27:14 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=A*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=10&fq=type:User&rows=10&wt=ruby} hits=36 status=0 QTime=1 
+Nov 03, 2015 10:27:32 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=A*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=20&fq=type:User&rows=10&wt=ruby} hits=36 status=0 QTime=1 
+Nov 03, 2015 10:27:41 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=A*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=30&fq=type:User&rows=10&wt=ruby} hits=36 status=0 QTime=1 
+Nov 03, 2015 10:27:50 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=As*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=1 status=0 QTime=0 
+Nov 03, 2015 10:28:03 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=A*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=36 status=0 QTime=1 
+Nov 03, 2015 10:28:06 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=C*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=16 status=0 QTime=0 
+Nov 03, 2015 10:28:07 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=Cr*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=4 status=0 QTime=1 
+Nov 03, 2015 10:28:08 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=Croo*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=1 status=0 QTime=1 
+Nov 03, 2015 10:28:09 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=Cro*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=2 status=0 QTime=1 
+Nov 03, 2015 10:28:10 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=Cr*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=4 status=0 QTime=0 
+Nov 03, 2015 10:28:11 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=C*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=16 status=0 QTime=0 
+Nov 03, 2015 10:28:16 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=h*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=22 status=0 QTime=1 
+Nov 03, 2015 10:28:17 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=hai*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=2 status=0 QTime=1 
+Nov 03, 2015 10:28:20 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=ha*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=11 status=0 QTime=1 
+Nov 03, 2015 10:32:41 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=T*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=16 status=0 QTime=1 
+Nov 03, 2015 10:32:42 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=To*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=4 status=0 QTime=0 
+Nov 03, 2015 10:32:49 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=To*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=4 status=0 QTime=0 
+Nov 03, 2015 10:33:12 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=To*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=4 status=0 QTime=1 
+Nov 03, 2015 10:33:31 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=T*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=16 status=0 QTime=0 
+Nov 03, 2015 10:33:51 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=B*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=20 status=0 QTime=1 
+Nov 03, 2015 10:33:52 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=Ber*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=2 status=0 QTime=1 
+Nov 03, 2015 10:33:55 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=Be*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=6 status=0 QTime=0 
+Nov 03, 2015 10:33:55 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=B*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=20 status=0 QTime=0 
+Nov 03, 2015 10:33:59 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=T*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=16 status=0 QTime=0 
+Nov 03, 2015 10:34:07 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=T*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=16 status=0 QTime=0 
+Nov 03, 2015 10:34:14 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=T*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=16 status=0 QTime=0 
+Nov 03, 2015 10:34:22 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=T*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=16 status=0 QTime=0 
+Nov 03, 2015 10:34:27 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=T*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=16 status=0 QTime=1 
+Nov 03, 2015 10:34:34 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=T*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=10&fq=type:User&rows=10&wt=ruby} hits=16 status=0 QTime=0 
+Nov 03, 2015 10:34:38 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=T*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=16 status=0 QTime=0 
+Nov 03, 2015 10:34:45 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=T*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=10&fq=type:User&rows=10&wt=ruby} hits=16 status=0 QTime=1 
+Nov 03, 2015 10:34:53 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=T*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=16 status=0 QTime=1 
+Nov 03, 2015 10:35:02 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=T*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=10&fq=type:User&rows=10&wt=ruby} hits=16 status=0 QTime=1 
+Nov 03, 2015 10:35:07 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=T*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=16 status=0 QTime=0 
+Nov 03, 2015 10:35:10 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=T*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=10&fq=type:User&rows=10&wt=ruby} hits=16 status=0 QTime=0 
+Nov 03, 2015 10:35:19 PM org.apache.solr.core.SolrCore execute
+INFO: [development] webapp=/solr path=/select params={q=T*&defType=edismax&qf=first_name_text+last_name_text+email_text+groups_text&fl=*+score&start=0&fq=type:User&rows=10&wt=ruby} hits=16 status=0 QTime=1 
