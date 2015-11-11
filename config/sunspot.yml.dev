@@ -1,7 +1,7 @@
 production:
   solr:
-    hostname: ent_solr
-    port: 8983
+    hostname: <%= ENV['SOLR_HOST'] %>
+    port: <%= ENV['SOLR_PORT'] %>
 #    hostname: localhost
 #    port: 8983
     log_level: WARNING

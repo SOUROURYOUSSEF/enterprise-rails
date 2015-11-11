@@ -10,7 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require web_style/admin_lte/JQuery/jQuery-2.1.4.min
+//= require web_style/admin_lte/jQuery/jQuery-2.1.4.min
 //= require jquery_ujs
 //= require turbolinks
 //= require web_style/devise.js

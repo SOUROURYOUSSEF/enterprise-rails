@@ -42,6 +42,7 @@ default_scope = ApplicationScope.where(:name => 'defaultscope').first_or_create!
 
 # add default_scope to default group
 default_group.application_scope = default_scope
+default_group.save!
 
 # add sample application classes
 application_classes =  [

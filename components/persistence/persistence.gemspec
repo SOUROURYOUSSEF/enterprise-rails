@@ -7,7 +7,7 @@ require 'persistence/version'
 Gem::Specification.new do |s|
   s.name        = 'persistence'
   s.version     = Persistence::VERSION
-  #s.platform    = 'ruby'
+  s.platform    = 'ruby'
   #s.platform    = 'java'
   s.authors     = ['prakash-alpine']
   s.email       = ['prakash0450@gmail.com']

@@ -1,0 +1,43 @@
+
+ent_postgres:
+  image: postgres
+  ports:
+    - "5432:5432"
+
+ent_solr:
+  image: solr
+  ports:
+    - "8983:8983"
+
+
+ent_web:
+  build:  .
+
+  container_name: ent_web_dev
+
+  # provide custom environment variables
+  env_file:
+    - config/docker_dev.env
+
+  # You can overwrite env variables here
+  environment:
+    - RAILS_ENV=development
+#    - DATABASE_HOST=192.168.0.20
+#    - DATABASE_PORT=5432
+#    - DATABASE_USR=rails_user
+#    - SOLR_HOST=192.168.0.20
+#    - SOLR_PORT=8983
+
+  ports:
+    - "32010:3000"
+
+  links:
+    - ent_postgres
+    - ent_solr
+
+#  external_links:
+#    - sad_wright:postgres
+#    - ent_solr:solr
+
+
+

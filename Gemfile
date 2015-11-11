@@ -49,6 +49,8 @@ end
 platform :ruby do
 
   gem 'activerecord-postgresql-adapter'
+  # Use puma as the app server. See https://github.com/puma/puma
+  gem 'puma'
 
   group :development, :test do
     # Access an IRB console on exception pages or by using <%= console %> in views
@@ -89,6 +91,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   #gem 'progress_bar'
+  gem 'foreman'
 end
 
 # group :test, :development do
