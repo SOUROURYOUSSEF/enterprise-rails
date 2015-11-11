@@ -20,5 +20,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'rails', '~> 4.2.4'
   s.add_dependency 'sunspot_rails',  '2.2.0'
   s.add_development_dependency 'sunspot_solr', '2.2.0'
-  s.add_dependency 'activerecord-postgresql-adapter'
+  # s.add_dependency 'activerecord-postgresql-adapter'
 end

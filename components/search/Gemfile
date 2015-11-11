@@ -12,9 +12,6 @@ gem 'sunspot_solr', '2.2.0', :group => :development
 
 # gem 'responders', '~> 2.0'
 
-gem 'activerecord-postgresql-adapter'
-#gem 'sqlite3'
-
 path '../' do
   gem 'persistence', '0.0.1'
 end

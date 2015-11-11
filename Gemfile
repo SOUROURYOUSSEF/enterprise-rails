@@ -37,16 +37,20 @@ gem 'responders', '~> 2.0'
 # https://github.com/plataformatec/devise
 gem 'devise'
 
-platform :jruby do
+platforms :jruby do
   # Had to lock net-ssh to 2.9.2 version. Latest version 3.1 requires Ruby 2.0
   gem 'net-ssh', '2.9.2'
   gem 'jruby-openssl', '0.9.6', :require => false
   gem 'activerecord-jdbcpostgresql-adapter', '1.3.7'
   # Use puma as the app server. See https://github.com/puma/puma
   gem 'puma'
+  # Warbler is a gem to make a Java jar or war file out of any Ruby, Rails or Rack application.
+  # Warbler provides a minimal, flexible, Ruby-like way to bundle up all of your application
+  # files for deployment to a Java environment.
+  gem 'warbler'
 end
 
-platform :ruby do
+platforms :ruby do
 
   gem 'activerecord-postgresql-adapter'
   # Use puma as the app server. See https://github.com/puma/puma
