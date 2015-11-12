@@ -16,8 +16,8 @@ path '../' do
 end
 
 # NOTE: Needed to make a minor change to gretel to work with Rails 4.2. see https://github.com/prakash-alpine/gretel
-# gem 'gretel', :github => 'prakash-alpine/gretel'
-gem 'gretel', '3.0.8'
+gem 'gretel', :github => 'prakash-alpine/gretel'
+# gem 'gretel', '3.0.8'
 gem 'active_model_serializers'
 gem 'responders', '~> 2.0'
 
