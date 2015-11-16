@@ -28,6 +28,10 @@ ENV DATABASE_USR=rails_user
 ENV SOLR_HOST=192.168.0.20
 ENV SOLR_PORT=8983
 
+#This env. variables will be used by sunspot.yml to connect to Solr
+ENV REDIS_HOST=192.168.0.20
+ENV REDIS_PORT=6379
+
 # You have to run this CMD with 0.0.0.0 IP address for port mapping to work in Docker container. Very strange.
 CMD ["rails", "server", "-b", "0.0.0.0"]
 

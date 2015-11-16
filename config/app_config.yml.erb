@@ -5,6 +5,17 @@
 development: &defaults
   title: Rails Authorization
   url:   http://localhost:3000
+
+  solr:
+    host: localhost
+    port: 8983
+    pidfile: ./tmp/pids/solr.pid
+
+  redis:
+    host: localhost
+    port: 6379
+    pidfile: ./tmp/pids/redis.pid
+
   sidebar_menu: &sidebar_menu
     dashboard:
       url:          /

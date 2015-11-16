@@ -37,6 +37,11 @@ function start () {
        $bin/start_rails.sh;
        EXIT_STATUS=`expr $EXIT_STATUS + $?`;
     fi
+
+    if should_handle redis; then
+       $bin/start_redis.sh;
+       EXIT_STATUS=`expr $EXIT_STATUS + $?`;
+    fi
 }
 
 function stop () {
@@ -75,6 +80,10 @@ function stop () {
   fi
   if should_handle postgres;   then
     $bin/stop-postgres.sh  $MAX_WAIT_TIME;
+    EXIT_STATUS=`expr $EXIT_STATUS + $?`;
+  fi
+  if should_handle redis;   then
+    $bin/stop_redis.sh  $MAX_WAIT_TIME;
     EXIT_STATUS=`expr $EXIT_STATUS + $?`;
   fi
   popd > /dev/null

@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 path 'components' do
    gem 'persistence', '0.0.1'
+   gem 'jobs', '0.0.1'
    gem 'authentication', '0.0.1'
    gem 'authorization', '0.0.1'
    gem 'api', '0.0.1'
@@ -60,8 +61,10 @@ platforms :ruby do
     # Access an IRB console on exception pages or by using <%= console %> in views
     # web-console gem depends on bindng_of_caller gem that does not support JRuby
     # Please see http://stackoverflow.com/questions/33210259/bundle-install-error-with-jruby
+    gem 'pry-rails'
     gem 'web-console', '~> 2.0'
-    gem 'byebug'
+    # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+    # gem 'byebug'
     gem 'therubyracer'
   end
 
@@ -82,7 +85,6 @@ group :development do
   # Quiet Assets turns off the Rails asset pipeline log. This means that it suppresses messages in your development log
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'quiet_assets'
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'pry-rails'
   gem 'sdoc', '~> 0.4.0'
   gem 'annotate'
