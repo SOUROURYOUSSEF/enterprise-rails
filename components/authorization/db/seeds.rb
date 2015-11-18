@@ -1,5 +1,7 @@
 puts ''
 puts '---- Adding Roles ----'
+# delete all previously stored permissions
+Permission.destroy_all
 Role.destroy_all
 admin_role = Role.find_or_create_by(:name => 'admin'.camelize)
 owner_role = Role.find_or_create_by(:name => 'owner'.camelize)
