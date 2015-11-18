@@ -77,6 +77,11 @@ end
 # See https://github.com/mcmire/logging-rails
 gem 'logging-rails', :require => 'logging/rails'
 
+# NOTE: You will need to install the `logging-email` gem to use this appender
+# with loggging-2.0. The email appender was extracted into a plugin gem. That
+# is the reason this code is commented out.
+# See https://github.com/twp/logging-email
+gem 'logging-email'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

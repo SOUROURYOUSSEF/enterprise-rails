@@ -1,3 +1,4 @@
+
 Logging::Rails.configure do |config|
 
   # Configure the Logging framework with the default log levels
@@ -25,6 +26,8 @@ Logging::Rails.configure do |config|
     :message => :magenta
   )
 
+  config.log_to = %w[stdout debug error audit]
+
   # Configure an appender that will write log events to STDOUT. A colorized
   # pattern layout is used to format the log events into strings before
   # writing.
@@ -43,7 +46,7 @@ Logging::Rails.configure do |config|
   Logging.appenders.rolling_file( 'debug',
     #:filename => config.paths['log'].first,
     :name => 'debug_appender',
-    :filename => 'log/application.log',
+    :filename => 'log/development.log',
     :keep => 7,
     :age => 'daily',
     :truncate => false,
@@ -65,7 +68,7 @@ Logging::Rails.configure do |config|
                                   )
   ) if config.log_to.include? 'audit'
 
-  Logging.appenders.file( 'error',
+  Logging.appenders.rolling_file( 'error',
                                   :filename => 'log/errors.log',
                                   :name => 'fatal_appender',
                                   :keep => 7,
@@ -114,7 +117,9 @@ Logging::Rails.configure do |config|
   #
   # => config/environments/production.rb
   #
-  #     config.log_to = %w[file email]
+  # Set the logging destination(s)
+  #config.log_to = %W(file stdout)
+
   #
   # In development you would want to log to STDOUT and possibly to a file:
   #
@@ -123,6 +128,7 @@ Logging::Rails.configure do |config|
   #     config.log_to = %w[stdout file]
   #
   Logging.logger.root.level = config.log_level
+
   Logging.logger.root.appenders = config.log_to unless config.log_to.empty?
 
 

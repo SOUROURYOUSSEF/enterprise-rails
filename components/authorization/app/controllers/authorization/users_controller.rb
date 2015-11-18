@@ -14,6 +14,7 @@ class Authorization::UsersController < Authorization::ApplicationController
     @total = User.count
     puts "total = #{@total}"
     if @search == nil || @search == ''
+      logger.debug "------------ retrieving users from database"
       @users = User.limit(@limit).offset(@offset).order("#{@order_column} #{@direction}").includes(:groups)
       @filteredCount = User.count
     else
@@ -24,7 +25,7 @@ class Authorization::UsersController < Authorization::ApplicationController
         per_page = @limit
         page = (@offset / @limit) + 1
         search = "#{@search}*"
-#        Rails.logger(DEBUG, "------------ retrieving users from Solr")
+        logger.debug "------------ retrieving users from Solr"
         # @result = Sunspot.search(User) do
         @result = User.search do
           fulltext search
@@ -35,7 +36,7 @@ class Authorization::UsersController < Authorization::ApplicationController
         # NOTE: Use the total rows found by search query
         @filteredCount = @result.total
       else
-#        Rails.logger(DEBUG, "-------------- retrieving users from database")
+        logger.debug "-------------- retrieving users from database"
         @users = User.where('first_name like :kw or last_name like :kw', :kw=>"%#{@search}%").limit(@limit).offset(@offset).order("#{@order_column} #{@direction}").includes(:groups)
         @filteredCount = @users.count
       end
@@ -51,7 +52,6 @@ class Authorization::UsersController < Authorization::ApplicationController
     #@user = User.create(:first_name => user_params['first_name'], :last_name => user_params['last_name'], :username => user_params['username'], :email => user_params['email'], :admin => user_params['admin'])
 
     @user.create(user_params)
-    #byebug
     if @user.errors.any?
       render 'user_errors'
     else

@@ -4,7 +4,7 @@
 
 namespace :sample_data do
   task :load do
-    require "#{Persistence::Engine.root}/spec/dummy/config/environment"
+    require "#{::Rails.root}/config/environment"
     SampleData::Engine.load_seed
   end
 end
