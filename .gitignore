@@ -9,7 +9,8 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*
-!/log/.keep
+/public/*
+.keep
 /tmp
 */solr/data
 */solr/test
@@ -17,17 +18,32 @@
 */solr/default/data
 *//log/*.log.lck
 */solr/pids
-
+tlog.*
+**/data/index/*.*
+**/data/index/*
+.*~
+#.*#
 *.fdt
 
 *.tim
 
 *.pos
 
+*.lck
+
 *.0000000000000000000
 
-*.log
-
-*.log
+*/*.log
+**/*.gen
 
 *.doc
+
+*.log
+
+*.gen
+
+components/search/spec/dummy/solr/development/data/index/segments.gen
+
+*.rdb
+
+*.gen
