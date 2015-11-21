@@ -1,15 +1,18 @@
 # == Route Map
 #
-# [:::[34m2015-10-26T13:53:30[0m] DEBUG [36mActiveRecord::Base[0m : [35m  [1m[36m (24.0ms)[0m  [1mSELECT version()[0m[0m
-# [:::[34m2015-10-26T13:53:30[0m] DEBUG [36mActiveRecord::Base[0m : [35m  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "users"[0m
-# [:::[34m2015-10-26T13:53:31[0m] DEBUG [36mActiveRecord::Base[0m : [35m  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "roles"[0m[0m
-# [:::[34m2015-10-26T13:53:31[0m] DEBUG [36mActiveRecord::Base[0m : [35m  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "groups"[0m
+# [:::[34m2015-11-20T20:49:45[0m] DEBUG [36mActiveRecord::Base[0m : [35m  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m[0m
+# [:::[34m2015-11-20T20:49:45[0m] DEBUG [36mActiveRecord::Base[0m : [35m  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "roles"[0m
+# [:::[34m2015-11-20T20:49:45[0m] DEBUG [36mActiveRecord::Base[0m : [35m  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "groups"[0m[0m
 #             Prefix Verb URI Pattern Controller#Action
 # persistence_engine      /           Persistence::Engine
 #     authentication      /           Authentication::Engine
 #      authorization      /           Authorization::Engine
+#                api      /api        Api::Engine
 #          web_style      /           WebStyle::Engine
 #        sample_data      /           SampleData::Engine
+#             search      /           Search::Engine
+#               jobs      /           Jobs::Engine
+#                cms      /           Cms::Engine
 #
 # Routes for Persistence::Engine:
 #
@@ -78,6 +81,8 @@
 #                          PUT    /roles/:id(.:format)                    authorization/roles#update
 #                          DELETE /roles/:id(.:format)                    authorization/roles#destroy
 #             delete_group GET    /groups/:id/delete(.:format)            authorization/groups#delete
+#  manage_membership_group GET    /groups/:id/manage_membership(.:format) authorization/groups#manage_membership
+#  update_membership_group PUT    /groups/:id/update_membership(.:format) authorization/groups#update_membership
 #                   groups GET    /groups(.:format)                       authorization/groups#index
 #                          POST   /groups(.:format)                       authorization/groups#create
 #                new_group GET    /groups/new(.:format)                   authorization/groups#new
@@ -97,10 +102,34 @@
 #                          DELETE /users/:id(.:format)                    authorization/users#destroy
 #                     root GET    /                                       authorization/users#index
 #
+# Routes for Api::Engine:
+#  v1_users GET  /v1/users(.:format)      api/v1/users#index {:format=>:json}
+#   v1_user GET  /v1/users/:id(.:format)  api/v1/users#show {:format=>:json}
+# v1_groups GET  /v1/groups(.:format)     api/v1/groups#index {:format=>:json}
+#  v1_group GET  /v1/groups/:id(.:format) api/v1/groups#show {:format=>:json}
+#
 # Routes for WebStyle::Engine:
 #
 #
 # Routes for SampleData::Engine:
+#
+#
+# Routes for Search::Engine:
+#
+#
+# Routes for Jobs::Engine:
+#
+#
+# Routes for Cms::Engine:
+# retrieve_cms GET    /cms/retrieve(.:format) cms/cms#retrieve
+#          cms GET    /cms(.:format)          cms/cms#index
+#              POST   /cms(.:format)          cms/cms#create
+#       new_cm GET    /cms/new(.:format)      cms/cms#new
+#      edit_cm GET    /cms/:id/edit(.:format) cms/cms#edit
+#           cm GET    /cms/:id(.:format)      cms/cms#show
+#              PATCH  /cms/:id(.:format)      cms/cms#update
+#              PUT    /cms/:id(.:format)      cms/cms#update
+#              DELETE /cms/:id(.:format)      cms/cms#destroy
 #
 
 Rails.application.routes.draw do
@@ -115,6 +144,7 @@ Rails.application.routes.draw do
   mount SampleData::Engine, at: '/'
   mount Search::Engine, at: '/'
   mount Jobs::Engine, at: '/'
+  mount Cms::Engine, at: '/'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

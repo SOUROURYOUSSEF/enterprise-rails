@@ -9,6 +9,7 @@ path 'components' do
    gem 'web_style', '0.0.1'
    gem 'sample_data', '0.0.1'
    gem 'search', '0.0.1'
+   gem 'cms', '0.0.1'
  end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -82,6 +83,14 @@ gem 'logging-rails', :require => 'logging/rails'
 # is the reason this code is commented out.
 # See https://github.com/twp/logging-email
 gem 'logging-email'
+
+# Use Redis as a Rails cache store. See https://github.com/redis-store/redis-rails
+# See https://github.com/redis/redis-rb to learn more about Redis
+gem 'redis-rails'
+
+# Process monitoring tool. Inspired from Bluepill and God. Requires Ruby(MRI) >= 1.9.3-p194. Uses Celluloid and Celluloid::IO.
+# See https://github.com/kostya/eye
+# gem 'eye'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

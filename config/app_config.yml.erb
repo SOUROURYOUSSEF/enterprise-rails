@@ -3,7 +3,7 @@
 # See http://stackoverflow.com/questions/6655767/how-to-use-yaml-in-a-rails-way
 
 development: &defaults
-  title: Rails Authorization
+  title: Enterprise Rails
   url:   http://localhost:3000
 
   solr:
@@ -15,6 +15,14 @@ development: &defaults
     host: localhost
     port: 6379
     pidfile: ./tmp/pids/redis.pid
+
+  locomotive:
+    host: localhost
+    port: 3000
+    db_path:  data/mongodb
+    username: prakash0450@gmail.com
+    password: Vinty123
+    auth_token: FYjyzNszXkLMbQayoudS
 
   sidebar_menu: &sidebar_menu
     dashboard:
@@ -64,5 +72,24 @@ test: *defaults
 production:
   title: Rails Authorization
   url:   http://localhost:3000
+
+  solr:
+    host: localhost
+    port: 8983
+    pidfile: ./tmp/pids/solr.pid
+
+  redis:
+    host: localhost
+    port: 6379
+    pidfile: ./tmp/pids/redis.pid
+
+  locomotive:
+    host: localhost
+    port: 27010
+    db_path:  data/mongodb
+    username: prakash0450@gmail.com
+    password: Vinty123
+    auth_token: FYjyzNszXkLMbQayoudS
+
   sidebar_menu: *sidebar_menu
 

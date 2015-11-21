@@ -17,6 +17,10 @@ PATH
       jbuilder (= 2.3.2)
       rails (~> 4.2.4)
       responders (= 2.1.0)
+    jobs (0.0.1)
+      clockwork (= 1.2.0)
+      rails (~> 4.2.4)
+      sidekiq (~> 3.5.3)
     persistence (0.0.1)
       rails (~> 4.2.4)
       search (= 0.0.1)
@@ -85,7 +89,6 @@ GEM
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
-    byebug (8.1.0)
     capistrano (3.4.0)
       i18n
       rake (>= 10.0.0)
@@ -96,6 +99,26 @@ GEM
     capistrano-rails (1.1.5)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
+    celluloid (0.17.2)
+      celluloid-essentials
+      celluloid-extras
+      celluloid-fsm
+      celluloid-pool
+      celluloid-supervision
+      timers (>= 4.1.1)
+    celluloid-essentials (0.20.5)
+      timers (>= 4.1.1)
+    celluloid-extras (0.20.5)
+      timers (>= 4.1.1)
+    celluloid-fsm (0.20.5)
+      timers (>= 4.1.1)
+    celluloid-pool (0.20.5)
+      timers (>= 4.1.1)
+    celluloid-supervision (0.20.5)
+      timers (>= 4.1.1)
+    clockwork (1.2.0)
+      activesupport
+      tzinfo
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -106,6 +129,7 @@ GEM
     coffee-script-source (1.10.0)
     colorize (0.7.7)
     commonjs (0.2.7)
+    connection_pool (2.2.0)
     debug_inspector (0.0.2)
     devise (3.4.1)
       bcrypt (~> 3.0)
@@ -130,6 +154,7 @@ GEM
       activesupport (>= 4.1.0)
     gretel (3.0.8)
       rails (>= 3.2.0)
+    hitimes (1.2.3)
     i18n (0.7.0)
     jbuilder (2.3.2)
       activesupport (>= 3.0.0, < 5)
@@ -151,6 +176,8 @@ GEM
     logging (2.0.0)
       little-plugger (~> 1.1)
       multi_json (~> 1.10)
+    logging-email (1.0.0)
+      logging (~> 2)
     logging-rails (0.5.0)
       logging (>= 1.8)
     loofah (2.0.3)
@@ -165,10 +192,10 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (3.0.1)
-    nokogiri (1.6.6.2)
+    nokogiri (1.6.6.3)
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
-    pg (0.18.3)
+    pg (0.18.4)
     pr_geohash (1.0.0)
     pry (0.10.3)
       coderay (~> 1.1.0)
@@ -208,6 +235,9 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
     rdoc (4.2.0)
+    redis (3.2.2)
+    redis-namespace (1.5.2)
+      redis (~> 3.0, >= 3.0.4)
     ref (2.0.0)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
@@ -240,8 +270,14 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    sidekiq (3.5.3)
+      celluloid (~> 0.17.2)
+      connection_pool (~> 2.2, >= 2.2.0)
+      json (~> 1.0)
+      redis (~> 3.2, >= 3.2.1)
+      redis-namespace (~> 1.5, >= 1.5.2)
     slop (3.6.0)
-    spring (1.4.1)
+    spring (1.4.2)
     sprockets (3.4.0)
       rack (> 1, < 3)
     sprockets-rails (2.3.3)
@@ -268,6 +304,8 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.1)
+    timers (4.1.1)
+      hitimes
     turbolinks (2.5.3)
       coffee-rails
     tzinfo (1.2.2)
@@ -294,15 +332,16 @@ DEPENDENCIES
   api (= 0.0.1)!
   authentication (= 0.0.1)!
   authorization (= 0.0.1)!
-  byebug
   capistrano-rails
   coffee-rails (~> 4.1.0)
   devise
   foreman
   jbuilder
+  jobs (= 0.0.1)!
   jquery-rails
   jruby-openssl (= 0.9.6)
   less-rails
+  logging-email
   logging-rails
   net-ssh (= 2.9.2)
   persistence (= 0.0.1)!
