@@ -26,7 +26,7 @@ mkdir -p $RAILS_HOME/tmp/pids
 CLOCKWORK_PID_FILE=$RAILS_HOME/tmp/pids/clockwork.pid
 RAILS_PID_FILE=$RAILS_HOME/tmp/pids/puma.pid
 SIDEKIQ_PID_FILE=$RAILS_HOME/tmp/pids/sidekiq.pid
-REDIS_PID_FILE=$RAILS_HOME/tmp/pids/redis.pid
+REDIS_PID_FILE=$RAILS_HOME/tmp/pids/redis-server.pid
 
 
 ## Function to test dependencies of processes. Checks the PID files in $RAILS_HOME/tmp dir
@@ -68,7 +68,10 @@ function log_inline () {
 
 function wait_for_start () {
     pid_file=$1
-    until ( test -f $pid_file ) && ( kill -0 `head -1 $pid_file` > /dev/null 2>&1 )
+    process_name=$2
+     # NOTE: need a better way of checking if process is in running state
+     #until ( test -f $pid_file ) && ( pgrep $process_name == `head -1 $pid_file` > /dev/null 2>&1 )
+     until ( test -f $pid_file )
     do
         sleep 1
     done
@@ -76,6 +79,7 @@ function wait_for_start () {
 
 function wait_for_stop () {
     pid_file=$1
+    # NOTE: need a better wasy of checking if process is stoppe. kill -0 is not supported on MacOSX. See 'man kill' manpage -> BUGS
     while kill -0 `head -1 $pid_file 2>/dev/null` > /dev/null 2>&1
     do
         echo -n "."
