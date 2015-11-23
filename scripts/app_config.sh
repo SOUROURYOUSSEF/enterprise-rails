@@ -8,7 +8,7 @@ fi
 RAILS_HOME=`echo $RAILS_HOME | sed 's/\/$//'`
 
 if [ "$RAILS_ENV" = "" ]; then
-    if [ -f $CHORUS_HOME/.development ]; then
+    if [ -f $RAILS_HOME/.development ]; then
         RAILS_ENV=development
     else
         RAILS_ENV=production
