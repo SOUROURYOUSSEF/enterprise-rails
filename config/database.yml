@@ -1,17 +1,15 @@
 default: &default
   adapter:  postgresql
   encoding: unicode
-  username: <%= ENV['DATABASE_USER'] %>
-  password:
-  host: <%= ENV['DATABASE_HOST'] %>
-  port: <%= ENV['DATABASE_PORT'] %>
+  username: postgres_rails
+  password: postgres_rails
+  # The host name is derived from docker-compose.yml file.
+  host: enterpriserails_ent_postgres_1
   min_messages: warning
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
   # domain sockets, so uncomment these lines.
-  # username: authorize_it
   #host: 127.0.0.1
-  #port: 8543
   pool: 5
 
   # Schema search path. The server defaults to $user,public
@@ -36,6 +34,6 @@ test:
   <<: *default
 
 production:
-  database: enterprise_rails_production
+  database: enterprise_rails
   <<: *default
 

@@ -1,0 +1,11 @@
+FROM postgres
+USER postgres
+LABEL version="1.0"
+VOLUME /var/lib/postgresql/data
+# RUN initdb -D /var/lib/postgresql/data
+# RUN pg_ctl start -w -D /var/lib/postgresql/data
+RUN psql --command "CREATE USER postgres_rails WITH SUPERUSER PASSWORD 'postgres_rails';" &&\
+RUN createdb -O postgres_rails
+
+
+

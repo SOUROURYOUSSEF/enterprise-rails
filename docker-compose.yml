@@ -1,23 +1,8 @@
 
-ent_postgres:
-  image: postgres
-  ports:
-    - "5432:5432"
-
-ent_solr:
-  image: solr
-  ports:
-    - "8983:8983"
-
-ent_redis:
-  image: redis
-  ports:
-    - "6379:6379"
-
 ent_web:
-  build:  .
+  build: .
 
-  container_name: ent_web_dev
+#  container_name: ent_web_dev
 
   # provide custom environment variables
   env_file:
@@ -26,6 +11,7 @@ ent_web:
   # You can overwrite env variables here
   environment:
     - RAILS_ENV=development
+
 #    - DATABASE_HOST=192.168.0.20
 #    - DATABASE_PORT=5432
 #    - DATABASE_USR=rails_user
@@ -39,6 +25,26 @@ ent_web:
     - ent_postgres
     - ent_solr
     - ent_redis
+
+ent_postgres:
+  image:  grahamgilbert/postgres:latest
+  ports:
+    - "5432:5432"
+  environment:
+    DB_NAME:  enterprise_rails_development
+    DB_USER:  postgres_rails
+    DB_PASS:  postgres_rails
+
+ent_solr:
+  image: solr
+  ports:
+    - "8983:8983"
+
+ent_redis:
+  image: redis:latest
+  ports:
+    - "6379:6379"
+
 
 #  external_links:
 #    - sad_wright:postgres

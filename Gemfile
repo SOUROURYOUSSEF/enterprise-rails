@@ -1,16 +1,16 @@
 source 'https://rubygems.org'
 
-path 'components' do
-   gem 'persistence', '0.0.1'
-   gem 'jobs', '0.0.1'
-   gem 'authentication', '0.0.1'
-   gem 'authorization', '0.0.1'
-   gem 'api', '0.0.1'
-   gem 'web_style', '0.0.1'
-   gem 'sample_data', '0.0.1'
-   gem 'search', '0.0.1'
-   gem 'cms', '0.0.1'
- end
+ path 'components' do
+    gem 'persistence', '0.0.1'
+    gem 'jobs', '0.0.1'
+    gem 'authentication', '0.0.1'
+    gem 'authorization', '0.0.1'
+    gem 'api', '0.0.1'
+    gem 'web_style', '0.0.1'
+    gem 'sample_data', '0.0.1'
+    gem 'search', '0.0.1'
+    gem 'cms', '0.0.1'
+  end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
@@ -66,6 +66,9 @@ platforms :ruby do
     gem 'web-console', '~> 2.0'
     # Call 'byebug' anywhere in the code to stop execution and get a debugger console
     # gem 'byebug'
+    # A gem for distributing the v8 runtime libraries and headers in both source and binary form.
+    gem 'libv8'
+    # Do not build on docker host
     gem 'therubyracer'
   end
 
@@ -102,16 +105,25 @@ group :development do
   gem 'pry-rails'
   gem 'sdoc', '~> 0.4.0'
   gem 'annotate'
+  # Less has dependency on rubyracer in development env. Temp. commenting out for build to pass on docker host
   gem 'less-rails'
   gem 'sass-rails'
+
   # Use CoffeeScript for .coffee assets and views
   gem 'coffee-rails', '~> 4.1.0'
+
   # Use Capistrano for deployment
   gem 'capistrano-rails'
+
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   #gem 'progress_bar'
-  gem 'foreman'
+
+  # The Bullet gem is designed to help you increase your application's performance by reducing the number of queries it makes.
+  # It will watch your queries while you develop your application and notify you when you should add eager loading (N+1 queries),
+  # when you're using eager loading that isn't necessary and when you should use counter cache
+  # See https://github.com/flyerhzm/bullet
+  gem 'bullet'
 end
 
 # group :test, :development do

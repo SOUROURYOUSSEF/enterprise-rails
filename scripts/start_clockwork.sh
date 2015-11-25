@@ -4,7 +4,7 @@
 
 CLOCKWORK_HOME=$RAILS_HOME/components/jobs
 echo "Starting Clockwork"
-cd $CLOCKWORK_HOME
+cd $RAILS_HOME
 echo $PWD
 
 bundle exec clockwork $CLOCKWORK_HOME/lib/clock.rb >> $RAILS_HOME/log/clockwork.log 2>&1 &
