@@ -19,7 +19,6 @@ WORKDIR /myapp
 ENV RAILS_ENV=development
 ENV RAILS_HOME=/myapp
 
-RUN erb ./config/redis.conf.erb > ./config/redis.conf
 
 # bundle install needs to be after adding rails dir since Gemfile refers to engines in components dir of app.
 
@@ -39,6 +38,8 @@ ENV SOLR_PORT=8983
 #This env. variables will be used by sunspot.yml to connect to Solr
 ENV REDIS_HOST=192.168.0.20
 ENV REDIS_PORT=6379
+
+RUN erb ./config/redis.conf.erb > ./config/redis.conf
 
 # You have to run this CMD with 0.0.0.0 IP address for port mapping to work in Docker container. Very strange.
 # NOTE: the rake commands are being run here before starting rails to setup database. There has to be a better way. Need to investigate.
