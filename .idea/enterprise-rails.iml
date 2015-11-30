@@ -168,9 +168,160 @@
     </content>
     <orderEntry type="jdk" jdkName="RVM: ruby-2.2.1" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="api (v0.0.1, /Users/prakashteli/workspaces/enterprise-rails/components/api) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/components/api/app" />
+          <root url="file://$MODULE_DIR$/components/api/bin" />
+          <root url="file://$MODULE_DIR$/components/api/lib" />
+          <root url="file://$MODULE_DIR$/components/api/config" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/components/api/app" />
+          <root url="file://$MODULE_DIR$/components/api/bin" />
+          <root url="file://$MODULE_DIR$/components/api/lib" />
+          <root url="file://$MODULE_DIR$/components/api/config" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="authentication (v0.0.1, /Users/prakashteli/workspaces/enterprise-rails/components/authentication) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/components/authentication/db" />
+          <root url="file://$MODULE_DIR$/components/authentication/app" />
+          <root url="file://$MODULE_DIR$/components/authentication/bin" />
+          <root url="file://$MODULE_DIR$/components/authentication/lib" />
+          <root url="file://$MODULE_DIR$/components/authentication/config" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/components/authentication/db" />
+          <root url="file://$MODULE_DIR$/components/authentication/app" />
+          <root url="file://$MODULE_DIR$/components/authentication/bin" />
+          <root url="file://$MODULE_DIR$/components/authentication/lib" />
+          <root url="file://$MODULE_DIR$/components/authentication/config" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="authorization (v0.0.1, /Users/prakashteli/workspaces/enterprise-rails/components/authorization) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/components/authorization/db" />
+          <root url="file://$MODULE_DIR$/components/authorization/app" />
+          <root url="file://$MODULE_DIR$/components/authorization/bin" />
+          <root url="file://$MODULE_DIR$/components/authorization/lib" />
+          <root url="file://$MODULE_DIR$/components/authorization/config" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/components/authorization/db" />
+          <root url="file://$MODULE_DIR$/components/authorization/app" />
+          <root url="file://$MODULE_DIR$/components/authorization/bin" />
+          <root url="file://$MODULE_DIR$/components/authorization/lib" />
+          <root url="file://$MODULE_DIR$/components/authorization/config" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="cms (v0.0.1, /Users/prakashteli/workspaces/enterprise-rails/components/cms) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/components/cms/app" />
+          <root url="file://$MODULE_DIR$/components/cms/bin" />
+          <root url="file://$MODULE_DIR$/components/cms/lib" />
+          <root url="file://$MODULE_DIR$/components/cms/config" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/components/cms/app" />
+          <root url="file://$MODULE_DIR$/components/cms/bin" />
+          <root url="file://$MODULE_DIR$/components/cms/lib" />
+          <root url="file://$MODULE_DIR$/components/cms/config" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jobs (v0.0.1, /Users/prakashteli/workspaces/enterprise-rails/components/jobs) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/components/jobs/app" />
+          <root url="file://$MODULE_DIR$/components/jobs/bin" />
+          <root url="file://$MODULE_DIR$/components/jobs/lib" />
+          <root url="file://$MODULE_DIR$/components/jobs/config" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/components/jobs/app" />
+          <root url="file://$MODULE_DIR$/components/jobs/bin" />
+          <root url="file://$MODULE_DIR$/components/jobs/lib" />
+          <root url="file://$MODULE_DIR$/components/jobs/config" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="persistence (v0.0.1, /Users/prakashteli/workspaces/enterprise-rails/components/persistence) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/components/persistence/db" />
+          <root url="file://$MODULE_DIR$/components/persistence/app" />
+          <root url="file://$MODULE_DIR$/components/persistence/bin" />
+          <root url="file://$MODULE_DIR$/components/persistence/lib" />
+          <root url="file://$MODULE_DIR$/components/persistence/config" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/components/persistence/db" />
+          <root url="file://$MODULE_DIR$/components/persistence/app" />
+          <root url="file://$MODULE_DIR$/components/persistence/bin" />
+          <root url="file://$MODULE_DIR$/components/persistence/lib" />
+          <root url="file://$MODULE_DIR$/components/persistence/config" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="sample_data (v0.0.1, /Users/prakashteli/workspaces/enterprise-rails/components/sample_data) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/components/sample_data/db" />
+          <root url="file://$MODULE_DIR$/components/sample_data/bin" />
+          <root url="file://$MODULE_DIR$/components/sample_data/lib" />
+          <root url="file://$MODULE_DIR$/components/sample_data/config" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/components/sample_data/db" />
+          <root url="file://$MODULE_DIR$/components/sample_data/bin" />
+          <root url="file://$MODULE_DIR$/components/sample_data/lib" />
+          <root url="file://$MODULE_DIR$/components/sample_data/config" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="search (v0.0.1, /Users/prakashteli/workspaces/enterprise-rails/components/search) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/components/search/app" />
+          <root url="file://$MODULE_DIR$/components/search/bin" />
+          <root url="file://$MODULE_DIR$/components/search/lib" />
+          <root url="file://$MODULE_DIR$/components/search/log" />
+          <root url="file://$MODULE_DIR$/components/search/config" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/components/search/app" />
+          <root url="file://$MODULE_DIR$/components/search/bin" />
+          <root url="file://$MODULE_DIR$/components/search/lib" />
+          <root url="file://$MODULE_DIR$/components/search/log" />
+          <root url="file://$MODULE_DIR$/components/search/config" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="web_style (v0.0.1, /Users/prakashteli/workspaces/enterprise-rails/components/web_style) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/components/web_style/lib" />
+          <root url="file://$MODULE_DIR$/components/web_style/config" />
+          <root url="file://$MODULE_DIR$/components/web_style/vendor" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/components/web_style/lib" />
+          <root url="file://$MODULE_DIR$/components/web_style/config" />
+          <root url="file://$MODULE_DIR$/components/web_style/vendor" />
+        </SOURCES>
+      </library>
+    </orderEntry>
     <orderEntry type="library" scope="PROVIDED" name="actionmailer (v4.2.4, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionpack (v4.2.4, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionview (v4.2.4, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="active_model_serializers (v0.9.3, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activejob (v4.2.4, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activemodel (v4.2.4, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activerecord (v4.2.4, RVM: ruby-2.2.1) [gem]" level="application" />
@@ -186,17 +337,31 @@
     <orderEntry type="library" scope="PROVIDED" name="capistrano (v3.4.0, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="capistrano-bundler (v1.1.4, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="capistrano-rails (v1.1.5, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="celluloid (v0.17.2, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="celluloid-essentials (v0.20.5, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="celluloid-extras (v0.20.5, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="celluloid-fsm (v0.20.5, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="celluloid-pool (v0.20.5, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="celluloid-supervision (v0.20.5, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="clockwork (v1.2.0, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coderay (v1.1.0, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-rails (v4.1.0, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script (v2.4.1, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.10.0, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="colorize (v0.7.7, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="commonjs (v0.2.7, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="connection_pool (v2.2.0, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="debug_inspector (v0.0.2, RVM: ruby-2.2.1) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="devise (v3.5.2, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="devise (v3.4.1, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.2.5, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="execjs (v2.6.0, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="factory_girl (v4.4.0, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="factory_girl_rails (v4.4.1, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="faker (v1.4.3, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v0.3.6, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="gretel (v3.0.8, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="hitimes (v1.2.3, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.7.0, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jbuilder (v2.3.2, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v4.0.5, RVM: ruby-2.2.1) [gem]" level="application" />
@@ -211,6 +376,7 @@
     <orderEntry type="library" scope="PROVIDED" name="loofah (v2.0.3, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.6.3, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="method_source (v0.8.2, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mime-types (v2.99, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mini_portile (v0.6.2, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="minitest (v5.8.3, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.11.2, RVM: ruby-2.2.1) [gem]" level="application" />
@@ -219,6 +385,7 @@
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.6.6.4, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="orm_adapter (v0.5.0, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pg (v0.18.4, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="pr_geohash (v1.0.0, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pry (v0.10.3, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pry-rails (v0.3.4, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="puma (v2.15.3, RVM: ruby-2.2.1) [gem]" level="application" />
@@ -235,27 +402,41 @@
     <orderEntry type="library" scope="PROVIDED" name="redis (v3.2.2, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="redis-actionpack (v4.0.1, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="redis-activesupport (v4.1.5, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="redis-namespace (v1.5.2, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="redis-rack (v1.5.0, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="redis-rails (v4.0.0, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="redis-store (v1.1.7, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ref (v2.0.0, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="responders (v2.1.0, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rsolr (v1.0.13, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-core (v3.4.1, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-expectations (v3.4.0, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-mocks (v3.4.0, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-rails (v3.4.0, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-support (v3.4.1, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass (v3.4.19, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass-rails (v5.0.4, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sdoc (v0.4.1, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sidekiq (v3.5.3, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="slop (v3.6.0, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="spring (v1.4.4, RVM: ruby-2.2.1) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="sprockets (v3.4.0, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sprockets (v3.4.1, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets-rails (v2.3.3, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sshkit (v1.7.1, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sunspot (v2.2.0, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sunspot_rails (v2.2.0, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="therubyracer (v0.12.2, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="therubyrhino (v2.0.4, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="therubyrhino_jar (v1.7.6, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thor (v0.19.1, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thread_safe (v0.3.5, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tilt (v2.0.1, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="timers (v4.1.1, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="turbolinks (v2.5.3, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v1.2.2, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="uglifier (v2.7.2, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="uniform_notifier (v1.9.0, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="wannabe_bool (v0.0.1, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="warden (v1.2.3, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="web-console (v2.2.1, RVM: ruby-2.2.1) [gem]" level="application" />
   </component>

@@ -15,6 +15,9 @@ then
 fi
 
 # NOTE: see redis.conf for options to store PID etc.
+
+# process redis.conf.erb file
+erb $RAILS_HOME/config/redis.conf.erb > $RAILS_HOME/config/redis.conf
 redis-server $RAILS_HOME/config/redis.conf
 
 wait_for_start $REDIS_PID_FILE

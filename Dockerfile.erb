@@ -27,18 +27,18 @@ RUN bundle install
 
 EXPOSE 3000
 #This env. variables will be used by database.yml to connect to postgresSQL
-ENV DATABASE_HOST=ent_postgres
-ENV DATABASE_PORT=5432
-ENV DATABASE_USR=authorize_it
-ENV DATABASE_PASSWD=postgres_rails
+ENV DATABASE_HOST=<%= ENV['DATABASE_HOST'] %>
+ENV DATABASE_PORT=<%= ENV['DATABASE_PORT'] %>
+ENV DATABASE_USER=<%= ENV['DATABASE_USER'] %>
+ENV DATABASE_PASSWD=<%= ENV['DATABASE_PASSWD'] %>
 
 #This env. variables will be used by sunspot.yml to connect to Solr
-ENV SOLR_HOST=192.168.0.20
-ENV SOLR_PORT=8983
+ENV SOLR_HOST=<%= ENV['SOLR_HOST'] %>
+ENV SOLR_PORT=<%= ENV['SOLR_PORT'] %>
 
 #This env. variables will be used by sunspot.yml to connect to Solr
-ENV REDIS_HOST=192.168.0.20
-ENV REDIS_PORT=6379
+ENV REDIS_HOST=<%= ENV['REDIS_HOST'] %>
+ENV REDIS_PORT=<%= ENV['REDIS_PORT'] %>
 
 # You have to run this CMD with 0.0.0.0 IP address for port mapping to work in Docker container. Very strange.
 # NOTE: the rake commands are being run here before starting rails to setup database. There has to be a better way. Need to investigate.

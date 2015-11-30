@@ -5,46 +5,47 @@ ent_web:
 #  container_name: ent_web_dev
 
   # provide custom environment variables
-  env_file:
-    - config/docker_dev.env
+  # env_file:
+  #  - config/docker_dev.env
 
   # You can overwrite env variables here
   environment:
     - RAILS_ENV=development
 
-#    - DATABASE_HOST=192.168.0.20
-#    - DATABASE_PORT=5432
-#    - DATABASE_USR=rails_user
-#    - SOLR_HOST=192.168.0.20
-#    - SOLR_PORT=8983
-
   ports:
     - "32010:3000"
 
   links:
-    - ent_postgres
-    - ent_solr
-    - ent_redis
+    - ent_postgres:ent_progress
+    - ent_solr:ent_solr
+    - ent_redis:ent_redis
 
 ent_postgres:
   image:  grahamgilbert/postgres:latest
   ports:
     - "5432:5432"
+  container_name: ent_postgres
   environment:
     DB_NAME:  enterprise_rails_development
     DB_USER:  postgres_rails
     DB_PASS:  postgres_rails
 
 ent_solr:
-  image: solr
+  image: pataquets/solr
   ports:
     - "8983:8983"
-
+  container_name: ent_solr
+  volumes:
+  # NOTE: for docker-machine the volumes are mapped from localhost->docker-machine->container. So we can expose the local solr configuration and data to container.
+  # This is not at all obvious. In order for this to work with a remote docker host, the localhost and docker host directories needs to be synced up manually.
+  # Also note that I had to use an older version (4.10) of solr image. The latest version is not compatible with what is used in the project (4.2).
+  # Also note the location of solr configuration and data on image is different than standard solr configuration. 
+    - ./components/search/spec/dummy/solr:/opt/solr/example/solr
 ent_redis:
   image: redis:latest
   ports:
     - "6379:6379"
-
+  container_name: ent_redis
 
 #  external_links:
 #    - sad_wright:postgres

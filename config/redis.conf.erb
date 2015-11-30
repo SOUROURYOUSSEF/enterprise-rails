@@ -49,13 +49,13 @@ daemonize yes
 # giving relative path does not generate the pidfile. Also you can not use environment variables
 # It looks like a bug.
 # See stackoverflow post at http://stackoverflow.com/questions/19452637/setting-dynamic-path-in-the-redis-conf-using-the-environment-variable
-pidfile /Users/prakashteli/workspaces/enterprise-rails/tmp/pids/redis-server.pid
+pidfile <%= ENV['RAILS_HOME'] %>/tmp/pids/redis-server.pid
 
 # pidfile ./tmp/pids/redis-server.pid
 
 # Accept connections on the specified port, default is 6379.
 # If port 0 is specified Redis will not listen on a TCP socket.
-port 6379
+port <%= ENV['REDIS_PORT'] %>
 
 # TCP listen() backlog.
 #
@@ -74,7 +74,7 @@ tcp-backlog 511
 # Examples:
 #
 # bind 192.168.1.100 10.0.0.1
-bind localhost
+bind <%= ENV['REDIS_HOST'] %>
 
 
 # Specify the path for the Unix socket that will be used to listen for
@@ -116,7 +116,7 @@ loglevel debug
 # Redis to log on the standard output. Note that if you use standard
 # output for logging but daemonize, logs will be sent to /dev/null
 
-logfile /Users/prakashteli/workspaces/enterprise-rails/log/redis.log
+logfile <%= ENV['RAILS_HOME'] %>/log/redis.log
 
 # To enable logging to the system logger, just set 'syslog-enabled' to yes,
 # and optionally update the other syslog parameters to suit your needs.
