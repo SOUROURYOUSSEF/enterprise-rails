@@ -29,7 +29,7 @@ EXPOSE 3000
 #This env. variables will be used by database.yml to connect to postgresSQL
 ENV DATABASE_HOST=ent_postgres
 ENV DATABASE_PORT=5432
-ENV DATABASE_USR=authorize_it
+ENV DATABASE_USER=postgres_rails
 ENV DATABASE_PASSWD=postgres_rails
 
 #This env. variables will be used by sunspot.yml to connect to Solr
@@ -47,7 +47,6 @@ CMD rake db:drop \
     && rake db:migrate \
     && rake sample_data:load \
     && rake authorization:seed \
-    && rm ./tmp/pids/*.pid \
     && ./scripts/start_sidekiq.sh \
     && ./scripts/start_clockwork.sh \
     && rails server -b 0.0.0.0
