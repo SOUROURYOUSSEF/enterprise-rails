@@ -18,6 +18,8 @@
       <env name="SOLR_PORT" value="8983" />
       <env name="SECRET_KEY_BASE" value="c733aabc894e4464031641d68f9c2066df51d177d793f462892b20ec8c50df7c06aa30fdd1153c19e6487684254fface62f09af847ad4cfb85c537d84e3e3a38" />
       <env name="SECRET_TOKEN" value="75247b16b4be847593117603f9f7edb7f5fa3043e62fcede9a63083a7bdb82085b8b7da30fbf6da84e7f5c7bae2b366ca2798c85e6bf1f8da678a4f9d336a524" />
+      <env name="REDIS_HOST" value="192.168.99.100" />
+      <env name="REDIS_PORT" value="6379" />
     </envs>
     <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
     <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
