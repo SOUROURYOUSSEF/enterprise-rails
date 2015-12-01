@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9e28779-1c11-49b8-a47a-bef81c08446f" name="Default" comment="Fixed issues to run app in production mode.">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/components/search/spec/dummy/config/sunspot.yml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/redis/redis_dump.rdb" afterPath="$PROJECT_DIR$/db/redis/redis_dump.rdb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docker-compose.yml" afterPath="$PROJECT_DIR$/docker-compose.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="enterprise-rails.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -89,10 +89,10 @@
           <file leaf-file-name="docker-compose.yml" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/docker-compose.yml">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.69036335">
-                  <caret line="59" column="36" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+                <state vertical-scroll-proportion="0.7203792">
+                  <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
                   <folding>
-                    <marker date="1449012288000" expanded="true" signature="99:141" placeholder="env_file:" />
+                    <marker date="1449012848000" expanded="true" signature="99:141" placeholder="env_file:" />
                   </folding>
                 </state>
               </provider>
@@ -198,21 +198,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="app_config.rb" pinned="false" current-in-tab="false">
+          <file leaf-file-name="app_config.rb" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/config/initializers/app_config.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
+                <state vertical-scroll-proportion="0.4375">
                   <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="sunspot.yml.bk" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/components/search/spec/dummy/config/sunspot.yml.bk">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -224,7 +214,7 @@
                 <state vertical-scroll-proportion="0.0">
                   <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
                   <folding>
-                    <marker date="1449012288000" expanded="true" signature="99:141" placeholder="env_file:" />
+                    <marker date="1449012848000" expanded="true" signature="99:141" placeholder="env_file:" />
                   </folding>
                 </state>
               </provider>
@@ -2596,7 +2586,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/app_config.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.4375">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
@@ -2685,14 +2675,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/search/spec/dummy/config/sunspot.yml.bk">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile.app.lock">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.2931035">
@@ -2763,10 +2745,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docker-compose.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.69036335">
-          <caret line="59" column="36" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.7203792">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
           <folding>
-            <marker date="1449012288000" expanded="true" signature="99:141" placeholder="env_file:" />
+            <marker date="1449012848000" expanded="true" signature="99:141" placeholder="env_file:" />
           </folding>
         </state>
       </provider>
