@@ -4,12 +4,7 @@
     <list default="true" id="a9e28779-1c11-49b8-a47a-bef81c08446f" name="Default" comment="Fixed issues to run app in production mode.">
       <change type="DELETED" beforePath="$PROJECT_DIR$/components/search/spec/dummy/config/sunspot.yml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/redis/redis_dump.rdb" afterPath="$PROJECT_DIR$/db/redis/redis_dump.rdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dockerfile" afterPath="$PROJECT_DIR$/Dockerfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/logging.rb" afterPath="$PROJECT_DIR$/config/logging.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/search/spec/dummy/solr/solr.xml" afterPath="$PROJECT_DIR$/components/search/spec/dummy/solr/solr.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dockerfile.erb" afterPath="$PROJECT_DIR$/Dockerfile.erb" />
     </list>
     <ignored path="enterprise-rails.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,7 +33,7 @@
     <favorites_list name="enterprise-rails" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.52858573">
+    <splitter split-orientation="vertical" split-proportion="0.75">
       <split-first>
         <leaf>
           <file leaf-file-name="redis.conf" pinned="false" current-in-tab="false">
@@ -91,10 +86,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="logging.rb" pinned="false" current-in-tab="true">
+          <file leaf-file-name="logging.rb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/config/logging.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.7114968">
+                <state vertical-scroll-proportion="0.0">
                   <caret line="147" column="3" selection-start-line="147" selection-start-column="3" selection-end-line="147" selection-end-column="3" />
                   <folding />
                 </state>
@@ -111,11 +106,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Dockerfile.erb" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Dockerfile.erb" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Dockerfile.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-19.678572">
-                  <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.40438873">
+                  <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
                   <folding />
                 </state>
               </provider>
@@ -158,7 +153,7 @@
           <file leaf-file-name="sunspot.yml" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/config/sunspot.yml">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.32518336">
+                <state vertical-scroll-proportion="0.6519608">
                   <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
                   <folding />
                 </state>
@@ -302,12 +297,12 @@
         <option value="$PROJECT_DIR$/docker_dev.sh" />
         <option value="$PROJECT_DIR$/config/app_config.yml.erb" />
         <option value="$PROJECT_DIR$/components/jobs/config/initializers/sidekiq.rb" />
-        <option value="$PROJECT_DIR$/Dockerfile.erb" />
         <option value="$PROJECT_DIR$/components/search/spec/dummy/solr/solr.xml" />
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/Dockerfile" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/config/logging.rb" />
+        <option value="$PROJECT_DIR$/Dockerfile.erb" />
       </list>
     </option>
   </component>
@@ -2228,7 +2223,7 @@
     <frame x="0" y="23" width="1985" height="1309" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23132406" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23132406" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297953" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25957778" sideWeight="0.5068493" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -2735,17 +2730,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dockerfile.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.678572">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/sunspot.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32518336">
+        <state vertical-scroll-proportion="0.6519608">
           <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
           <folding />
         </state>
@@ -2796,8 +2783,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/logging.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7114968">
+        <state vertical-scroll-proportion="0.0">
           <caret line="147" column="3" selection-start-line="147" selection-start-column="3" selection-end-line="147" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dockerfile.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40438873">
+          <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
           <folding />
         </state>
       </provider>
