@@ -1,0 +1,14 @@
+
+gem 'rails', '4.2.4'
+
+path 'components' do
+  gem 'persistence', '0.0.1'
+  gem 'jobs', '0.0.1'
+  gem 'authentication', '0.0.1'
+  gem 'authorization', '0.0.1'
+  gem 'api', '0.0.1'
+  gem 'web_style', '0.0.1'
+  gem 'sample_data', '0.0.1'
+  gem 'search', '0.0.1'
+  gem 'cms', '0.0.1'
+end

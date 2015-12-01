@@ -5,18 +5,21 @@ RUN npm install -g phantomjs
 RUN mkdir /myapp
 RUN mkdir /tmp/gems
 
-# WORKDIR /tmp/gems
-# COPY Gemfile Gemfile
-# COPY Gemfile.lock Gemfile.lock
-# RUN bundle install
+WORKDIR /tmp/gems
+COPY Gemfile.app Gemfile.app
+RUN bundle install --gemfile=Gemfile.app
 
 ADD . /myapp
 
 WORKDIR /myapp
 
+RUN bundle install --gemfile=Gemfile.components
+RUN mv Gemfile.components.lock Gemfile.lock
+
 # VOLUME .:/myapp
 
 ENV RAILS_ENV=production
+ENV SECRET_KEY_BASE=c733aabc894e4464031641d68f9c2066df51d177d793f462892b20ec8c50df7c06aa30fdd1153c19e6487684254fface62f09af847ad4cfb85c537d84e3e3a38
 ENV RAILS_HOME=/myapp
 
 
