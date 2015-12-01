@@ -16,7 +16,7 @@ WORKDIR /myapp
 
 # VOLUME .:/myapp
 
-ENV RAILS_ENV=development
+ENV RAILS_ENV=production
 ENV RAILS_HOME=/myapp
 
 
@@ -48,6 +48,7 @@ CMD rake db:drop \
     && rake db:migrate \
     && rake sample_data:load \
     && rake authorization:seed \
+    && rake assets:precompile \
     && ./scripts/start_sidekiq.sh \
     && ./scripts/start_clockwork.sh \
     && rails server -b 0.0.0.0
