@@ -10,7 +10,7 @@ ent_web:
 
   # You can overwrite env variables here
   environment:
-    - RAILS_ENV=development
+    - RAILS_ENV=production
 
   ports:
     - "32010:3000"

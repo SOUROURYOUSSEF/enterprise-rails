@@ -17,6 +17,7 @@ WORKDIR /myapp
 # VOLUME .:/myapp
 
 ENV RAILS_ENV=production
+ENV RAILS_PORT=3000
 ENV RAILS_HOME=/myapp
 
 RUN erb ./config/redis.conf.erb > ./config/redis.conf
@@ -51,7 +52,7 @@ CMD rake db:drop \
     && rake assets:precompile \
     && ./scripts/start_sidekiq.sh \
     && ./scripts/start_clockwork.sh \
-    && rails server -b 0.0.0.0
+    && rails server -e production -b 0.0.0.0
 
 
 
