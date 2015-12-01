@@ -19,6 +19,7 @@ ent_web:
     - ent_postgres:ent_progress
     - ent_solr:ent_solr
     - ent_redis:ent_redis
+    - ent_mongodb:ent_mongodb
 
 ent_postgres:
   image:  grahamgilbert/postgres:latest
@@ -46,6 +47,18 @@ ent_redis:
   ports:
     - "6379:6379"
   container_name: ent_redis
+
+ent_mongodb:
+  image: frodenas/mongodb:latest
+  ports:
+    - 27017:27017
+  container_name: ent_mongodb
+  environment:
+    MONGODB_USERNAME: mongodb_rails
+    MONGODB_PASSWORD: mongodb_rails
+    MONGODB_DBNAME: locomotive
+    MONGODB_ROLE: dbOwner
+
 
 #  external_links:
 #    - sad_wright:postgres
