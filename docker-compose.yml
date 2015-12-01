@@ -57,7 +57,7 @@ ent_mongodb:
     MONGODB_USERNAME: mongodb_rails
     MONGODB_PASSWORD: mongodb_rails
     MONGODB_DBNAME: locomotive
-    MONGODB_ROLE: dbOwner
+    MONGODB_ROLE: dbAdminAnyDatabase
 
 
 #  external_links:
