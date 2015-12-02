@@ -20,6 +20,7 @@ ent_web:
     - ent_solr:ent_solr
     - ent_redis:ent_redis
     - ent_mongodb:ent_mongodb
+    - ent_cms:ent_cms
 
 ent_postgres:
   image:  grahamgilbert/postgres:latest
@@ -52,7 +53,7 @@ ent_mongodata:
   image: tutum/mongodb
   volumes:
     - /data/db
-  command: --break-mongo
+  command: /bin/sh
 
 ent_mongodb:
   image: tutum/mongodb
@@ -63,7 +64,21 @@ ent_mongodb:
   container_name: ent_mongodb
   environment:
     MONGODB_PASS: mongodb_rails
-  command: --smallfiles --rest --auth
+
+ent_cms:
+  image: prakash0450/enterprise_cms:v1
+  ports:
+    - "32020:3000"
+  container_name: ent_cms
+  environment:
+    RAILS_ENV: production
+    MONGODB_HOST: 192.168.0.20
+    MONGODB_PORT: 27017
+    MONGODB_USER: admin
+    MONGODB_PASSWD: mongodb_rails
+
+
+# command: --smallfiles --rest --auth
 
 #  external_links:
 #    - sad_wright:postgres
