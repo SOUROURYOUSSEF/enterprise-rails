@@ -5,27 +5,31 @@ RUN npm install -g phantomjs
 RUN mkdir /myapp
 RUN mkdir /tmp/gems
 
-WORKDIR /tmp/gems
-COPY Gemfile.app Gemfile.app
-RUN bundle install --gemfile=Gemfile.app
+# WORKDIR /tmp/gems
+# COPY Gemfile.app Gemfile.app
+# RUN bundle install --gemfile=Gemfile.app
 
 ADD . /myapp
 
 WORKDIR /myapp
 
-RUN bundle install --gemfile=Gemfile.components
-RUN mv Gemfile.components.lock Gemfile.lock
-
 # VOLUME .:/myapp
 
 ENV RAILS_ENV=production
-ENV SECRET_KEY_BASE=c733aabc894e4464031641d68f9c2066df51d177d793f462892b20ec8c50df7c06aa30fdd1153c19e6487684254fface62f09af847ad4cfb85c537d84e3e3a38
+ENV RAILS_PORT=3000
 ENV RAILS_HOME=/myapp
+ENV SECRET_KEY_BASE=c733aabc894e4464031641d68f9c2066df51d177d793f462892b20ec8c50df7c06aa30fdd1153c19e6487684254fface62f09af847ad4cfb85c537d84e3e3a38
 
+RUN bundle install
+
+# RUN bundle install --gemfile=Gemfile.components
+# RUN mv Gemfile.components.lock Gemfile.lock
+
+RUN erb ./config/redis.conf.erb > ./config/redis.conf
 
 # bundle install needs to be after adding rails dir since Gemfile refers to engines in components dir of app.
 
-RUN bundle install
+
 
 EXPOSE 3000
 #This env. variables will be used by database.yml to connect to postgresSQL
@@ -41,8 +45,7 @@ ENV SOLR_PORT=8983
 #This env. variables will be used by sunspot.yml to connect to Solr
 ENV REDIS_HOST=192.168.0.20
 ENV REDIS_PORT=6379
-
-RUN erb ./config/redis.conf.erb > ./config/redis.conf
+ENV REDIS_URL=redis://192.168.0.20:6379
 
 # You have to run this CMD with 0.0.0.0 IP address for port mapping to work in Docker container. Very strange.
 # NOTE: the rake commands are being run here before starting rails to setup database. There has to be a better way. Need to investigate.
@@ -54,7 +57,7 @@ CMD rake db:drop \
     && rake assets:precompile \
     && ./scripts/start_sidekiq.sh \
     && ./scripts/start_clockwork.sh \
-    && rails server -b 0.0.0.0
+    && rails server -e production -b 0.0.0.0
 
 
 

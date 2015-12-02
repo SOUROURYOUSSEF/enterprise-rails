@@ -49,15 +49,12 @@ ent_redis:
   container_name: ent_redis
 
 ent_mongodb:
-  image: frodenas/mongodb:latest
+  image: tutum/mongodb
   ports:
     - 27017:27017
   container_name: ent_mongodb
   environment:
-    MONGODB_USERNAME: mongodb_rails
-    MONGODB_PASSWORD: mongodb_rails
-    MONGODB_DBNAME: locomotive
-    MONGODB_ROLE: dbOwner
+    MONGODB_PASS: mongodb_rails
 
 
 #  external_links:
