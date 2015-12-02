@@ -6,9 +6,8 @@ RUN mkdir /myapp
 RUN mkdir /tmp/gems
 
 # WORKDIR /tmp/gems
-# COPY Gemfile Gemfile
-# COPY Gemfile.lock Gemfile.lock
-# RUN bundle install
+COPY Gemfile.app Gemfile.app
+RUN bundle install --gemfile=Gemfile.app
 
 ADD . /myapp
 
@@ -20,11 +19,14 @@ ENV RAILS_ENV=production
 ENV RAILS_PORT=3000
 ENV RAILS_HOME=/myapp
 
+RUN bundle install --gemfile=Gemfile.components
+RUN mv Gemfile.components.lock Gemfile.lock
+
 RUN erb ./config/redis.conf.erb > ./config/redis.conf
 
 # bundle install needs to be after adding rails dir since Gemfile refers to engines in components dir of app.
 
-RUN bundle install
+
 
 EXPOSE 3000
 #This env. variables will be used by database.yml to connect to postgresSQL
