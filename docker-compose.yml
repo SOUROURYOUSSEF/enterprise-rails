@@ -48,14 +48,22 @@ ent_redis:
     - "6379:6379"
   container_name: ent_redis
 
+ent_mongodata:
+  image: tutum/mongodb
+  volumes:
+    - /data/db
+  command: --break-mongo
+
 ent_mongodb:
   image: tutum/mongodb
   ports:
     - 27017:27017
+  volumes_from:
+    - ent_mongodata
   container_name: ent_mongodb
   environment:
     MONGODB_PASS: mongodb_rails
-
+  command: --smallfiles --rest --auth
 
 #  external_links:
 #    - sad_wright:postgres
