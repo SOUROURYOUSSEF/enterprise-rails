@@ -69,7 +69,7 @@ ent_mongodb:
 ent_cms:
   image: prakash0450/enterprise_cms:v1
   ports:
-    - "32020:3000"
+    - "32020:3009"
   container_name: ent_cms
   environment:
     RAILS_ENV: production

@@ -28,6 +28,7 @@ RUN bundle install
 # RUN bundle install --gemfile=Gemfile.components
 # RUN mv Gemfile.components.lock Gemfile.lock
 
+
 EXPOSE 3000
 #This env. variables will be used by database.yml to connect to postgresSQL
 ENV DATABASE_HOST=ent_postgres
@@ -40,11 +41,11 @@ ENV SOLR_HOST=192.168.0.20
 ENV SOLR_PORT=8983
 
 #This env. variables will be used by sunspot.yml to connect to Solr
-ENV REDIS_HOST=192.168.0.20
+ENV REDIS_HOST=ent_redis
 ENV REDIS_PORT=6379
-ENV REDIS_URL=redis://192.168.0.20:6379
+ENV REDIS_URL=redis://ent_redis:6379
 
-# process env. variables on redis.conf file. Redis does not support env variables in its confiuration
+# process env. variables on redis.conf file. Redis does not support env variables in its configuration file.
 RUN erb ./config/redis.conf.erb > ./config/redis.conf
 
 # You have to run this CMD with 0.0.0.0 IP address for port mapping to work in Docker container. Very strange.
