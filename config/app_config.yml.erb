@@ -17,7 +17,7 @@ development: &defaults
     pidfile: ./tmp/pids/redis.pid
 
   locomotive:
-    host: localhost
+    host: locomotive
     port: 3000
     db_path:  data/mongodb
     username: prakash0450@gmail.com
@@ -74,22 +74,23 @@ production:
   url:   http://localhost:3000
 
   solr:
-    host: localhost
-    port: 8983
+    host: <%= ENV['SOLR_HOST'] %>
+    port: <%= ENV['SOLR_PORT'] %>
     pidfile: ./tmp/pids/solr.pid
 
   redis:
-    host: localhost
-    port: 6379
+    host: <%= ENV['REDIS_HOST'] %>
+    port: <%= ENV['REDIS_PORT'] %>
     pidfile: ./tmp/pids/redis.pid
 
   locomotive:
-    host: localhost
-    port: 27010
-    db_path:  data/mongodb
-    username: prakash0450@gmail.com
-    password: Vinty123
-    auth_token: FYjyzNszXkLMbQayoudS
+    host: <%= ENV['CMS_HOST'] %>
+    port: <%= ENV['CMS_PORT'] %>
+    db_path: <%= ENV['CMS_DBPATH'] %>
+    username: <%= ENV['CMS_USER'] %>
+    password: <%= ENV['CMS_PASSWD'] %>
+    auth_token: <%= ENV['CMS_AUTH_TOKEN'] %>
+#    auth_token: FYjyzNszXkLMbQayoudS
 
   sidebar_menu: *sidebar_menu
 

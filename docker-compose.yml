@@ -53,6 +53,7 @@ ent_mongodata:
   image: tutum/mongodb
   volumes:
     - /data/db
+  container_name: ent_mongodata
   command: /bin/sh
 
 ent_mongodb:
@@ -72,7 +73,8 @@ ent_cms:
   container_name: ent_cms
   environment:
     RAILS_ENV: production
-    MONGODB_HOST: 192.168.0.20
+    # MONGODB_HOST: 192.168.0.20
+    MONGODB_HOST: ent_mongodb
     MONGODB_PORT: 27017
     MONGODB_USER: admin
     MONGODB_PASSWD: mongodb_rails
