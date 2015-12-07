@@ -1,13 +1,13 @@
 FROM ruby:2.2
 RUN apt-get update \
-    && apt-get install -y build-essential nodejs npm nodejs-legacy postgresql-client emacs
+    && apt-get install -y build-essential nodejs npm nodejs-legacy postgresql-client emacs nginx
 RUN npm install -g phantomjs
 RUN mkdir /myapp
 RUN mkdir /tmp/gems
 
 # WORKDIR /tmp/gems
-# COPY Gemfile.app Gemfile.app
-# RUN bundle install --gemfile=Gemfile.app
+COPY Gemfile.app Gemfile.app
+RUN bundle install --gemfile=Gemfile.app --development --test
 
 ADD . /myapp
 
@@ -23,10 +23,9 @@ ENV SECRET_KEY_BASE=c733aabc894e4464031641d68f9c2066df51d177d793f462892b20ec8c50
 
 # bundle install needs to be after adding rails dir since Gemfile refers to engines in components dir of app.
 
-RUN bundle install
+# RUN bundle install
 
-# RUN bundle install --gemfile=Gemfile.components
-# RUN mv Gemfile.components.lock Gemfile.lock
+RUN bundle install --gemfile=Gemfile --development --test
 
 
 EXPOSE 3000

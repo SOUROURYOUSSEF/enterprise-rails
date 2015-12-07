@@ -1,4 +1,7 @@
 require 'devise'
+require 'omniauth'
+require 'omniauth-facebook'
+require 'oauth2'
 
 module Authentication
   class Engine < ::Rails::Engine

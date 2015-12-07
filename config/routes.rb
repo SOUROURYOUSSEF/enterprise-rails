@@ -146,6 +146,10 @@ Rails.application.routes.draw do
   mount Jobs::Engine, at: '/'
   mount Cms::Engine, at: '/'
 
+  # Route for Omniauth authentication
+
+  match '/auth/:provider/callback' => 'authentication/authentications#create', via: [:get, :post]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

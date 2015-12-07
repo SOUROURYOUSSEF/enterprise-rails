@@ -23,6 +23,9 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'rails', '~> 4.2.4'
   s.add_dependency 'devise', '3.4.1'
+  s.add_dependency 'omniauth', '1.2.2'
+  s.add_dependency 'omniauth-facebook', '3.0.0'
+  s.add_dependency 'oauth2', '1.0.0'
 
   s.add_development_dependency 'rspec-rails', '3.2.1'
   s.add_development_dependency 'shoulda-matchers', '2.8.0'

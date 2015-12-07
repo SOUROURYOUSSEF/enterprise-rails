@@ -6,8 +6,9 @@ export DATABASE_PORT=5432
 export DATABASE_USER=postgres_rails
 export DATABASE_PASSWD=postgres_rails
 
-#This env. variables will be used by sunspot.yml to connect to Solr
-export SOLR_HOST=192.168.0.20
+#This env. variables will be used by sunspot.yml to connect to Solr.  IP address of DigitalOcean instance.
+# Need to figure out why I can not use hostname instead of IP addr here. Results into runtime error.
+export SOLR_HOST=104.131.20.197
 #export SOLR_HOST=ent_solr
 export SOLR_PORT=8983
 
