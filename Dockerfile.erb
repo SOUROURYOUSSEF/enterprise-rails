@@ -60,7 +60,7 @@ RUN rm /etc/nginx/sites-enabled/default
 ADD ./config/nginx.conf /etc/nginx/sites-enabled/webapp.conf
 
 # start nginx service (as root)
-RUN service nginx start
+# RUN service nginx start
 
 # RUN rm -f /etc/service/nginx/down
 
@@ -74,6 +74,7 @@ CMD rake db:drop \
     && rake assets:precompile \
     && ./scripts/start_sidekiq.sh \
     && ./scripts/start_clockwork.sh \
+    && service nginx restart \
     && puma -C config/puma.rb
 
 
