@@ -17,16 +17,27 @@ ent_web:
     - "80:80"
 
   links:
+    - ent_data:ent_data
     - ent_postgres:ent_progress
     - ent_solr:ent_solr
     - ent_redis:ent_redis
     - ent_mongodb:ent_mongodb
-    - ent_cms_1:ent_cms_1
+
+#    - ent_cms:ent_cms
+
+ent_data:
+  image: postgres:9.3.10
+  container_name: ent_data
+  volumes:
+    - /var/lib/postgresql/data
+  command: /bin/true
 
 ent_postgres:
   image:  grahamgilbert/postgres:latest
   ports:
     - "5432:5432"
+  volumes_from:
+    - ent_data
   container_name: ent_postgres
   environment:
     DB_NAME:  enterprise_rails_development
@@ -43,7 +54,7 @@ ent_solr:
   # This is not at all obvious. In order for this to work with a remote docker host, the localhost and docker host directories needs to be synced up manually.
   # Also note that I had to use an older version (4.10) of solr image. The latest version is not compatible with what is used in the project (4.2).
   # Also note the location of solr configuration and data on image is different than standard solr configuration. 
-    - ./components/search/spec/dummy/solr:/opt/solr/example/solr
+    - /root/ent_rails/solr:/opt/solr/example/solr
 ent_redis:
   image: redis:latest
   ports:
@@ -57,6 +68,14 @@ ent_mongodata:
   container_name: ent_mongodata
   command: /bin/sh
 
+ent_data:
+  image: ent_postgres
+  volumes:
+    /data/postgres
+  container_name: ent_data
+  command: /bin/sh
+
+
 ent_mongodb:
   image: tutum/mongodb
   ports:
@@ -67,18 +86,18 @@ ent_mongodb:
   environment:
     MONGODB_PASS: mongodb_rails
 
-ent_cms_1:
-  image: prakash0450/enterprise_cms:v1
-  ports:
-    - "32020:3009"
-  container_name: ent_cms
-  environment:
-    RAILS_ENV: production
-    # MONGODB_HOST: 192.168.0.20
-    MONGODB_HOST: ent_mongodb
-    MONGODB_PORT: 27017
-    MONGODB_USER: admin
-    MONGODB_PASSWD: mongodb_rails
+#ent_cms:
+#  image: prakash0450/enterprise_cms:do_v1
+#  ports:
+#    - "32020:3009"
+#  container_name: ent_cms
+#  environment:
+#    RAILS_ENV: production
+#    # MONGODB_HOST: 192.168.0.20
+#    MONGODB_HOST: 104.131.20.197
+#    MONGODB_PORT: 27017
+#    MONGODB_USER: admin
+#    MONGODB_PASSWD: mongodb_rails
 
 
 # command: --smallfiles --rest --auth

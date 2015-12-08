@@ -3,11 +3,15 @@ RUN apt-get update \
     && apt-get install -y build-essential nodejs npm nodejs-legacy postgresql-client emacs nginx
 RUN npm install -g phantomjs
 RUN mkdir /myapp
+RUN mkdir /myapp/tmp
+RUN mkdir /myapp/tmp/pids
+RUN mkdir /myapp/tmp/sockets
+
 RUN mkdir /tmp/gems
 
 # WORKDIR /tmp/gems
 COPY Gemfile.app Gemfile.app
-RUN bundle install --gemfile=Gemfile.app
+RUN bundle install --gemfile=Gemfile.app --without development test
 
 ADD . /myapp
 
@@ -25,10 +29,13 @@ ENV SECRET_KEY_BASE=c733aabc894e4464031641d68f9c2066df51d177d793f462892b20ec8c50
 
 # RUN bundle install
 
-RUN bundle install --gemfile=Gemfile
+RUN bundle install --gemfile=Gemfile --without development test
 
 
 EXPOSE 3000
+# expose nginx default port
+EXPOSE 80
+
 #This env. variables will be used by database.yml to connect to postgresSQL
 ENV DATABASE_HOST=ent_postgres
 ENV DATABASE_PORT=5432
@@ -36,7 +43,7 @@ ENV DATABASE_USER=postgres_rails
 ENV DATABASE_PASSWD=postgres_rails
 
 #This env. variables will be used by sunspot.yml to connect to Solr
-ENV SOLR_HOST=192.168.0.20
+ENV SOLR_HOST=104.131.20.197
 ENV SOLR_PORT=8983
 
 #This env. variables will be used by sunspot.yml to connect to Solr
@@ -46,6 +53,16 @@ ENV REDIS_URL=redis://ent_redis:6379
 
 # process env. variables on redis.conf file. Redis does not support env variables in its configuration file.
 RUN erb ./config/redis.conf.erb > ./config/redis.conf
+
+# remove default configuration
+RUN rm /etc/nginx/sites-enabled/default
+
+ADD ./config/nginx.conf /etc/nginx/sites-enabled/webapp.conf
+
+# start nginx service (as root)
+# RUN service nginx start
+
+# RUN rm -f /etc/service/nginx/down
 
 # You have to run this CMD with 0.0.0.0 IP address for port mapping to work in Docker container. Very strange.
 # NOTE: the rake commands are being run here before starting rails to setup database. There has to be a better way. Need to investigate.
@@ -57,7 +74,9 @@ CMD rake db:drop \
     && rake assets:precompile \
     && ./scripts/start_sidekiq.sh \
     && ./scripts/start_clockwork.sh \
-    && rails server -e production -b 0.0.0.0
+    && service nginx restart \
+    && puma -C config/puma.rb
+
 
 
 
