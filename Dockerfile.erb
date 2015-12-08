@@ -11,7 +11,7 @@ RUN mkdir /tmp/gems
 
 # WORKDIR /tmp/gems
 COPY Gemfile.app Gemfile.app
-RUN bundle install --gemfile=Gemfile.app --development --test
+RUN bundle install --gemfile=Gemfile.app --without development test
 
 ADD . /myapp
 
