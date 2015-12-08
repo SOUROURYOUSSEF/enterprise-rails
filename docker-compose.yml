@@ -18,7 +18,7 @@ ent_web:
 
   links:
     - ent_data:ent_data
-    - ent_postgres:ent_progress
+    - ent_postgres:ent_postgres
     - ent_solr:ent_solr
     - ent_redis:ent_redis
     - ent_mongodb:ent_mongodb
@@ -67,14 +67,6 @@ ent_mongodata:
     - /data/db
   container_name: ent_mongodata
   command: /bin/sh
-
-ent_data:
-  image: ent_postgres
-  volumes:
-    /data/postgres
-  container_name: ent_data
-  command: /bin/sh
-
 
 ent_mongodb:
   image: tutum/mongodb

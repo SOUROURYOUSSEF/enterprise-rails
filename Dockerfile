@@ -43,7 +43,7 @@ ENV DATABASE_USER=postgres_rails
 ENV DATABASE_PASSWD=postgres_rails
 
 #This env. variables will be used by sunspot.yml to connect to Solr
-ENV SOLR_HOST=104.131.20.197
+ENV SOLR_HOST=192.168.0.20
 ENV SOLR_PORT=8983
 
 #This env. variables will be used by sunspot.yml to connect to Solr

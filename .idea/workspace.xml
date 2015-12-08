@@ -4,7 +4,6 @@
     <list default="true" id="a9e28779-1c11-49b8-a47a-bef81c08446f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dockerfile" afterPath="$PROJECT_DIR$/Dockerfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docker-compose.yml" afterPath="$PROJECT_DIR$/docker-compose.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docker-compose_DO.yml" afterPath="$PROJECT_DIR$/docker-compose_DO.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="enterprise-rails.iws" />
@@ -40,20 +39,33 @@
           <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Dockerfile">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="27.821428">
+                <state vertical-scroll-proportion="18.071428">
                   <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="Gemfile.components" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Gemfile.components">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-0.0">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+              <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+                <state />
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="docker-compose.yml" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/docker-compose.yml">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.7661823">
-                  <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+                <state vertical-scroll-proportion="1.4531044">
+                  <caret line="68" column="18" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
                   <folding>
-                    <marker date="1449587798000" expanded="true" signature="99:141" placeholder="env_file:" />
+                    <marker date="1449596809000" expanded="true" signature="99:141" placeholder="env_file:" />
                   </folding>
                 </state>
               </provider>
@@ -104,16 +116,6 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="-51.57143">
                   <caret line="76" column="30" selection-start-line="76" selection-start-column="30" selection-end-line="76" selection-end-column="30" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Gemfile">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="112" column="2" selection-start-line="112" selection-start-column="2" selection-end-line="112" selection-end-column="2" />
                   <folding />
                 </state>
               </provider>
@@ -2246,7 +2248,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449544326343</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Adding volumes for postsgres data">
+      <created>1449595901596</created>
+      <option name="number" value="00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1449595901596</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2313,7 +2321,8 @@
     <MESSAGE value="Swithced to use docker generated host names" />
     <MESSAGE value="Docker deployment for DigitalOcean" />
     <MESSAGE value="Added nginx configuration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added nginx configuration" />
+    <MESSAGE value="Adding volumes for postsgres data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding volumes for postsgres data" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2432,13 +2441,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/components/search/spec/dummy/config/database.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/search/spec/dummy/config/secrets.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2759,14 +2761,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="27.821428">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docker_digitalocean.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2807,12 +2801,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="18.071428">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile.components">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/docker-compose.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7661823">
-          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+        <state vertical-scroll-proportion="1.4531044">
+          <caret line="68" column="18" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
           <folding>
-            <marker date="1449587798000" expanded="true" signature="99:141" placeholder="env_file:" />
+            <marker date="1449596809000" expanded="true" signature="99:141" placeholder="env_file:" />
           </folding>
         </state>
       </provider>
