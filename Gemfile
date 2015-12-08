@@ -98,6 +98,11 @@ gem 'redis-rails'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+gem 'sass-rails'
+
+# Use CoffeeScript for .coffee assets and views
+gem 'coffee-rails', '~> 4.1.0'
+
 group :development do
   # Quiet Assets turns off the Rails asset pipeline log. This means that it suppresses messages in your development log
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -107,10 +112,6 @@ group :development do
   gem 'annotate'
   # Less has dependency on rubyracer in development env. Temp. commenting out for build to pass on docker host
   gem 'less-rails'
-  gem 'sass-rails'
-
-  # Use CoffeeScript for .coffee assets and views
-  gem 'coffee-rails', '~> 4.1.0'
 
   # Use Capistrano for deployment
   gem 'capistrano-rails'

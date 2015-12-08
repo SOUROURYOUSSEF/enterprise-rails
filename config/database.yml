@@ -37,6 +37,6 @@ test:
   <<: *default
 
 production:
-  database: ent_rails_production
+  database: enterprise_rails_development
   <<: *default
 
