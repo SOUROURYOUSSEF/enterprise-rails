@@ -66,11 +66,7 @@ ADD ./config/nginx.conf /etc/nginx/sites-enabled/webapp.conf
 
 # You have to run this CMD with 0.0.0.0 IP address for port mapping to work in Docker container. Very strange.
 # NOTE: the rake commands are being run here before starting rails to setup database. There has to be a better way. Need to investigate.
-CMD rake db:drop \
-    && rake db:create \
-    && rake db:migrate \
-    && rake sample_data:load \
-    && rake authorization:seed \
+CMD rake docker:db:setup \
     && rake assets:precompile \
     && ./scripts/start_sidekiq.sh \
     && ./scripts/start_clockwork.sh \
