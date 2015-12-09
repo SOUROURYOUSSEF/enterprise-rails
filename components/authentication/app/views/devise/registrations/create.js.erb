@@ -4,13 +4,14 @@ toastr.success('New user has been added successfully');
 $('#newUser').modal('hide');
 $('#table_content').html('<%= escape_javascript(render 'authorization/users/table', :users => @users) %>');
 $('#users_table').DataTable({
-    "ajax": "users.json",
+    "ajax": "/users.json",
     "columns": [
         { "data": "first_name" },
         { "data": "last_name" },
         { "data": "username" },
         { "data": "email" },
-        { "data": "department" },
+        { "data": "groups" },
+        { "data": "scope" },
         { "data": "actions" }
     ],
     "paging": true,
@@ -23,3 +24,4 @@ $('#users_table').DataTable({
     "autoWidth": false,
     "iDisplayLength": 10
 });
+
