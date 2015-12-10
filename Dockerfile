@@ -22,9 +22,7 @@ WORKDIR /myapp
 ENV RAILS_ENV=production
 ENV RAILS_PORT=3000
 ENV RAILS_HOME=/myapp
-ENV SECRET_KEY_BASE=<%= ENV['SECRET_KEY_BASE'] %>
-
-#c733aabc894e4464031641d68f9c2066df51d177d793f462892b20ec8c50df7c06aa30fdd1153c19e6487684254fface62f09af847ad4cfb85c537d84e3e3a38
+ENV SECRET_KEY_BASE=c733aabc894e4464031641d68f9c2066df51d177d793f462892b20ec8c50df7c06aa30fdd1153c19e6487684254fface62f09af847ad4cfb85c537d84e3e3a38
 
 
 # bundle install needs to be after adding rails dir since Gemfile refers to engines in components dir of app.
@@ -39,19 +37,19 @@ EXPOSE 3000
 EXPOSE 80
 
 #This env. variables will be used by database.yml to connect to postgresSQL
-ENV DATABASE_HOST=<%= ENV['DATABASE_HOST'] %>
-ENV DATABASE_PORT=<%= ENV['DATABASE_PORT'] %>
-ENV DATABASE_USER=<%= ENV['DATABASE_USER'] %>
-ENV DATABASE_PASSWD=<%= ENV['DATABASE_PASSWD'] %>
+ENV DATABASE_HOST=ent_postgres
+ENV DATABASE_PORT=5432
+ENV DATABASE_USER=postgres_rails
+ENV DATABASE_PASSWD=postgres_rails
 
 #This env. variables will be used by sunspot.yml to connect to Solr
-ENV SOLR_HOST=<%= ENV['SOLR_HOST'] %>
-ENV SOLR_PORT=<%= ENV['SOLR_PORT'] %>
+ENV SOLR_HOST=104.131.20.197
+ENV SOLR_PORT=8983
 
 #This env. variables will be used by sunspot.yml to connect to Solr
-ENV REDIS_HOST=<%= ENV['REDIS_HOST'] %>
-ENV REDIS_PORT=<%= ENV['REDIS_PORT'] %>
-ENV REDIS_URL=redis://<%= ENV['REDIS_HOST'] %>:<%= ENV['REDIS_PORT'] %>
+ENV REDIS_HOST=ent_redis
+ENV REDIS_PORT=6379
+ENV REDIS_URL=redis://ent_redis:6379
 
 # process env. variables on redis.conf file. Redis does not support env variables in its configuration file.
 RUN erb ./config/redis.conf.erb > ./config/redis.conf

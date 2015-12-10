@@ -1,13 +1,16 @@
 #! /bin/sh
 
 export RAILS_ENV=production
+export RAILS_PORT=3000
+export SECRET_KEY_BASE=c733aabc894e4464031641d68f9c2066df51d177d793f462892b20ec8c50df7c06aa30fdd1153c19e6487684254fface62f09af847ad4cfb85c537d84e3e3a38
 export DATABASE_HOST=ent_postgres
 export DATABASE_PORT=5432
 export DATABASE_USER=postgres_rails
 export DATABASE_PASSWD=postgres_rails
 
 #This env. variables will be used by sunspot.yml to connect to Solr.  IP address of DigitalOcean instance.
-# Need to figure out why I can not use hostname instead of IP addr here. Results into runtime error.
+# Need to figure out why I can not use docker-compose generated hostname instead of IP addr here.
+Results into runtime error.
 export SOLR_HOST=104.131.20.197
 #export SOLR_HOST=ent_solr
 export SOLR_PORT=8983

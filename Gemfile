@@ -98,10 +98,15 @@ gem 'redis-rails'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# sass-rails need to be availalbe in production for asset recompilation
 gem 'sass-rails'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
+
+# Transparently encrypt ActiveRecord, Mongoid, and MongoMapper attributes. Encrypt passwords in configuration files. Encrypt entire files at rest.
+# See http://rocketjob.github.io/symmetric-encryption/index.html
+# gem 'symmetric-encryption'
 
 group :development do
   # Quiet Assets turns off the Rails asset pipeline log. This means that it suppresses messages in your development log
@@ -125,7 +130,15 @@ group :development do
   # when you're using eager loading that isn't necessary and when you should use counter cache
   # See https://github.com/flyerhzm/bullet
   gem 'bullet'
+
+  # Brakeman is a security scanner for Ruby on Rails applications. See http://brakemanscanner.org/docs/introduction/
+  gem 'brakeman', :require => false
+
+  gem 'rails_best_practices'
+
 end
+
+
 
 # group :test, :development do
 #  gem 'rspec-rails'

@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20151205130228) do
 
   create_table "activities", force: :cascade do |t|
     t.integer "entity_id"
-    t.string  "entity_type", limit: 255
+    t.string  "entity_type"
     t.integer "event_id"
   end
 
@@ -26,23 +26,23 @@ ActiveRecord::Schema.define(version: 20151205130228) do
   add_index "activities", ["event_id"], name: "index_activities_on_event_id", using: :btree
 
   create_table "application_classes", force: :cascade do |t|
-    t.string   "name",              limit: 255, null: false
-    t.string   "description",       limit: 255
+    t.string   "name",              null: false
+    t.string   "description"
     t.integer  "parent_class_id"
-    t.string   "parent_class_name", limit: 255
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
+    t.string   "parent_class_name"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
   add_index "application_classes", ["name"], name: "index_application_classes_on_name", unique: true, using: :btree
 
   create_table "application_objects", force: :cascade do |t|
-    t.integer  "instance_id",                      null: false
+    t.integer  "instance_id",          null: false
     t.integer  "parent_class_id"
-    t.string   "parent_class_name",    limit: 255
+    t.string   "parent_class_name"
     t.integer  "permissions_mask"
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
     t.integer  "application_scope_id"
     t.integer  "application_class_id"
     t.integer  "user_id"
@@ -53,20 +53,20 @@ ActiveRecord::Schema.define(version: 20151205130228) do
   add_index "application_objects", ["user_id"], name: "index_application_objects_on_user_id", using: :btree
 
   create_table "application_scopes", force: :cascade do |t|
-    t.string   "name",              limit: 255, null: false
+    t.string   "name",              null: false
     t.integer  "parent_class_id"
-    t.string   "parent_class_name", limit: 255
+    t.string   "parent_class_name"
     t.text     "description"
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
   create_table "associated_datasets", force: :cascade do |t|
     t.integer  "dataset_id"
     t.integer  "workspace_id"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-    t.string   "legacy_id",    limit: 255
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "legacy_id"
     t.datetime "deleted_at"
   end
 
@@ -74,13 +74,13 @@ ActiveRecord::Schema.define(version: 20151205130228) do
 
   create_table "attachments", force: :cascade do |t|
     t.integer  "note_id"
-    t.string   "contents_file_name",    limit: 255
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
-    t.string   "contents_content_type", limit: 255
+    t.string   "contents_file_name"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.string   "contents_content_type"
     t.integer  "contents_file_size"
     t.datetime "contents_updated_at"
-    t.string   "legacy_id",             limit: 255
+    t.string   "legacy_id"
   end
 
   add_index "attachments", ["note_id"], name: "index_attachments_on_note_id", using: :btree
@@ -98,9 +98,9 @@ ActiveRecord::Schema.define(version: 20151205130228) do
     t.integer  "author_id"
     t.text     "body"
     t.integer  "event_id"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-    t.string   "legacy_id",  limit: 255
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "legacy_id"
     t.datetime "deleted_at"
   end
 
@@ -109,21 +109,21 @@ ActiveRecord::Schema.define(version: 20151205130228) do
 
   create_table "csv_files", force: :cascade do |t|
     t.integer  "workspace_id"
-    t.string   "contents_file_name",    limit: 255
-    t.string   "contents_content_type", limit: 255
+    t.string   "contents_file_name"
+    t.string   "contents_content_type"
     t.integer  "contents_file_size"
     t.datetime "contents_updated_at"
-    t.datetime "created_at",                                        null: false
-    t.datetime "updated_at",                                        null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
     t.boolean  "has_header"
     t.text     "column_names"
     t.text     "types"
-    t.string   "to_table",              limit: 255
-    t.string   "delimiter",             limit: 255
+    t.string   "to_table"
+    t.string   "delimiter"
     t.integer  "user_id"
     t.boolean  "new_table"
-    t.boolean  "truncate",                          default: false
-    t.boolean  "user_uploaded",                     default: true
+    t.boolean  "truncate",              default: false
+    t.boolean  "user_uploaded",         default: true
     t.integer  "import_id"
   end
 
@@ -131,17 +131,17 @@ ActiveRecord::Schema.define(version: 20151205130228) do
 
   create_table "dashboard_items", force: :cascade do |t|
     t.integer  "user_id"
-    t.string   "name",       limit: 255
+    t.string   "name"
     t.integer  "location"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.string   "options",    limit: 255, default: "", null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "options",    default: "", null: false
   end
 
   create_table "data_source_account_permissions", force: :cascade do |t|
-    t.integer "accessed_id",                        null: false
-    t.integer "data_source_account_id",             null: false
-    t.string  "accessed_type",          limit: 255, null: false
+    t.integer "accessed_id",            null: false
+    t.integer "data_source_account_id", null: false
+    t.string  "accessed_type",          null: false
   end
 
   add_index "data_source_account_permissions", ["accessed_id", "accessed_type"], name: "index_instance_account_permissions_on_accessed", using: :btree
@@ -154,8 +154,8 @@ ActiveRecord::Schema.define(version: 20151205130228) do
     t.integer  "owner_id",                          null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "legacy_id",             limit: 255
-    t.string   "encrypted_db_password", limit: 255
+    t.string   "legacy_id"
+    t.string   "encrypted_db_password"
     t.boolean  "invalid_credentials"
   end
 
@@ -173,12 +173,12 @@ ActiveRecord::Schema.define(version: 20151205130228) do
     t.integer  "owner_id",                                       null: false
     t.boolean  "shared",                      default: false
     t.string   "version",         limit: 256
-    t.string   "state",           limit: 255, default: "online"
-    t.string   "legacy_id",       limit: 255
+    t.string   "state",                       default: "online"
+    t.string   "legacy_id"
     t.datetime "last_checked_at"
     t.datetime "last_online_at"
     t.datetime "deleted_at"
-    t.string   "type",            limit: 255
+    t.string   "type"
     t.boolean  "is_hawq"
     t.boolean  "ssl",                         default: false
   end
@@ -193,7 +193,7 @@ ActiveRecord::Schema.define(version: 20151205130228) do
     t.datetime "updated_at",                 null: false
     t.datetime "stale_at"
     t.datetime "deleted_at"
-    t.string   "type",           limit: 255, null: false
+    t.string   "type",                       null: false
   end
 
   add_index "databases", ["data_source_id", "name"], name: "index_databases_on_data_source_id_and_name", unique: true, using: :btree
@@ -209,8 +209,8 @@ ActiveRecord::Schema.define(version: 20151205130228) do
     t.boolean  "master_table",                    default: false
     t.datetime "stale_at"
     t.text     "query"
-    t.string   "legacy_id",           limit: 255
-    t.string   "edc_workspace_id",    limit: 255
+    t.string   "legacy_id"
+    t.string   "edc_workspace_id"
     t.datetime "deleted_at"
     t.integer  "workspace_id"
     t.integer  "hdfs_data_source_id"
@@ -223,28 +223,28 @@ ActiveRecord::Schema.define(version: 20151205130228) do
   create_table "datasets_notes", force: :cascade do |t|
     t.integer "dataset_id"
     t.integer "note_id"
-    t.string  "legacy_id",  limit: 255
+    t.string  "legacy_id"
   end
 
   create_table "events", force: :cascade do |t|
-    t.string   "action",          limit: 255
+    t.string   "action"
     t.integer  "actor_id"
     t.integer  "target1_id"
-    t.string   "target1_type",    limit: 255
-    t.datetime "created_at",                                  null: false
-    t.datetime "updated_at",                                  null: false
-    t.string   "target2_type",    limit: 255
+    t.string   "target1_type"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.string   "target2_type"
     t.integer  "target2_id"
     t.text     "additional_data"
     t.integer  "workspace_id"
     t.datetime "deleted_at"
-    t.string   "legacy_id",       limit: 255
-    t.string   "legacy_type",     limit: 255
-    t.boolean  "insight",                     default: false
+    t.string   "legacy_id"
+    t.string   "legacy_type"
+    t.boolean  "insight",         default: false
     t.integer  "promoted_by_id"
     t.datetime "promotion_time"
-    t.boolean  "published",                   default: false
-    t.string   "target3_type",    limit: 255
+    t.boolean  "published",       default: false
+    t.string   "target3_type"
     t.integer  "target3_id"
   end
 
@@ -254,24 +254,24 @@ ActiveRecord::Schema.define(version: 20151205130228) do
   add_index "events", ["workspace_id"], name: "index_events_on_workspace_id", using: :btree
 
   create_table "gnip_data_sources", force: :cascade do |t|
-    t.string   "name",        limit: 255
+    t.string   "name"
     t.text     "description"
     t.integer  "owner_id"
-    t.string   "username",    limit: 255
-    t.string   "password",    limit: 255
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
-    t.string   "stream_url",  limit: 255
+    t.string   "username"
+    t.string   "password"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "stream_url"
     t.datetime "deleted_at"
   end
 
   add_index "gnip_data_sources", ["deleted_at", "id"], name: "index_gnip_data_sources_on_deleted_at_and_id", using: :btree
 
   create_table "groups", force: :cascade do |t|
-    t.string   "name",                  limit: 255, null: false
-    t.string   "description",           limit: 255
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
+    t.string   "name",                  null: false
+    t.string   "description"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
     t.integer  "application_scope_id"
     t.integer  "application_scopes_id"
   end
@@ -297,7 +297,7 @@ ActiveRecord::Schema.define(version: 20151205130228) do
   create_table "hdfs_data_sources", force: :cascade do |t|
     t.string   "name",                  limit: 256
     t.text     "description"
-    t.string   "host",                  limit: 255,                    null: false
+    t.string   "host",                                                 null: false
     t.integer  "port"
     t.integer  "owner_id",                                             null: false
     t.string   "version",               limit: 256
@@ -305,14 +305,14 @@ ActiveRecord::Schema.define(version: 20151205130228) do
     t.string   "group_list",            limit: 256
     t.datetime "created_at",                                           null: false
     t.datetime "updated_at",                                           null: false
-    t.string   "legacy_id",             limit: 255
+    t.string   "legacy_id"
     t.datetime "last_checked_at"
     t.datetime "last_online_at"
-    t.string   "state",                 limit: 255, default: "online", null: false
+    t.string   "state",                             default: "online", null: false
     t.datetime "deleted_at"
-    t.string   "job_tracker_host",      limit: 255
+    t.string   "job_tracker_host"
     t.integer  "job_tracker_port"
-    t.string   "hdfs_version",          limit: 255
+    t.string   "hdfs_version"
     t.boolean  "high_availability",                 default: false
     t.text     "connection_parameters"
   end
@@ -331,7 +331,7 @@ ActiveRecord::Schema.define(version: 20151205130228) do
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
     t.datetime "stale_at"
-    t.string   "legacy_id",           limit: 255
+    t.string   "legacy_id"
     t.datetime "deleted_at"
   end
 
@@ -342,21 +342,21 @@ ActiveRecord::Schema.define(version: 20151205130228) do
     t.integer  "hdfs_entry_id"
     t.integer  "user_id"
     t.integer  "upload_id"
-    t.string   "file_name",     limit: 255
+    t.string   "file_name"
     t.boolean  "success"
     t.datetime "finished_at"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "import_templates", force: :cascade do |t|
     t.integer  "destination_id"
     t.integer  "source_id"
-    t.string   "destination_name", limit: 255
+    t.string   "destination_name"
     t.boolean  "truncate"
     t.integer  "row_limit"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "imports", force: :cascade do |t|
@@ -364,7 +364,7 @@ ActiveRecord::Schema.define(version: 20151205130228) do
     t.datetime "finished_at"
     t.datetime "created_at"
     t.integer  "workspace_id"
-    t.string   "to_table",               limit: 255
+    t.string   "to_table"
     t.integer  "source_id"
     t.boolean  "truncate"
     t.boolean  "new_table"
@@ -373,13 +373,13 @@ ActiveRecord::Schema.define(version: 20151205130228) do
     t.text     "file_name"
     t.boolean  "success"
     t.integer  "destination_dataset_id"
-    t.string   "legacy_id",              limit: 255
+    t.string   "legacy_id"
     t.datetime "started_at"
-    t.string   "type",                   limit: 255, null: false
+    t.string   "type",                   null: false
     t.integer  "schema_id"
-    t.string   "source_type",            limit: 255
+    t.string   "source_type"
     t.datetime "canceled_at"
-    t.string   "cancel_message",         limit: 255
+    t.string   "cancel_message"
   end
 
   create_table "job_results", force: :cascade do |t|
@@ -392,70 +392,70 @@ ActiveRecord::Schema.define(version: 20151205130228) do
   end
 
   create_table "job_subscriptions", force: :cascade do |t|
-    t.integer  "user_id",                null: false
-    t.integer  "job_id",                 null: false
-    t.string   "condition",  limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.integer  "user_id",    null: false
+    t.integer  "job_id",     null: false
+    t.string   "condition"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_index "job_subscriptions", ["job_id", "condition", "user_id"], name: "index_job_subscriptions_on_job_id_and_condition_and_user_id", using: :btree
 
   create_table "job_task_results", force: :cascade do |t|
     t.integer  "job_result_id"
-    t.string   "name",              limit: 255
+    t.string   "name"
     t.datetime "started_at"
     t.datetime "finished_at"
-    t.string   "status",            limit: 255
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
+    t.string   "status"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
     t.text     "message"
-    t.string   "payload_result_id", limit: 255
+    t.string   "payload_result_id"
     t.integer  "payload_id"
-    t.string   "type",              limit: 255
+    t.string   "type"
   end
 
   create_table "job_tasks", force: :cascade do |t|
     t.integer  "index"
     t.datetime "deleted_at"
     t.integer  "job_id"
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
-    t.string   "type",              limit: 255
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "type"
     t.integer  "payload_id"
-    t.string   "payload_type",      limit: 255
-    t.string   "status",            limit: 255
-    t.string   "payload_result_id", limit: 255
-    t.string   "killable_id",       limit: 255
+    t.string   "payload_type"
+    t.string   "status"
+    t.string   "payload_result_id"
+    t.string   "killable_id"
   end
 
   create_table "jobs", force: :cascade do |t|
     t.text     "name"
     t.boolean  "enabled"
     t.integer  "workspace_id"
-    t.datetime "created_at",                                    null: false
-    t.datetime "updated_at",                                    null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
     t.datetime "deleted_at"
     t.datetime "next_run"
     t.datetime "last_run"
-    t.string   "interval_unit",  limit: 255
+    t.string   "interval_unit"
     t.integer  "interval_value"
     t.datetime "end_run"
-    t.string   "time_zone",      limit: 255, default: "Alaska"
-    t.string   "status",         limit: 255, default: "idle"
+    t.string   "time_zone",      default: "Alaska"
+    t.string   "status",         default: "idle"
     t.integer  "owner_id"
-    t.string   "success_notify", limit: 255, default: "nobody"
-    t.string   "failure_notify", limit: 255, default: "nobody"
+    t.string   "success_notify", default: "nobody"
+    t.string   "failure_notify", default: "nobody"
   end
 
   add_index "jobs", ["workspace_id"], name: "index_jobs_on_workspace_id", using: :btree
 
   create_table "memberships", force: :cascade do |t|
-    t.integer  "user_id",                  null: false
-    t.integer  "workspace_id",             null: false
+    t.integer  "user_id",      null: false
+    t.integer  "workspace_id", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "legacy_id",    limit: 255
+    t.string   "legacy_id"
   end
 
   add_index "memberships", ["user_id", "workspace_id"], name: "index_memberships_on_user_id_and_workspace_id", using: :btree
@@ -463,34 +463,34 @@ ActiveRecord::Schema.define(version: 20151205130228) do
   add_index "memberships", ["workspace_id"], name: "index_memberships_on_workspace_id", using: :btree
 
   create_table "milestones", force: :cascade do |t|
-    t.string   "name",         limit: 255
-    t.string   "state",        limit: 255
+    t.string   "name"
+    t.string   "state"
     t.date     "target_date"
     t.integer  "workspace_id"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   add_index "milestones", ["workspace_id"], name: "index_milestones_on_workspace_id", using: :btree
 
   create_table "notes_work_flow_results", force: :cascade do |t|
-    t.string  "result_id", limit: 255
+    t.string  "result_id"
     t.integer "note_id"
   end
 
   create_table "notes_workfiles", force: :cascade do |t|
     t.integer "note_id"
     t.integer "workfile_id"
-    t.string  "legacy_id",   limit: 255
+    t.string  "legacy_id"
   end
 
   create_table "notifications", force: :cascade do |t|
     t.integer  "recipient_id"
     t.integer  "event_id"
-    t.datetime "created_at",                               null: false
-    t.datetime "updated_at",                               null: false
-    t.boolean  "read",                     default: false, null: false
-    t.string   "legacy_id",    limit: 255
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.boolean  "read",         default: false, null: false
+    t.string   "legacy_id"
     t.integer  "comment_id"
     t.datetime "deleted_at"
   end
@@ -503,11 +503,11 @@ ActiveRecord::Schema.define(version: 20151205130228) do
   end
 
   create_table "operations", force: :cascade do |t|
-    t.string   "name",                 limit: 255, null: false
+    t.string   "name",                 null: false
     t.text     "description"
     t.integer  "sequence"
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
     t.integer  "application_class_id"
   end
 
@@ -525,8 +525,8 @@ ActiveRecord::Schema.define(version: 20151205130228) do
   add_index "permissions", ["role_id"], name: "index_permissions_on_role_id", using: :btree
 
   create_table "queue_classic_jobs", force: :cascade do |t|
-    t.string   "q_name",    limit: 255
-    t.string   "method",    limit: 255
+    t.string   "q_name"
+    t.string   "method"
     t.text     "args"
     t.datetime "locked_at"
   end
@@ -534,10 +534,10 @@ ActiveRecord::Schema.define(version: 20151205130228) do
   add_index "queue_classic_jobs", ["q_name", "id"], name: "idx_qc_on_name_only_unlocked", using: :btree
 
   create_table "roles", force: :cascade do |t|
-    t.string   "name",        limit: 255, null: false
-    t.string   "description", limit: 255
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.string   "name",        null: false
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "roles_users", id: false, force: :cascade do |t|
@@ -557,8 +557,8 @@ ActiveRecord::Schema.define(version: 20151205130228) do
     t.datetime "stale_at"
     t.datetime "refreshed_at"
     t.datetime "deleted_at"
-    t.string   "parent_type",                   limit: 255,             null: false
-    t.string   "type",                          limit: 255,             null: false
+    t.string   "parent_type",                                           null: false
+    t.string   "type",                                                  null: false
   end
 
   add_index "schemas", ["deleted_at", "id"], name: "index_schemas_on_deleted_at_and_id", using: :btree
@@ -583,21 +583,21 @@ ActiveRecord::Schema.define(version: 20151205130228) do
   end
 
   create_table "tableau_workbook_publications", force: :cascade do |t|
-    t.string   "name",                       limit: 255
+    t.string   "name"
     t.integer  "dataset_id"
     t.integer  "workspace_id"
-    t.datetime "created_at",                             null: false
-    t.datetime "updated_at",                             null: false
-    t.string   "project_name",               limit: 255
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.string   "project_name"
     t.integer  "linked_tableau_workfile_id"
   end
 
   create_table "taggings", force: :cascade do |t|
     t.integer  "tag_id"
     t.integer  "taggable_id"
-    t.string   "taggable_type", limit: 255
+    t.string   "taggable_type"
     t.integer  "tagger_id"
-    t.string   "tagger_type",   limit: 255
+    t.string   "tagger_type"
     t.string   "context",       limit: 128
     t.datetime "created_at"
   end
@@ -607,8 +607,8 @@ ActiveRecord::Schema.define(version: 20151205130228) do
   add_index "taggings", ["taggable_id", "taggable_type", "tag_id"], name: "index_taggings_on_taggable_id_and_taggable_type_and_tag_id", unique: true, using: :btree
 
   create_table "tags", force: :cascade do |t|
-    t.string  "name",           limit: 255
-    t.integer "taggings_count",             default: 0, null: false
+    t.string  "name"
+    t.integer "taggings_count", default: 0, null: false
   end
 
   create_table "uploads", force: :cascade do |t|
@@ -622,28 +622,28 @@ ActiveRecord::Schema.define(version: 20151205130228) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "first_name",             limit: 255,                 null: false
-    t.string   "last_name",              limit: 255,                 null: false
-    t.string   "username",               limit: 255
-    t.string   "email",                  limit: 255,                 null: false
-    t.string   "title",                  limit: 255
-    t.string   "department",             limit: 255
+    t.string   "first_name",                             null: false
+    t.string   "last_name",                              null: false
+    t.string   "username"
+    t.string   "email",                                  null: false
+    t.string   "title"
+    t.string   "department"
     t.text     "notes"
-    t.string   "password_digest",        limit: 255
-    t.boolean  "admin",                              default: false
+    t.string   "password_digest"
+    t.boolean  "admin",                  default: false
     t.datetime "deleted_at"
-    t.string   "image_file_path",        limit: 255
-    t.string   "image_content_type",     limit: 255
+    t.string   "image_file_path"
+    t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.string   "password_salt",          limit: 255
-    t.datetime "created_at",                                         null: false
-    t.datetime "updated_at",                                         null: false
-    t.string   "encrypted_password",     limit: 255, default: "",    null: false
-    t.string   "reset_password_token",   limit: 255
+    t.string   "password_salt"
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.string   "encrypted_password",     default: "",    null: false
+    t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                      default: 0,     null: false
+    t.integer  "sign_in_count",          default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
@@ -656,13 +656,13 @@ ActiveRecord::Schema.define(version: 20151205130228) do
   add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
   create_table "workfile_drafts", force: :cascade do |t|
-    t.integer  "workfile_id",              null: false
+    t.integer  "workfile_id",  null: false
     t.integer  "base_version"
-    t.integer  "owner_id",                 null: false
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.integer  "owner_id",     null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.text     "content"
-    t.string   "legacy_id",    limit: 255
+    t.string   "legacy_id"
   end
 
   add_index "workfile_drafts", ["owner_id"], name: "index_workfile_drafts_on_owner_id", using: :btree
@@ -671,9 +671,9 @@ ActiveRecord::Schema.define(version: 20151205130228) do
 
   create_table "workfile_execution_locations", force: :cascade do |t|
     t.integer "workfile_id"
-    t.string  "workfile_type",           limit: 255
+    t.string  "workfile_type"
     t.integer "execution_location_id"
-    t.string  "execution_location_type", limit: 255
+    t.string  "execution_location_type"
   end
 
   add_index "workfile_execution_locations", ["workfile_id"], name: "index_workfile_execution_locations_on_workfile_id", using: :btree
@@ -690,7 +690,7 @@ ActiveRecord::Schema.define(version: 20151205130228) do
     t.string   "contents_content_type", limit: 256
     t.integer  "contents_file_size"
     t.datetime "contents_updated_at"
-    t.string   "legacy_id",             limit: 255
+    t.string   "legacy_id"
   end
 
   add_index "workfile_versions", ["modifier_id"], name: "index_workfile_versions_on_modifier_id", using: :btree
@@ -698,22 +698,22 @@ ActiveRecord::Schema.define(version: 20151205130228) do
   add_index "workfile_versions", ["workfile_id"], name: "index_workfile_versions_on_workfile_id", using: :btree
 
   create_table "workfiles", force: :cascade do |t|
-    t.integer  "workspace_id",                                                null: false
-    t.integer  "owner_id",                                                    null: false
+    t.integer  "workspace_id",                                    null: false
+    t.integer  "owner_id",                                        null: false
     t.text     "description"
-    t.datetime "created_at",                                                  null: false
-    t.datetime "updated_at",                                                  null: false
-    t.string   "file_name",                  limit: 255
+    t.datetime "created_at",                                      null: false
+    t.datetime "updated_at",                                      null: false
+    t.string   "file_name"
     t.datetime "deleted_at"
     t.integer  "latest_workfile_version_id"
-    t.string   "content_type",               limit: 255
+    t.string   "content_type"
     t.integer  "execution_location_id"
-    t.string   "legacy_id",                  limit: 255
-    t.string   "type",                       limit: 255, default: "Workfile", null: false
+    t.string   "legacy_id"
+    t.string   "type",                       default: "Workfile", null: false
     t.text     "additional_data"
     t.datetime "user_modified_at"
     t.text     "execution_location_type"
-    t.string   "status",                     limit: 255, default: "idle"
+    t.string   "status",                     default: "idle"
   end
 
   add_index "workfiles", ["file_name", "workspace_id"], name: "index_workfiles_on_file_name_and_workspace_id", unique: true, using: :btree
@@ -739,11 +739,11 @@ ActiveRecord::Schema.define(version: 20151205130228) do
     t.boolean  "has_added_sandbox",                     default: false
     t.boolean  "has_changed_settings",                  default: false
     t.integer  "sandbox_id"
-    t.string   "legacy_id",                 limit: 255
+    t.string   "legacy_id"
     t.boolean  "show_sandbox_datasets",                 default: true
     t.boolean  "is_project",                            default: true
-    t.string   "project_status",            limit: 255, default: "on_track"
-    t.string   "project_status_reason",     limit: 255
+    t.string   "project_status",                        default: "on_track"
+    t.string   "project_status_reason"
     t.integer  "milestones_count",                      default: 0
     t.integer  "milestones_achieved_count",             default: 0
     t.date     "project_target_date"
