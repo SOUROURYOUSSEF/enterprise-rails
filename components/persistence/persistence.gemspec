@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'rails', '~> 4.2.4'
   s.add_dependency 'search', '0.0.1'
   s.add_dependency 'sunspot_rails',  '2.2.0'
+  s.add_dependency 'symmetric-encryption',  '3.8.2'
   s.add_development_dependency 'sunspot_solr', '2.2.0'
 
 
