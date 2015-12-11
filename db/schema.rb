@@ -625,7 +625,7 @@ ActiveRecord::Schema.define(version: 20151205130228) do
     t.string   "first_name",                             null: false
     t.string   "last_name",                              null: false
     t.string   "username"
-    t.string   "email",                                  null: false
+    t.string   "encrypted_email",                        null: false
     t.string   "encrypted_home_phone"
     t.string   "encrypted_mobile_phone"
     t.string   "title"
@@ -652,7 +652,6 @@ ActiveRecord::Schema.define(version: 20151205130228) do
     t.inet     "last_sign_in_ip"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["first_name", "last_name"], name: "index_users_on_first_name_and_last_name", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree

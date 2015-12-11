@@ -16,7 +16,10 @@ class BaseSchema < ActiveRecord::Migration
       t.string :first_name, null: false
       t.string :last_name, null: false
       t.string :username, nul: false
-      t.string :email, null: false
+      # Uses symmetric-encryption to encrypt email and phone numbers
+      t.string :encrypted_email, null: false
+      t.string :encrypted_home_phone
+      t.string :encrypted_mobile_phone
       t.string :title
       t.string :department
       t.text   :notes
@@ -31,7 +34,9 @@ class BaseSchema < ActiveRecord::Migration
       t.timestamps null: false
     end
 
-    add_index(:users, :email, unique: true)
+    'Turned off unique indexing on encrypted email'
+    # add_index(:users, :email, unique: true)
+
     add_index(:users, :username, unique: true)
     add_index(:users, [:first_name, :last_name], unique: true)
 
