@@ -106,7 +106,8 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # Transparently encrypt ActiveRecord, Mongoid, and MongoMapper attributes. Encrypt passwords in configuration files. Encrypt entire files at rest.
 # See http://rocketjob.github.io/symmetric-encryption/index.html
-# gem 'symmetric-encryption'
+
+gem 'symmetric-encryption'
 
 group :development do
   # Quiet Assets turns off the Rails asset pipeline log. This means that it suppresses messages in your development log

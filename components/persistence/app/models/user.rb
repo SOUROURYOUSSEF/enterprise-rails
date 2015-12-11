@@ -29,14 +29,34 @@ class User  < ActiveRecord::Base
   #devise :database_authenticatable, :registerable,
   #       :recoverable, :rememberable, :trackable, :validatable
 
-  validates_presence_of :username, :first_name, :last_name, :email
+  attr_encrypted :email
+  attr_encrypted :home_phone
+  attr_encrypted :mobile_phone
+
+  validates_presence_of :username, :first_name, :last_name
+  validates_presence_of :email, :symmetric_encryption => true
+
+  validates :encrypted_email, :symmetric_encryption => true, :uniqueness => false
+
   validates_uniqueness_of :username, :case_sensitive => false, :allow_blank => false, :message => 'has already been taken'
-  validates_uniqueness_of :email, :case_sensitive => false, :allow_blank => false, :message => 'address has already been taken'
-  validates_format_of :email, :with => /[\w\.-]+(\+[\w-]*)?@([\w-]+\.)+[\w-]+/, :message => 'address is invalid'
+
+  # validates_uniqueness_of :email, :case_sensitive => false, :allow_blank => false, :message => 'address has already been taken'
+
+  validates_format_of :email,  :symmetric_encryption => true, :with => /[\w\.-]+(\+[\w-]*)?@([\w-]+\.)+[\w-]+/, :message => 'address is invalid'
+
   validates_format_of :username, :with => /\A[a-z0-9_-]{8,25}\z/
+
+  validates_format_of :home_phone, :symmetric_encryption => true, length: { in: 10 },
+                      :with => /\A(\d{10}|\(?\d{3}\)?[-. ]\d{3}[-.]\d{4})\z/,
+                      :allow_blank => true, :message => 'is invalid'
+  validates_format_of :mobile_phone, :symmetric_encryption => true, length: { in: 10 },
+                      :with => /\A(\d{10}|\(?\d{3}\)?[-. ]\d{3}[-.]\d{4})\z/,
+                      :allow_blank => true, :message => 'is invalid'
+
   validates_length_of :username, :maximum => 25, :minimum => 8
-  validates_length_of :first_name, :last_name, :email, :title, :department, :maximum => 256
+  validates_length_of :first_name, :last_name, :title, :department, :maximum => 256
   validates_length_of :notes, :maximum => 4096
+
 
   # NOTE: Following is moved to authorization/lib/authrization.rb module. This
   # keeps allows seperation of concerns across components
