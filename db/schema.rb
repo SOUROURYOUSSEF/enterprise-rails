@@ -626,6 +626,8 @@ ActiveRecord::Schema.define(version: 20151205130228) do
     t.string   "last_name",                              null: false
     t.string   "username"
     t.string   "email",                                  null: false
+    t.string   "encrypted_home_phone"
+    t.string   "encrypted_mobile_phone"
     t.string   "title"
     t.string   "department"
     t.text     "notes"
