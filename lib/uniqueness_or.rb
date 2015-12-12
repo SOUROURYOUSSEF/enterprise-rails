@@ -35,7 +35,7 @@ module ActiveRecord
           end
 
           if attribute_name == 'encrypted_email'
-            validate_unique_encrypted_email(klass, table, attribute, column, value)
+            validate_unique_encrypted_email(klass, table, attribute, value)
 
           # elsif attribute_name == 'username'
           #  validate_unique_username(klass, table, attribute, column, value)
@@ -49,6 +49,7 @@ module ActiveRecord
         end
 
         def validate_unique_encrypted_email(klass, table, attribute, value)
+          # code taken from active_record/connection_adapters/abstract_adapter.rb. Need to encrypt email address before comparing
           table_attr = table[attribute]
           value = klass.connection.case_sensitive_modifier(value, table_attr) unless value.nil?
           table_attr.eq(SymmetricEncryption.encrypt(value))
