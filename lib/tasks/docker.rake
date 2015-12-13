@@ -1,4 +1,5 @@
 require 'active_record'
+require 'symmetric-encryption'
 
 namespace :docker do
   namespace :db do
@@ -11,6 +12,7 @@ namespace :docker do
         `bundle exec rails generate symmetric_encryption:new_keys #{Rails.env}`
       end
       begin
+        SymmetricEncryption.load!
         Rake::Task[:'db:migrate'].invoke
       rescue ActiveRecord::NoDatabaseError
         puts 'Database does not exists. Creating new database..'
