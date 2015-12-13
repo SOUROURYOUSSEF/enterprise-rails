@@ -7,8 +7,8 @@ namespace :docker do
       #ActiveRecord::Migrator.migrations_paths = ActiveRecord::Tasks::DatabaseTasks.migrations_paths
       # Generate assymetric keys for production environment if not already created. This should be created only Once.
       # SymmetricEncryption.load!
-      if !File.exist?('/etc/rails/keys/enterprise_rails_production.key')
-        Rake::Task[:'rails generate symmetric_encryption:new_keys production'].execute
+      if !File.exist?("/etc/rails/keys/enterprise_rails_#{Rails.env}.key")
+        `bundle exec rails generate symmetric_encryption:new_keys #{Rails.env}`
       end
       begin
         Rake::Task[:'db:migrate'].invoke
