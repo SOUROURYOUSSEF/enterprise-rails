@@ -5,6 +5,11 @@ namespace :docker do
     task :setup do
       #ActiveRecord::Base.configurations       = YAML::load(ERB.new(IO.read(File.join(::Rails.root, 'config', 'database.yml'))).result)[::Rails.env]
       #ActiveRecord::Migrator.migrations_paths = ActiveRecord::Tasks::DatabaseTasks.migrations_paths
+      # Generate assymetric keys for production environment if not already created. This should be created only Once.
+      SymmetricEncryption.load!
+      if !File.exist?('/etc/rails/keys/enterprise_rails_production.key')
+        Rake::Task[:'rails generate symmetric_encryption:new_keys production'].execute
+      end
       begin
         Rake::Task[:'db:migrate'].invoke
       rescue ActiveRecord::NoDatabaseError
@@ -16,10 +21,6 @@ namespace :docker do
         Rake::Task[:'sample_data:load'].execute
         Rake::Task[:'authorization:seed'].execute
         ENV['SOLR_ENABLED'] = 'true'
-      end
-      # Generate assymetric keys for production environment if not already created. This should be created only Once.
-      if !File.exist?('/etc/rails/keys/enterprise_rails_production.key')
-        Rake::Task[:'rails generate symmetric_encryption:new_keys production'].execute
       end
     end
   end
