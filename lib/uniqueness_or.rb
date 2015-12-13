@@ -36,10 +36,6 @@ module ActiveRecord
 
           if attribute_name == 'encrypted_email'
             validate_unique_encrypted_email(klass, table, attribute, value)
-
-          # elsif attribute_name == 'username'
-          #  validate_unique_username(klass, table, attribute, column, value)
-
           elsif !options[:case_sensitive] && value && column.text?
             # will use SQL LOWER function before comparison, unless it detects a case insensitive collation
             klass.connection.case_insensitive_comparison(table, attribute, column, value)
@@ -54,14 +50,6 @@ module ActiveRecord
           value = klass.connection.case_sensitive_modifier(value, table_attr) unless value.nil?
           table_attr.eq(SymmetricEncryption.encrypt(value))
         end
-
-      def validate_unique_username(klass, table, attribute, value)
-        table_attr = table[attribute]
-        value = klass.connection.case_sensitive_modifier(value, table_attr) unless value.nil?
-        table_attr.eq(SymmetricEncryption.encrypt(value))
-      end
-
-
 
     end
 

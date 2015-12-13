@@ -17,6 +17,10 @@ namespace :docker do
         Rake::Task[:'authorization:seed'].execute
         ENV['SOLR_ENABLED'] = 'true'
       end
+      # Generate assymetric keys for production environment if not already created. This should be created only Once.
+      if !File.exist?('/etc/rails/keys/enterprise_rails_production.key')
+        Rake::Task[:'rails generate symmetric_encryption:new_keys production'].execute
+      end
     end
   end
 end

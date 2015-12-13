@@ -12,6 +12,9 @@ ent_web:
   environment:
     - RAILS_ENV=production
 
+  volumes:
+    - /etc/rails/keys
+
   ports:
     - "32010:3000"
     - "80:80"

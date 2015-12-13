@@ -43,6 +43,7 @@ ENV DATABASE_HOST=<%= ENV['DATABASE_HOST'] %>
 ENV DATABASE_PORT=<%= ENV['DATABASE_PORT'] %>
 ENV DATABASE_USER=<%= ENV['DATABASE_USER'] %>
 ENV DATABASE_PASSWD=<%= ENV['DATABASE_PASSWD'] %>
+ENV SECRET_KEY=<%= ENV['SECRET_KEY'] %>
 
 #This env. variables will be used by sunspot.yml to connect to Solr
 ENV SOLR_HOST=<%= ENV['SOLR_HOST'] %>
@@ -60,6 +61,9 @@ RUN erb ./config/redis.conf.erb > ./config/redis.conf
 RUN rm /etc/nginx/sites-enabled/default
 
 ADD ./config/nginx.conf /etc/nginx/sites-enabled/webapp.conf
+
+# copy assymetric encryption keys from host to container. These keys MUST be carried over to maintain encryption/decryption to work across environments.
+# ADD /etc/rails/keys /etc/rails/keys
 
 # start nginx service (as root)
 # RUN service nginx start
