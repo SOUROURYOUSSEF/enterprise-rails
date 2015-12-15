@@ -69,7 +69,7 @@ The "executable" emphasizes the fact that the architecture can be tested/verifie
 - Use of Rails best practices and idioms
 - Fully integrated ready-to-use sample application
 
-
+For full documentation refer to WIKI page at https://github.com/prakash-alpine/enterprise-rails/wiki
 <!---
 ### What is Enterprise Application?
 
