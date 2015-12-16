@@ -1,4 +1,4 @@
-class BaseSchema < ActiveRecord::Migration
+class SampleSchema < ActiveRecord::Migration
 
   def change
 

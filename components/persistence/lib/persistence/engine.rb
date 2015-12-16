@@ -5,7 +5,7 @@ require 'authorization'
 module Persistence
   class Engine < ::Rails::Engine
 
-    #isolate_namespace Persistence
+    isolate_namespace Persistence
 
     # http://pivotallabs.com/leave-your-migrations-in-your-rails-engines/
     initializer :append_migrations do |app|

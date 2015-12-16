@@ -1,14 +1,11 @@
-require 'active_record'
+require 'rails/all'
+
+# require 'active_record'
 require 'symmetric-encryption'
 
 namespace :docker do
   namespace :db do
-    task :setup do
-      #ActiveRecord::Base.configurations       = YAML::load(ERB.new(IO.read(File.join(::Rails.root, 'config', 'database.yml'))).result)[::Rails.env]
-      #ActiveRecord::Migrator.migrations_paths = ActiveRecord::Tasks::DatabaseTasks.migrations_paths
-      # Generate assymetric keys for production environment if not already created. This should be created only Once.
-      # SymmetricEncryption.load!
-
+    task :setup, [:reset] => :environment do |t, args|
       #if !File.exist?("/etc/rails/keys/enterprise_rails_#{Rails.env}.key")
       #  puts "-----------------------"
       ##  puts "Generating encryption keys for production"
@@ -18,15 +15,35 @@ namespace :docker do
 
       begin
         SymmetricEncryption.load!
-        Rake::Task[:'db:migrate'].invoke
+        if args[:reset] == 'true'
+          puts 'Resetting the Database..'
+          ENV['SOLR_ENABLED'] = 'false'
+          puts "---- Dropping database ----"
+          Rake::Task[:'db:drop'].execute
+          puts "---- Creating databae ----"
+          Rake::Task[:'db:create'].execute
+          puts "---- Migrating database ----"
+          Rake::Task[:'db:migrate'].execute
+          puts "---- Loading sample data ----"
+          Rake::Task[:'sample_data:load'].execute
+          puts "---- Seeding authorization data ----"
+          Rake::Task[:'authorization:seed'].execute
+          ENV['SOLR_ENABLED'] = 'true'
+        else
+          Rake::Task[:'db:migrate'].invoke
+        end
       rescue ActiveRecord::NoDatabaseError
         puts 'Database does not exists. Creating new database..'
-        # Note: Use execute instead of invoke. "invoke" tries to execute rake tasks in parallel which is not we want.
-        # Note: disable SOLR during initial database set-up as Solr container is not yet started.
         ENV['SOLR_ENABLED'] = 'false'
+        puts "---- Dropping database ----"
+        Rake::Task[:'db:drop'].execute
+        puts "---- Creating databae ----"
         Rake::Task[:'db:create'].execute
+        puts "---- Migrating database ----"
         Rake::Task[:'db:migrate'].execute
+        puts "---- Loading sample data ----"
         Rake::Task[:'sample_data:load'].execute
+        puts "---- Seeding authorization data ----"
         Rake::Task[:'authorization:seed'].execute
         ENV['SOLR_ENABLED'] = 'true'
       end

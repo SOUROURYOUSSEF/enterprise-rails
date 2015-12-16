@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
 require_relative '../config/boot'
+require_relative '../lib/override_rake_tasks'
+
 require 'rake'
 Rake.application.run
