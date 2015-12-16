@@ -41,6 +41,7 @@ ENV DATABASE_HOST=<%= ENV['DATABASE_HOST'] %>
 ENV DATABASE_PORT=<%= ENV['DATABASE_PORT'] %>
 ENV DATABASE_USER=<%= ENV['DATABASE_USER'] %>
 ENV DATABASE_PASSWD=<%= ENV['DATABASE_PASSWD'] %>
+ENV DATABASE_RESET=<%= ENV['DATABASE_RESET'] %>
 
 #This env. variables will be used by sunspot.yml to connect to Solr
 ENV SOLR_HOST=<%= ENV['SOLR_HOST'] %>
@@ -72,7 +73,7 @@ ADD ./config/nginx.conf /etc/nginx/sites-enabled/webapp.conf
 
 # You have to run this CMD with 0.0.0.0 IP address for port mapping to work in Docker container. Very strange.
 # NOTE: the rake commands are being run here before starting rails to setup database. There has to be a better way. Need to investigate.
-CMD rake docker:db:setup[true] \
+CMD rake docker:db:setup[ENV['DATABASE_RESET']] \
     && rake assets:precompile \
     && ./scripts/start_sidekiq.sh \
     && ./scripts/start_clockwork.sh \

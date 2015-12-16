@@ -36,6 +36,9 @@ module EnterpriseRails
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
+    # Skip email and password in log files
+    config.filter_parameters += [:password, :password_confirmation, :email]
+
     #HandlebarsAssets::Config.template_namespace = 'JST'
 
   end

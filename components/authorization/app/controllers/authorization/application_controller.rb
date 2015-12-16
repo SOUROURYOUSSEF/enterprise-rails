@@ -7,5 +7,8 @@ module Authorization
 
     before_filter :authenticate_user!
 
+    # skip password and email in logs
+    filter_parameter_logging :password, :email
+
   end
 end

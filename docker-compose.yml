@@ -11,6 +11,7 @@ ent_web:
   # You can overwrite env variables here
   environment:
     - RAILS_ENV=production
+    - DATABASE_RESET=false
 
   volumes:
     # production keys for symmetric-encryption needs to be mapped from host.
