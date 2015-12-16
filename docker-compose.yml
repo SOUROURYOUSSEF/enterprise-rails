@@ -45,7 +45,7 @@ ent_postgres:
     - ent_data
   container_name: ent_postgres
   environment:
-    DB_NAME:  enterprise_rails_development
+    DB_NAME:  enterprise_rails_prod
     DB_USER:  postgres_rails
     DB_PASS:  postgres_rails
 
