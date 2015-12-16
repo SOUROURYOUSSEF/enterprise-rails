@@ -6,7 +6,7 @@ export SECRET_KEY_BASE=c733aabc894e4464031641d68f9c2066df51d177d793f462892b20ec8
 export DATABASE_HOST=ent_postgres
 export DATABASE_PORT=5432
 export DATABASE_USER=postgres_rails
-export DATABASE_PASSWD="QEVuQwEA1i1wt1NtbWKg2o7+Jupbsg=="
+export DATABASE_PASSWD=postgres_rails
 
 #This env. variables will be used by sunspot.yml to connect to Solr.  IP address of docker-machine.
 # Need to figure out why I can not use docker-compose generated hostname instead of IP address here.
