@@ -1,4 +1,4 @@
-require 'fileUtils'
+require 'fileutils'
 require 'symmetric-encryption'
 require_relative '../override_rake_tasks'
 
