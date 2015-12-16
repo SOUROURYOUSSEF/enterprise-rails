@@ -65,8 +65,13 @@ ADD ./config/nginx.conf /etc/nginx/sites-enabled/webapp.conf
 # copy assymetric encryption keys from host to container. These keys MUST be carried over to maintain encryption/decryption to work across environments.
 # ADD /etc/rails/keys /etc/rails/keys
 
+RUN mkdir -p /etc/rails/keys
+
+RUN bundle exec rails generate symmetric_encryption:new_keys production
+
 # start nginx service (as root)
 # RUN service nginx start
+
 
 # RUN rm -f /etc/service/nginx/down
 
