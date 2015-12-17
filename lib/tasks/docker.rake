@@ -12,6 +12,8 @@ namespace :docker do
       #  `bundle exec rails generate symmetric_encryption:new_keys #{Rails.env}`
       #  puts "-----------------------"
       #end
+      #ActiveRecord::Base.configurations       = YAML::load(ERB.new(IO.read(File.join(::Rails.root, 'config', 'database.yml'))).result)
+      #ActiveRecord::Migrator.migrations_paths = ActiveRecord::Tasks::DatabaseTasks.migrations_paths
 
       begin
         SymmetricEncryption.load!
@@ -30,22 +32,24 @@ namespace :docker do
           Rake::Task[:'authorization:seed'].execute
           ENV['SOLR_ENABLED'] = 'true'
         else
-          Rake::Task[:'db:migrate'].invoke
+          # Rake::Task[:'db:migrate'].invoke
         end
       rescue ActiveRecord::NoDatabaseError
-        puts 'Database does not exists. Creating new database..'
-        ENV['SOLR_ENABLED'] = 'false'
-        puts "---- Dropping database ----"
-        Rake::Task[:'db:drop'].execute
-        puts "---- Creating databae ----"
-        Rake::Task[:'db:create'].execute
-        puts "---- Migrating database ----"
-        Rake::Task[:'db:migrate'].execute
-        puts "---- Loading sample data ----"
-        Rake::Task[:'sample_data:load'].execute
-        puts "---- Seeding authorization data ----"
-        Rake::Task[:'authorization:seed'].execute
-        ENV['SOLR_ENABLED'] = 'true'
+        puts 'Database does not exists.'
+
+        # ENV['SOLR_ENABLED'] = 'false'
+        # puts "---- Dropping database ----"
+        # Rake::Task[:'db:drop'].execute
+        # puts "---- Creating databae ----"
+        # Rake::Task[:'db:create'].execute
+        # puts "---- Migrating database ----"
+        # Rake::Task[:'db:migrate'].execute
+        # puts "---- Loading sample data ----"
+        # Rake::Task[:'sample_data:load'].execute
+        # puts "---- Seeding authorization data ----"
+        # Rake::Task[:'authorization:seed'].execute
+        # ENV['SOLR_ENABLED'] = 'true'
+
       end
     end
   end

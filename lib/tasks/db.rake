@@ -8,7 +8,7 @@ namespace :db do
   override_task  :migrate =>  :environment do |task, args|
     ActiveRecord::Base.configurations = YAML::load(ERB.new(IO.read(File.join(::Rails.root, 'config', 'database.yml'))).result)
     # delete any current migration files from top level db/migrate folder
-    Pathname.new(Rails.root.to_s + '/db/migrate').children.each { |p| p.unlink }
+    # Pathname.new(Rails.root.to_s + '/db/migrate').children.each { |p| p.unlink }
     engines = ['persistence','authorization', 'authentication']
     engines.each do |engine|
       puts '---- Copying migrations from ' + engine + '----'
