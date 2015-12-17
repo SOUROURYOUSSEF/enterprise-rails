@@ -1,3 +1,5 @@
+require 'symmetric-encryption'
+
 # Add code to extend base Rails controller for application specific functionality.
 # 1. Enable all access to Rails with Authentication
 # 2. Configure logging parameters.
@@ -37,7 +39,7 @@ ActionController::Base.class_eval do
             :url => request.url,
             :method => request.method,
             :remote_ip => request.remote_ip,
-            :params => request.parameters.clone
+            :params => filter_params(request.parameters.clone)
         },
         :response => {
             :status => response.status,
@@ -50,4 +52,18 @@ ActionController::Base.class_eval do
     request_hash
   end
 
+  # Filter sensitive parameters (password, email, etc.) from audit logs
+  def filter_params(params)
+    if params['user'] && params['user']['email']
+#      params['user']['email'] = SymmetricEncryption.encrypt(params['user']['email'])
+      params['user']['email'] = 'FILTERED'
+
+    end
+    if params['user'] && params['user']['password']
+#      params['user']['password'] = SymmetricEncryption.encrypt(params['user']['password'])
+      params['user']['password'] = 'FILTERED'
+
+    end
+    return params
+  end
 end
