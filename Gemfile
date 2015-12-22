@@ -106,8 +106,15 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # Transparently encrypt ActiveRecord, Mongoid, and MongoMapper attributes. Encrypt passwords in configuration files. Encrypt entire files at rest.
 # See http://rocketjob.github.io/symmetric-encryption/index.html
-
 gem 'symmetric-encryption'
+
+# Multitenancy for Rails and ActiveRecord
+# Apartment provides tools to help you deal with multiple tenants in your Rails application.
+# If you need to have certain data sequestered based on account or company, but still allow
+# some data to exist in a common tenant, Apartment can help.
+# See https://github.com/influitive/apartment
+gem 'apartment'
+
 
 group :development do
   # Quiet Assets turns off the Rails asset pipeline log. This means that it suppresses messages in your development log
