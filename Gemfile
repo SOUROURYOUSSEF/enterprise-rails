@@ -70,6 +70,7 @@ platforms :ruby do
     gem 'libv8'
     # Do not build on docker host
     gem 'therubyracer'
+
   end
 
 end
@@ -115,6 +116,13 @@ gem 'symmetric-encryption'
 # See https://github.com/influitive/apartment
 gem 'apartment'
 
+# Rack::Cors provides support for Cross-Origin Resource Sharing (CORS) for Rack compatible web applications.
+# See: https://github.com/cyu/rack-cors
+gem 'rack-cors', :require => 'rack/cors'
+
+# Simple, secure token based authentication for Rails. See https://github.com/lynndylanhurley/devise_token_auth
+# Needed for authticating REST API requests.
+# gem 'devise_token_auth'
 
 group :development do
   # Quiet Assets turns off the Rails asset pipeline log. This means that it suppresses messages in your development log
