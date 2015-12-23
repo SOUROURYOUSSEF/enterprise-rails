@@ -41,5 +41,17 @@ module EnterpriseRails
 
     #HandlebarsAssets::Config.template_namespace = 'JST'
 
+    # TODO: THIS IS TEMP FOR TESTING IONIC MOBILE APP IN BROWSER. MUST BE REMOVED BEFORE
+    # PUBLISHING APP TO PRODUCTION
+    # Your Rails app will now be able to handle cross domain requests,
+    # and the Ionic App will no longer complain when run alongside
+    # Rails in the browser.
+    config.middleware.insert_before 0, "Rack::Cors" do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :put, :delete, :post, :options]
+      end
+    end
+
   end
 end

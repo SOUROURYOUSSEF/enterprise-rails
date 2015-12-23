@@ -6,6 +6,9 @@ if [ "$RAILS_HOME" = "" ]; then
 fi
 # remove trailing '/' from RAILS_HOME
 RAILS_HOME=`echo $RAILS_HOME | sed 's/\/$//'`
+POSTGRES_HOME=/usr/local/Cellar/postgresql/9.4.4
+POSTGRES_DATA_DIR=$RAILS_HOME/postgres-db
+POSTGRES_PORT=5432
 
 if [ "$RAILS_ENV" = "" ]; then
     if [ -f $RAILS_HOME/.development ]; then
@@ -27,6 +30,8 @@ CLOCKWORK_PID_FILE=$RAILS_HOME/tmp/pids/clockwork.pid
 RAILS_PID_FILE=$RAILS_HOME/tmp/pids/puma.pid
 SIDEKIQ_PID_FILE=$RAILS_HOME/tmp/pids/sidekiq.pid
 REDIS_PID_FILE=$RAILS_HOME/tmp/pids/redis-server.pid
+# Postgres PID file is written in postgres data directory.
+POSTGRES_PID_FILE=$POSTGRES_DATA_DIR/postmaster.pid
 
 
 ## Function to test dependencies of processes. Checks the PID files in $RAILS_HOME/tmp dir

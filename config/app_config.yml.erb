@@ -6,6 +6,9 @@ development: &defaults
   title: Enterprise Rails
   url:   http://localhost:3000
 
+  postgres:
+    database_threads: 100
+
   solr:
     host: <%= ENV['SOLR_HOST'] %>
     port: <%= ENV['SOLR_PORT'] %>
