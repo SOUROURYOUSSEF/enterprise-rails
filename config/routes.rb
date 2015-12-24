@@ -135,7 +135,6 @@
 Rails.application.routes.draw do
 
 
-  devise_for :users
   
   # Order of engines mount is important if each engine has its own database migration.
   # You need to sequence is such that database migrations ans sychnronized correctly

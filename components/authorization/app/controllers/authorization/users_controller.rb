@@ -111,7 +111,7 @@ class Authorization::UsersController < Authorization::ApplicationController
   private
 
   def user_params
-    params.require(:user).permit('first_name', 'last_name', 'username', 'email', 'department', 'notes', 'admin', 'image_file_path', 'image_content_type', 'image_file_size')
+    params.require(:user).permit('first_name', 'last_name', 'username', 'email', 'department', 'notes', 'admin', 'image_file_path', 'image_content_type', 'image_file_size', 'authentication_token')
   end
 
 end

@@ -2,7 +2,7 @@ require_dependency 'api/v1/application_controller'
 
 module Api
   module V1
-    class UsersController <  ApplicationController
+    class UsersController <  Api::V1::ApplicationController
       respond_to :html, :js, :json
 
       def index

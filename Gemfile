@@ -124,6 +124,9 @@ gem 'rack-cors', :require => 'rack/cors'
 # Needed for authticating REST API requests.
 # gem 'devise_token_auth'
 
+# This gem provides the extracted Token Authenticatable module of devise. See: https://github.com/baschtl/devise-token_authenticatable
+gem 'devise-token_authenticatable'
+
 group :development do
   # Quiet Assets turns off the Rails asset pipeline log. This means that it suppresses messages in your development log
   # bundle exec rake doc:rails generates the API under doc/api.
