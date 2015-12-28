@@ -17,15 +17,6 @@ module Api
           render :json=> resource.errors, :status=>422
         end
 
-        # user = User.create(user_params)
-        # if user.save
-        #   render :json=> user.as_json(:auth_token=>user.authentication_token, :username=>user.username), :status=>201
-        #   return
-        # else
-        #   warden.custom_failure!
-        #   render :json=> user.errors, :status=>422
-        # end
-
       end
 
       private
