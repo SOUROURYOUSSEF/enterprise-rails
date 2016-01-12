@@ -44,7 +44,8 @@ class User  < ActiveRecord::Base
 
   validates_format_of :email,  :symmetric_encryption => true, :with => /[\w\.-]+(\+[\w-]*)?@([\w-]+\.)+[\w-]+/, :message => 'address is invalid'
 
-  validates_format_of :username, :with => /\A[a-z0-9_-]{8,25}\z/
+  # validates_format_of :username, :with => validate_username
+  validate :validate_username, :on => :create
 
   validates_format_of :home_phone, :symmetric_encryption => true, length: { in: 10 },
                       :with => /\A(\d{10}|\(?\d{3}\)?[-. ]\d{3}[-.]\d{4})\z/,
@@ -64,6 +65,10 @@ class User  < ActiveRecord::Base
   #has_and_belongs_to_many :groups, -> { uniq }
   #has_and_belongs_to_many :roles, -> { uniq }
   #has_many :application_objects
+
+  def validate_username
+    return true
+  end
 
   def full_name
     "#{first_name.capitalize} #{last_name.capitalize}"

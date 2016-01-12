@@ -15,3 +15,7 @@ export SOLR_PORT=8983
 export REDIS_HOST=159.203.122.254
 export REDIS_PORT=6379
 
+# Following variables are used for SMS integration via Twillio
+export TWILIO_ACCOUNT_SID="AC4e2bd58b1c9ebaed6d4c683349a71f75"
+export TWILIO_AUTH_TOKEN="16c379b93116aabf180946b5e98ad6dc"
+export TWILIO_PHONE_NUMBER="6172199572"

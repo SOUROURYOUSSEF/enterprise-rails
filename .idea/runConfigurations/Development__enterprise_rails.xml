@@ -21,6 +21,9 @@
       <env name="REDIS_HOST" value="192.168.99.100" />
       <env name="REDIS_PORT" value="6379" />
       <env name="DATABASE_PASSWD" value="ent_rails" />
+      <env name="TWILIO_ACCOUNT_SID" value="AC4e2bd58b1c9ebaed6d4c683349a71f75" />
+      <env name="TWILIO_AUTH_TOKEN" value="16c379b93116aabf180946b5e98ad6dc" />
+      <env name="TWILIO_PHONE_NUMBER" value="6172199572" />
     </envs>
     <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
     <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />

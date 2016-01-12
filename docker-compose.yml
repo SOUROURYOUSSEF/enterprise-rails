@@ -18,6 +18,7 @@ ent_web:
     # to maintain the encryption consistent across deployment
     # - ./config/symmetric-encryption/keys:/etc/rails/keys
     - /root/winston-mobile/rails/keys:/etc/rails/keys
+    - /root/winston-mobile/fuse-demo:/myapp/public
 
 
   ports:

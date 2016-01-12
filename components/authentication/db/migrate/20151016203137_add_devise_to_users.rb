@@ -25,6 +25,11 @@ class AddDeviseToUsers < ActiveRecord::Migration
         # t.datetime :confirmation_sent_at
         # t.string   :unconfirmed_email # Only if using reconfirmable
 
+        # Mobile phone number verification with Twillio
+        t.boolean :mobile_verified, :default => false
+        t.string :mobile_verification_pin
+        t.datetime :mobile_verification_sent_at
+        t.datetime :mobile_verification_confirmed_at
         ## Lockable
         # t.integer  :failed_attempts, default: 0, null: false # Only if lock strategy is :failed_attempts
         # t.string   :unlock_token # Only if unlock strategy is :email or :both

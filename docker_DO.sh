@@ -27,3 +27,8 @@ export CMS_DBPATH=
 export CMS_USER=admin
 export CMS_PASSWD=ent_rails
 export CMS_AUTH_TOKEN=FYjyzNszXkLMbQayoudS
+
+# Following variables are used for SMS integration via Twillio
+export TWILIO_ACCOUNT_SID="AC4e2bd58b1c9ebaed6d4c683349a71f75"
+export TWILIO_AUTH_TOKEN="16c379b93116aabf180946b5e98ad6dc"
+export TWILIO_PHONE_NUMBER="6172199572"

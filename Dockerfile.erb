@@ -52,6 +52,12 @@ ENV REDIS_HOST=<%= ENV['REDIS_HOST'] %>
 ENV REDIS_PORT=<%= ENV['REDIS_PORT'] %>
 ENV REDIS_URL=redis://<%= ENV['REDIS_HOST'] %>:<%= ENV['REDIS_PORT'] %>
 
+# Following variables are used for SMS integration via Twillio
+ENV TWILIO_ACCOUNT_SID=<%= ENV['TWILIO_ACCOUNT_SID'] %>
+export TWILIO_AUTH_TOKEN=<%= ENV['TWILIO_AUTH_TOKEN'] %>
+export TWILIO_PHONE_NUMBER=<%= ENV['TWILIO_PHONE_NUMBER'] %>
+
+
 # process env. variables on redis.conf file. Redis does not support env variables in its configuration file.
 RUN erb ./config/redis.conf.erb > ./config/redis.conf
 

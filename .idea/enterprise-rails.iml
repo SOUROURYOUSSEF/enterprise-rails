@@ -70,6 +70,9 @@
         <env name="REDIS_HOST" value="192.168.99.100" />
         <env name="REDIS_PORT" value="6379" />
         <env name="DATABASE_PASSWD" value="ent_rails" />
+        <env name="TWILIO_ACCOUNT_SID" value="AC4e2bd58b1c9ebaed6d4c683349a71f75" />
+        <env name="TWILIO_AUTH_TOKEN" value="16c379b93116aabf180946b5e98ad6dc" />
+        <env name="TWILIO_PHONE_NUMBER" value="6172199572" />
       </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
@@ -421,6 +424,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rails-html-sanitizer (v1.0.2, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails_best_practices (v1.15.7, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="railties (v4.2.4, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rake (v10.4.2, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="redis (v3.2.2, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="redis-actionpack (v4.0.1, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="redis-activesupport (v4.1.5, RVM: ruby-2.2.1) [gem]" level="application" />
