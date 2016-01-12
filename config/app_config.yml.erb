@@ -103,6 +103,11 @@ production:
     port: <%= ENV['REDIS_PORT'] %>
     pidfile: ./tmp/pids/redis.pid
 
+  twilio:
+    phone_number: <%= ENV['TWILIO_PHONE_NUMBER'] %>
+    auth_token: <%= ENV['TWILIO_AUTH_TOKEN'] %>
+    account_sid: <%= ENV['TWILIO_ACCOUNT_SID'] %>
+
   locomotive:
     host: <%= ENV['CMS_HOST'] %>
     port: <%= ENV['CMS_PORT'] %>

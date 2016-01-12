@@ -52,6 +52,12 @@ ENV REDIS_HOST=ent_redis
 ENV REDIS_PORT=6379
 ENV REDIS_URL=redis://ent_redis:6379
 
+# Following variables are used for SMS integration via Twillio
+ENV TWILIO_ACCOUNT_SID=AC4e2bd58b1c9ebaed6d4c683349a71f75
+ENV TWILIO_AUTH_TOKEN=16c379b93116aabf180946b5e98ad6dc
+ENV TWILIO_PHONE_NUMBER=6172199572
+
+
 # process env. variables on redis.conf file. Redis does not support env variables in its configuration file.
 RUN erb ./config/redis.conf.erb > ./config/redis.conf
 
