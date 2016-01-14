@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+<h1>Welcome to Winston, <%= @user.full_name %></h1>
+<p>
+    You have successfully completed your registration.<br/>
+    your username is: <%= @user.username %>.<br/>
+    To verify your email address, please click on the link below:
+    <br/>
+    http://winston-mobile.leanrails.com/confirm_email?token=fkdjgklj3rgjwhy566765
+
+</p>
+
+<p>
+    To login to the site, just follow this link:
+    <br/>
+  <%= @url %>.
+</p>
+<p>Thanks for joining and have a great day!</p>
+<br/>
+<p>The Winston Team</p>
+</body>
+</html>

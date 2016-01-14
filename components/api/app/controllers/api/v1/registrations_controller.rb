@@ -24,6 +24,7 @@ module Api
           resource.save
           if params['mobile_registration'].to_b == true
             send_mobile_verification_pin(resource)
+            send_email_verification_code(resource)
           end
           render :json=> resource.as_json(:only => [:authentication_token, :username, :id, :first_name, :last_name, :email, :mobile_phone, :mobile_verification_pin]), :status=>201
           return
@@ -71,9 +72,14 @@ module Api
         twilio_client.messages.create(
             from: APP_CONFIG['twilio']['phone_number'],
             to: user.mobile_phone,
-            body: "Use this code to verify your mobile number: #{user.mobile_verification_pin}"
+            body: "Welcome to Winston. Enter #{user.mobile_verification_pin} on the sign up page to verify your mobile number. Type HELP for help, STOP to cancel."
         )
         user.mobile_verification_sent_at = Time.now
+      end
+
+      # Sends email notification for registration
+      def send_email_verification_code(user)
+        Persistence::UserMailer.welcome_email(user).deliver_now
       end
 
     end
