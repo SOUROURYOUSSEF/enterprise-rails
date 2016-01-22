@@ -17,11 +17,16 @@ module Api
           params['user']['password'] = Array.new(8){[*'0'..'9', *'a'..'z', *'A'..'Z'].sample}.join
         end
 
+        if User.where(:username => params['user']['email']).first != nil
+          render :json=> {:success=>false, :error=> 'Email is already taken.'}, :status=>422
+          return
+        end
+
         build_resource(user_params)
         resource_saved = resource.save
         if resource_saved
-          resource.mobile_verification_pin = rand(0000..9999).to_s.rjust(4, '0')
-          resource.save
+          #resource.mobile_verification_pin = rand(0000..9999).to_s.rjust(4, '0')
+          resource.update_attribute(:mobile_verification_pin, rand(0000..9999).to_s.rjust(4, '0'))
           if params['mobile_registration'].to_b == true
             send_mobile_verification_pin(resource)
             send_email_verification_code(resource)
@@ -30,7 +35,9 @@ module Api
           return
         else
           warden.custom_failure!
-          render :json=> {:success=>false, :error=> resource.errors}, :status=>422
+#          render :json=> {:success=>false, :error=> resource.errors}, :status=>422
+          render :json=> {:success=>false, :error=> 'Failed to sign up'}, :status=>422
+          return
         end
 
       end
@@ -38,6 +45,7 @@ module Api
       def verify_mobile
         user = User.find(params['id'])
         if user.mobile_verification_pin == params['mobile_verification_pin']
+          user.update_attribute(:mobile_verification_confirmed_at, Time.now)
           render :json =>  user.as_json(:only => [:authentication_token, :username, :mobile_phone, :mobile_verification_pin ]), :status=>200
           return
         else
@@ -80,6 +88,7 @@ module Api
       # Sends email notification for registration
       def send_email_verification_code(user)
         Persistence::UserMailer.welcome_email(user).deliver_now
+        user.email_verification_sent_at = Time.now
       end
 
     end

@@ -30,6 +30,13 @@ class AddDeviseToUsers < ActiveRecord::Migration
         t.string :mobile_verification_pin
         t.datetime :mobile_verification_sent_at
         t.datetime :mobile_verification_confirmed_at
+
+        # Email address verification
+        t.boolean :email_verified, :default => false
+        t.string :email_verification_code
+        t.datetime :email_verification_sent_at
+        t.datetime :email_verification_confirmed_at
+
         ## Lockable
         # t.integer  :failed_attempts, default: 0, null: false # Only if lock strategy is :failed_attempts
         # t.string   :unlock_token # Only if unlock strategy is :email or :both

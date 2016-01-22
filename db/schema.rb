@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160110012246) do
+ActiveRecord::Schema.define(version: 20160122172722) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -645,6 +645,10 @@ ActiveRecord::Schema.define(version: 20160110012246) do
     t.string   "mobile_verification_pin"
     t.datetime "mobile_verification_sent_at"
     t.datetime "mobile_verification_confirmed_at"
+    t.boolean  "email_verified",                   default: false
+    t.string   "email_verification_code"
+    t.datetime "email_verification_sent_at"
+    t.datetime "email_verification_confirmed_at"
     t.string   "authentication_token"
   end
 
