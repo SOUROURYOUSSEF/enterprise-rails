@@ -9,7 +9,7 @@ namespace :db do
     ActiveRecord::Base.configurations = YAML::load(ERB.new(IO.read(File.join(::Rails.root, 'config', 'database.yml'))).result)
     # delete any current migration files from top level db/migrate folder
     # Pathname.new(Rails.root.to_s + '/db/migrate').children.each { |p| p.unlink }
-    engines = ['persistence','authorization', 'authentication']
+    engines = ['persistence','authorization', 'authentication', 'state_machines']
     engines.each do |engine|
       puts '---- Copying migrations from ' + engine + '----'
       `bundle exec rake #{engine}:install:migrations`

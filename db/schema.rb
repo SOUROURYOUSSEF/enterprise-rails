@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160122172722) do
+ActiveRecord::Schema.define(version: 20160125185249) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -650,6 +650,7 @@ ActiveRecord::Schema.define(version: 20160122172722) do
     t.datetime "email_verification_sent_at"
     t.datetime "email_verification_confirmed_at"
     t.string   "authentication_token"
+    t.string   "aasm_state"
   end
 
   add_index "users", ["authentication_token"], name: "index_users_on_authentication_token", unique: true, using: :btree

@@ -10,6 +10,7 @@ path 'components' do
   gem 'sample_data', '0.0.1'
   gem 'search', '0.0.1'
   gem 'cms', '0.0.1'
+  gem 'state_machines', '0.0.1'
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

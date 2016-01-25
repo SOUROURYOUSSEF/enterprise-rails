@@ -47,6 +47,9 @@ class AddDeviseToUsers < ActiveRecord::Migration
 
         # Uncomment below if timestamps were not included in your original model.
         # t.timestamps null: false
+
+        # Sign up method
+        t.string :signup_method, :default => 'email'  # choices are 'email', 'facebook', 'google', 'twitter', 'linkedin'
       end
 
       add_index :users, :reset_password_token, unique: true

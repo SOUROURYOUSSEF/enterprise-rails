@@ -1,6 +1,15 @@
+require 'aasm'
+
 module StateMachines
   class Engine < ::Rails::Engine
     isolate_namespace StateMachines
+
+    # http://edgeguides.rubyonrails.org/engines.html#a-note-on-decorators-and-loading-code
+    config.to_prepare do
+      Dir.glob(StateMachines::Engine.root + "app/decorators/**/*_decorator*.rb").each do |c|
+        require_dependency(c)
+      end
+    end
 
     # http://pivotallabs.com/leave-your-migrations-in-your-rails-engines/
     initializer :append_migrations do |app|

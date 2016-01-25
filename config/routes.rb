@@ -142,6 +142,7 @@ Rails.application.routes.draw do
   mount Authentication::Engine, at: '/'
   mount Authorization::Engine, at: '/'
   mount Api::Engine, at: '/api'
+  mount StateMachines::Engine, at: '/'
   mount WebStyle::Engine, at: '/'
   mount SampleData::Engine, at: '/'
   mount Search::Engine, at: '/'

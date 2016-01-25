@@ -28,8 +28,13 @@ module Api
           #resource.mobile_verification_pin = rand(0000..9999).to_s.rjust(4, '0')
           resource.update_attribute(:mobile_verification_pin, rand(0000..9999).to_s.rjust(4, '0'))
           if params['mobile_registration'].to_b == true
-            send_mobile_verification_pin(resource)
-            send_email_verification_code(resource)
+            # Use the AASM state machine to manage state transitions
+            # See components/state_machines/app/decorators/user_decorator.rb
+            resource.contacted
+
+            #send_mobile_verification_pin(resource)
+            #send_email_verification_code(resource)
+
           end
           render :json=> resource.as_json(:only => [:authentication_token, :username, :id, :first_name, :last_name, :email, :mobile_phone, :mobile_verification_pin]), :status=>201
           return

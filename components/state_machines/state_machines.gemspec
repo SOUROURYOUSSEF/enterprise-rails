@@ -18,6 +18,8 @@ Gem::Specification.new do |s|
   s.test_files = Dir['spec/**/*']
 
   s.add_dependency 'rails', '~> 4.2.4'
+  s.add_dependency 'persistence', '0.0.1'
+  s.add_dependency 'aasm', '4.7.0'
 
   s.add_development_dependency 'rspec-rails', '3.2.1'
   s.add_development_dependency 'factory_girl', '4.4.0'
