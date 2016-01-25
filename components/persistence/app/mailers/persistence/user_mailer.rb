@@ -1,6 +1,6 @@
 module Persistence
   class UserMailer < ApplicationMailer
-    default from: 'prakash0450@gmail.com'
+    default from: 'winston@winstondigital.com'
 
     def welcome_email(user)
       @user = user

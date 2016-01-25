@@ -1,26 +1,68 @@
 <!DOCTYPE html>
+
 <html>
 <head>
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title></title>
+  <%= stylesheet_link_tag  'web_style/bootstrap-email', media: 'all' %>
 </head>
 <body>
-<h1>Welcome to Winston, <%= @user.full_name %></h1>
-<p>
-    You have successfully completed your registration.<br/>
-    your username is: <%= @user.username %>.<br/>
-    To verify your email address, please click on the link below:
-    <br/>
-    http://winston-mobile.leanrails.com/confirm_email?token=fkdjgklj3rgjwhy566765
-
-</p>
-
-<p>
-    To login to the site, just follow this link:
-    <br/>
-  <%= @url %>.
-</p>
-<p>Thanks for joining and have a great day!</p>
-<br/>
-<p>The Winston Team</p>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+  <tr>
+    <td class="navbar navbar-inverse" align="center">
+      <!-- This setup makes the nav background stretch the whole width of the screen. -->
+      <table width="650px" cellspacing="0" cellpadding="3" class="container">
+        <tr>
+          <td align="center" colspan="12">
+            <%= image_tag('winston_logo.png', :alt => '[Winston Digital]') %>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF" align="center">
+      <table width="650px" cellspacing="0" cellpadding="3" class="container">
+        <tr>
+          <td>
+            <h2>Welcome to Winston, <%= @user.full_name %></h2>
+            <p style="font-size: 14px;">
+              You have successfully completed your registration.<br/>
+              your username is: <%= @user.username %>.<br/>
+              To verify your email address, please click on the button below:
+              <br/><br/>
+              <a class="btn btn-primary" href="http://winston-mobile.leanrails.com/confirm_email?token=fkdjgklj3rgjwhy566765">Confirm Email Address</a>
+            </p>
+            <br/>
+            <p style="font-size: 14px;">
+              To login to the site, just click on the button below:
+              <br/><br/>
+              <button type="button" class="btn btn-success">Log On</button>
+            </p>
+            <p style="font-size: 14px;">
+              Thanks for joining and have a great day!
+              <br/><br/>
+              The Winston Team
+            </p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF" align="center">
+      <table width="650px" cellspacing="0" cellpadding="3" class="container">
+        <tr>
+          <td>
+            <hr>
+            <p>All rights reserved. 2015 Copyright. Winston Digital LLC.</p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
 </body>
 </html>
+
+

@@ -48,7 +48,11 @@ Rails.application.configure do
   # Show the logging configuration on STDOUT
   config.show_log_configuration = true
 
-  config.action_mailer.delivery_method = :smtp
+  # Use letter opener web during development and testing. So no real email is sent.
+  # You can view the email using letter opener interface mounted at /dev/emails. See routes.rb
+  config.action_mailer.delivery_method = :letter_opener_web
+
+#  config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
       address:              'smtp.gmail.com',
       port:                 587,

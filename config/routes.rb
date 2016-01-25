@@ -148,6 +148,10 @@ Rails.application.routes.draw do
   mount Jobs::Engine, at: '/'
   mount Cms::Engine, at: '/'
 
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: '/dev/emails'
+  end
+
   # Route for Omniauth authentication
 
   match '/auth/:provider/callback' => 'authentication/authentications#create', via: [:get, :post]
