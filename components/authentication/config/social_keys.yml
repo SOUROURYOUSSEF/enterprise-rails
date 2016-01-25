@@ -1,0 +1,36 @@
+# 2015-07-23 RICHARD:
+# THIS IS A SAMPLE FOR social_keys.yml which is git-ignored as it should be, because it will have your keys in it.
+# REMEMBER TO COPY THIS FILE TO social_keys.yml AND CHANGE THE KEYS IN THERE TO MATCH YOURS.
+development:
+  facebook_key: "204621893222125"
+  facebook_secret: "9a09c46a7cd8fb538ae94f487d473a99"
+  facebook_access_token: "CAACEdEose0cBAH6JSzZCtxHGAkKYrZC951YxakXjVIreFZBXYeCSjoK1394JIGGZBH66Sc7ghuQuVoCF82KouqvZBsoC5jmknANiHrGDwKVLt0ZAVaX8K5xoKMvT5MUh2RX0aIg69jXvQ0yRvZALx5T0UQmF5cjCSv9ORHPfo1juKCcKwZCdYVwblA85kCzXe5GX8acl360HNwZDZD"
+
+  twitter_key: "YOUR_KEY"
+  twitter_secret: "YOUR_SECRET"
+
+  github_key: "YOUR_KEY"
+  github_secret: "YOUR_SECRET"
+
+  linkedin_key: "YOUR_KEY"
+  linkedin_secret: "YOUR_SECRET"
+
+  google_key: "YOUR_KEY"
+  google_secret: "YOUR_SECRET"
+
+production:
+  facebook_key: "204621893222125"
+  facebook_secret: "9a09c46a7cd8fb538ae94f487d473a99"
+  facebook_access_token: "CAACEdEose0cBAH6JSzZCtxHGAkKYrZC951YxakXjVIreFZBXYeCSjoK1394JIGGZBH66Sc7ghuQuVoCF82KouqvZBsoC5jmknANiHrGDwKVLt0ZAVaX8K5xoKMvT5MUh2RX0aIg69jXvQ0yRvZALx5T0UQmF5cjCSv9ORHPfo1juKCcKwZCdYVwblA85kCzXe5GX8acl360HNwZDZD"
+
+  twitter_key: "YOUR_KEY"
+  twitter_secret: "YOUR_SECRET"
+
+  github_key: "YOUR_KEY"
+  github_secret: "YOUR_SECRET"
+
+  linkedin_key: "YOUR_KEY"
+  linkedin_secret: "YOUR_SECRET"
+
+  google_key: "YOUR_KEY"
+  google_secret: "YOUR_SECRET"

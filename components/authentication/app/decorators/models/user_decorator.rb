@@ -4,6 +4,8 @@
 
 User.class_eval do
 
+
+  has_many :authentications
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   # :token_authenticatable is added to enable authetication over REST API.
@@ -22,6 +24,5 @@ User.class_eval do
       break token unless User.where(authentication_token: token).first
     end
   end
-
 
 end

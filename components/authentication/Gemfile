@@ -5,9 +5,51 @@ source 'https://rubygems.org'
 # development dependencies will be added by default to the :development group.
 gemspec
 
+# Gems needed for social login
+#gem 'linkedin'
+
+# Koala is a lightweight, flexible Ruby SDK for Facebook. It allows read/write access to the
+# social graph via the Graph and REST APIs, as well as support for realtime updates and
+# OAuth and Facebook Connect authentication.
+# See https://github.com/arsduo/koala
+gem 'koala'
+
+# A Ruby interface to the Twitter API.
+# See https://github.com/sferik/twitter
+gem 'twitter'
+
+# OmniAuth is a library that standardizes multi-provider authentication for web applications.
+# It was created to be powerful, flexible, and do as little as possible.
+# See https://github.com/intridea/omniauth
 gem 'omniauth'
+
+# This gem contains a generic OAuth2 strategy for OmniAuth.
+# It is meant to serve as a building block strategy for other strategies and not to be
+# used independently (since it has no inherent way to gather uid and user info).
+# See https://github.com/intridea/omniauth-oauth2
+gem 'omniauth-oauth2'
+
+# Facebook OAuth2 Strategy for OmniAuth.
+# Supports the OAuth 2.0 server-side and client-side flows. Read the Facebook docs for more details:
+# http://developers.facebook.com/docs/authentication
+# See https://github.com/mkdynamic/omniauth-facebook
 gem 'omniauth-facebook'
-gem 'oauth2'
+
+# Strategy to authenticate with Google via OAuth2 in OmniAuth.
+# Get your API key at: https://code.google.com/apis/console/ Note the Client ID and the Client Secret.
+# For more details, read the Google docs: https://developers.google.com/accounts/docs/OAuth2
+# See https://github.com/zquestz/omniauth-google-oauth2
+gem 'omniauth-google-oauth2'
+
+# This gem contains the Twitter strategy for OmniAuth.
+# Twitter offers a few different methods of integration. This strategy implements the browser variant of the "Sign in with Twitter" flow.
+# Twitter uses OAuth 1.0a. Twitter's developer area contains ample documentation on how it implements this, so check that out if you are really interested in the details.
+# See https://github.com/arunagw/omniauth-twitter
+gem 'omniauth-twitter'
+
+
+#gem 'omniauth-github'
+#gem 'omniauth-linkedin-oauth2'
 
 # Declare any dependencies that are still in development here instead of in
 # your gemspec. These might include edge Rails or gems from your path or

@@ -25,6 +25,7 @@ module Api
         build_resource(user_params)
         resource_saved = resource.save
         if resource_saved
+          resource.named
           #resource.mobile_verification_pin = rand(0000..9999).to_s.rjust(4, '0')
           resource.update_attribute(:mobile_verification_pin, rand(0000..9999).to_s.rjust(4, '0'))
           if params['mobile_registration'].to_b == true

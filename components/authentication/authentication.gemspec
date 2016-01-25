@@ -25,9 +25,17 @@ Gem::Specification.new do |s|
   s.add_dependency 'devise', '3.4.1'
   s.add_dependency 'omniauth', '1.2.2'
   s.add_dependency 'omniauth-facebook', '3.0.0'
-  s.add_dependency 'oauth2', '1.0.0'
+  # s.add_dependency 'oauth2', '1.0.0'
+  s.add_dependency 'koala', '2.2.0'
+  s.add_dependency 'twitter', '5.16.0'
+  s.add_dependency 'omniauth-twitter', '1.2.1'
+  s.add_dependency 'omniauth-oauth2', '1.4.0'
+  s.add_dependency 'omniauth-google-oauth2', '0.3.0'
+
   # For SMS and MMS messaging integration
   s.add_dependency 'twilio-ruby', '~> 4.1.0'
+
+
 
   s.add_development_dependency 'rspec-rails', '3.2.1'
   s.add_development_dependency 'shoulda-matchers', '2.8.0'
