@@ -39,6 +39,7 @@ gem 'responders', '~> 2.0'
 # https://github.com/plataformatec/devise
 gem 'devise'
 
+
 platforms :jruby do
   # Had to lock net-ssh to 2.9.2 version. Latest version 3.1 requires Ruby 2.0
   gem 'net-ssh', '2.9.2'
@@ -127,6 +128,14 @@ gem 'rack-cors', :require => 'rack/cors'
 # This gem provides the extracted Token Authenticatable module of devise. See: https://github.com/baschtl/devise-token_authenticatable
 gem 'devise-token_authenticatable'
 
+# This gem is a drop in solution for styling HTML emails with CSS without having to do the hard work yourself.
+# See https://github.com/fphilipe/premailer-rails
+gem 'premailer-rails'
+
+# Gives letter_opener an interface for browsing sent emails. Allows you to read sent email in a web browser. Handy for testing HTML emails without actually sending the email.
+# See https://github.com/fgrehm/letter_opener_web
+gem 'letter_opener_web', '~> 1.2.0'
+
 group :development do
   # Quiet Assets turns off the Rails asset pipeline log. This means that it suppresses messages in your development log
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -154,6 +163,8 @@ group :development do
   gem 'brakeman', :require => false
 
   gem 'rails_best_practices'
+
+
 
 end
 

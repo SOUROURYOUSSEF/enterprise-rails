@@ -16,7 +16,10 @@ ent_web:
   volumes:
     # production keys for symmetric-encryption needs to be mapped from host.
     # to maintain the encryption consistent across deployment
-    - ./config/symmetric-encryption/keys:/etc/rails/keys
+    # - ./config/symmetric-encryption/keys:/etc/rails/keys
+    - /root/winston-mobile/rails/keys:/etc/rails/keys
+    - /root/winston-mobile/fuse-demo:/myapp/public
+
 
   ports:
     - "32010:3000"
@@ -60,8 +63,8 @@ ent_solr:
   # This is not at all obvious. In order for this to work with a remote docker host, the localhost and docker host directories needs to be synced up manually.
   # Also note that I had to use an older version (4.10) of solr image. The latest version is not compatible with what is used in the project (4.2).
   # Also note the location of solr configuration and data on image is different than standard solr configuration. 
-#    - /root/ent_rails/solr:/opt/solr/example/solr
-    - ./components/search/spec/dummy/solr:/opt/solr/example/solr
+    - /root/winston-mobile/solr:/opt/solr/example/solr
+#    - ./components/search/spec/dummy/solr:/opt/solr/example/solr
 ent_redis:
   image: redis:latest
   ports:

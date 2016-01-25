@@ -18,6 +18,9 @@ namespace :docker do
       begin
         SymmetricEncryption.load!
         if args[:reset] == 'true'
+
+          # Rake::Task[:'db:migrate'].invoke
+
           puts 'Resetting the Database..'
           ENV['SOLR_ENABLED'] = 'false'
           puts "---- Dropping database ----"
@@ -32,6 +35,20 @@ namespace :docker do
           Rake::Task[:'authorization:seed'].execute
           ENV['SOLR_ENABLED'] = 'true'
         else
+          puts 'Resetting the Database..'
+          ENV['SOLR_ENABLED'] = 'false'
+          puts "---- Dropping database ----"
+          Rake::Task[:'db:drop'].execute
+          puts "---- Creating databae ----"
+          Rake::Task[:'db:create'].execute
+          puts "---- Migrating database ----"
+          Rake::Task[:'db:migrate'].execute
+          puts "---- Loading sample data ----"
+          Rake::Task[:'sample_data:load'].execute
+          puts "---- Seeding authorization data ----"
+          Rake::Task[:'authorization:seed'].execute
+          ENV['SOLR_ENABLED'] = 'true'
+
           # Rake::Task[:'db:migrate'].invoke
         end
       rescue ActiveRecord::NoDatabaseError

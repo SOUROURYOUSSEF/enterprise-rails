@@ -41,16 +41,22 @@ ENV DATABASE_HOST=ent_postgres
 ENV DATABASE_PORT=5432
 ENV DATABASE_USER=postgres_rails
 ENV DATABASE_PASSWD=postgres_rails
-ENV DATABASE_RESET=false
+ENV DATABASE_RESET=true
 
 #This env. variables will be used by sunspot.yml to connect to Solr
-ENV SOLR_HOST=192.168.0.20
+ENV SOLR_HOST=159.203.122.254
 ENV SOLR_PORT=8983
 
 #This env. variables will be used by sunspot.yml to connect to Solr
 ENV REDIS_HOST=ent_redis
 ENV REDIS_PORT=6379
 ENV REDIS_URL=redis://ent_redis:6379
+
+# Following variables are used for SMS integration via Twillio
+ENV TWILIO_ACCOUNT_SID=AC4e2bd58b1c9ebaed6d4c683349a71f75
+ENV TWILIO_AUTH_TOKEN=16c379b93116aabf180946b5e98ad6dc
+ENV TWILIO_PHONE_NUMBER=6172199572
+
 
 # process env. variables on redis.conf file. Redis does not support env variables in its configuration file.
 RUN erb ./config/redis.conf.erb > ./config/redis.conf
