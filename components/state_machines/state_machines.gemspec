@@ -1,35 +1,23 @@
 $:.push File.expand_path('../lib', __FILE__)
 
 # Maintain your gem's version:
-require 'persistence/version'
+require 'state_machines/version'
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = 'persistence'
-  s.version     = Persistence::VERSION
-  #s.platform    = 'ruby'
-  #s.platform    = 'java'
+  s.name        = 'state_machines'
+  s.version     = StateMachines::VERSION
   s.authors     = ['prakash-alpine']
   s.email       = ['prakash0450@gmail.com']
-  # Stupid, Stupid: Make sure to remove TODO and FIXME. It fails the bundle install command
-  s.homepage    = ''
-  s.summary     = 'Summary of Persistence.'
-  s.description = 'Description of Persistence.'
+  s.homepage    = 'http://enterprise-rails.leanrails.com'
+  s.summary     = 'Component for managing state machines for active record objects'
+  s.description = 'Component for managing state machines for active record objects'
   s.license     = 'MIT'
 
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.rdoc']
   s.test_files = Dir['spec/**/*']
 
-  # Note: All gem dependencies are locked to a specific version so that they can not get
-  # out of sync with same gems in another components. If two components have different
-  # versions of gems, bundler will complain.
-
   s.add_dependency 'rails', '~> 4.2.4'
-  s.add_dependency 'search', '0.0.1'
-  s.add_dependency 'sunspot_rails',  '2.2.0'
-  s.add_dependency 'symmetric-encryption',  '3.8.2'
-  s.add_development_dependency 'sunspot_solr', '2.2.0'
-
 
   s.add_development_dependency 'rspec-rails', '3.2.1'
   s.add_development_dependency 'factory_girl', '4.4.0'
@@ -48,5 +36,5 @@ Gem::Specification.new do |s|
   # Add a comment summarizing the current schema to the top or bottom of each of your model, fixtures, tests and specs
   # https://github.com/ctran/annotate_models
   s.add_development_dependency 'annotate', '2.6.10'
-
+  
 end
