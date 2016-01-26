@@ -23,6 +23,7 @@
 #
 
 class User  < ActiveRecord::Base
+  include AASM
 
   # See Authentcation
   # Include default devise modules. Others available are:

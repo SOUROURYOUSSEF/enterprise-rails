@@ -1,6 +1,10 @@
-class Authentication < ActiveRecord::Base
+require 'koala'
 
-  belongs_to :users
+class AuthProvider < ActiveRecord::Base
+
+#  table_name 'auth_providers'
+
+  belongs_to :user
 
   after_create :fetch_details
 
@@ -14,7 +18,7 @@ class Authentication < ActiveRecord::Base
   def fetch_details_from_facebook
     graph = Koala::Facebook::API.new(self.token)
     facebook_data = graph.get_object("me")
-    self.username = facebook_data['username']
+    self.username = facebook_data['name'].parameterize.underscore
     self.save
   end
 
@@ -36,3 +40,4 @@ class Authentication < ActiveRecord::Base
   end
 
 end
+

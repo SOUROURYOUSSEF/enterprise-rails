@@ -1,8 +1,14 @@
 <component name="ProjectDictionaryState">
   <dictionary name="prakashteli">
     <words>
+      <w>authenticatable</w>
       <w>friendlists</w>
       <w>omniauth</w>
+      <w>omniauthable</w>
+      <w>registerable</w>
+      <w>rememberable</w>
+      <w>trackable</w>
+      <w>validatable</w>
     </words>
   </dictionary>
 </component>

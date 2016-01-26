@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160125185249) do
+ActiveRecord::Schema.define(version: 20160126030714) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -84,6 +84,17 @@ ActiveRecord::Schema.define(version: 20160125185249) do
   end
 
   add_index "attachments", ["note_id"], name: "index_attachments_on_note_id", using: :btree
+
+  create_table "auth_providers", force: :cascade do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.integer  "user_id"
+    t.string   "token"
+    t.string   "secret"
+    t.string   "username"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "comments", force: :cascade do |t|
     t.integer  "author_id"
@@ -613,10 +624,10 @@ ActiveRecord::Schema.define(version: 20160125185249) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "first_name",                                       null: false
-    t.string   "last_name",                                        null: false
+    t.string   "first_name",                                         null: false
+    t.string   "last_name",                                          null: false
     t.string   "username"
-    t.string   "encrypted_email",                                  null: false
+    t.string   "encrypted_email",                                    null: false
     t.string   "encrypted_home_phone"
     t.string   "encrypted_mobile_phone"
     t.string   "title"
@@ -630,13 +641,13 @@ ActiveRecord::Schema.define(version: 20160125185249) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "password_salt"
-    t.datetime "created_at",                                       null: false
-    t.datetime "updated_at",                                       null: false
-    t.string   "encrypted_password",               default: "",    null: false
+    t.datetime "created_at",                                         null: false
+    t.datetime "updated_at",                                         null: false
+    t.string   "encrypted_password",               default: "",      null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                    default: 0,     null: false
+    t.integer  "sign_in_count",                    default: 0,       null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
@@ -650,6 +661,7 @@ ActiveRecord::Schema.define(version: 20160125185249) do
     t.datetime "email_verification_sent_at"
     t.datetime "email_verification_confirmed_at"
     t.string   "authentication_token"
+    t.string   "signup_method",                    default: "email"
     t.string   "aasm_state"
   end
 

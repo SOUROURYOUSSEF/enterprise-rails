@@ -2,6 +2,7 @@ require 'devise'
 require 'omniauth'
 require 'omniauth-facebook'
 require 'oauth2'
+require 'koala'
 
 module Authentication
   class Engine < ::Rails::Engine
