@@ -19,7 +19,7 @@ class AuthProvider < ActiveRecord::Base
     graph = Koala::Facebook::API.new(self.token)
     facebook_data = graph.get_object("me")
     self.username = facebook_data['name'].parameterize.underscore
-    self.save
+    self.save!
   end
 
   def fetch_details_from_twitter

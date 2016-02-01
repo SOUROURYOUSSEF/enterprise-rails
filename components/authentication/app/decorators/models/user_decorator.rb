@@ -45,18 +45,22 @@ User.class_eval do
       if user.blank?
         user = User.new
         user.password = Devise.friendly_token[0,10]
-        user.username = auth.info.name.parameterize.underscore
+        user.first_name = auth.info.name.partition(' ').first
+        user.last_name = auth.info.name.partition(' ').last
+        user.username = auth.info.email
         user.email = auth.info.email
+        # place user in the default group for now.
+        user.groups << Group.find_by(:name => 'default_group')
         if auth.provider == 'twitter'
           user.save(:validate => false)
         else
-          user.save
+          user.save!
         end
       end
       auth_provider.username = auth.info.name.parameterize.underscore
       auth_provider.user_id = user.id
-      auth_provider.save
       user.auth_providers << auth_provider
+      auth_provider.save!
     end
     auth_provider.user
   end
